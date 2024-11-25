@@ -1,0 +1,721 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2.windows%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/">
+      
+      
+        <link rel="next" href="../4.%E7%BC%96%E7%A8%8B%E4%B8%96%E7%95%8C%E9%87%8C%E7%9A%84%E5%B0%9A%E6%96%B9%E5%AE%9D%E5%89%91/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>3.从终端开始的系统结构探秘 - Chips</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Chips" class="md-header__button md-logo" aria-label="Chips" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chips
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3.从终端开始的系统结构探秘
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Chips" class="md-nav__button md-logo" aria-label="Chips" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Chips
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PickingChip's Knowledge base
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.电脑硬件配置简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.windows%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.windows操作简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3.从终端开始的系统结构探秘
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.%E7%BC%96%E7%A8%8B%E4%B8%96%E7%95%8C%E9%87%8C%E7%9A%84%E5%B0%9A%E6%96%B9%E5%AE%9D%E5%89%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.编程世界里的尚方宝剑
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.%E6%B5%85%E6%B5%85%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.浅浅理解计算机网络
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GIt%26Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GIt&Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LVGL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LVGL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Stm32/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stm32
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bash shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c%E8%AF%AD%E8%A8%80%E5%BA%93%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一，字符串函数（引用"string.h"）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%B7%A5%E5%85%B7%E9%93%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工具链
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A0%91%E8%8E%93%E6%B4%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    树莓派
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AB%AF%E5%8F%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    端口
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    通信协议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>3.从终端开始的系统结构探秘</h1>
+
+<p>1.终端
+    计算机 = 主机 + 终端</p>
+<pre><code>终端 = 输入终端 + 输出终端
+</code></pre>
+<p>向主机输入数据的设备就是输入终端（键盘，鼠标），接收主机数据的就是输出终端（显示器）
+用物理方式和主机相连的称为物理终端，没有用物理方式相连就是虚拟终端。</p>
+<p>ps.一台主机可以有很多终端，权限最高的终端就是控制台（只有一个）</p>
+<p>2.Shell（壳）</p>
+<p>【1】shell</p>
+<p>终端和主机虽然连接起来了，但是我们想一想为什么仅仅通过鼠标点击图形，轻轻敲击键盘就能让计算机明白我们想干嘛，执行我们想进行的操作？
+其实这个时候就需要有一个程序把我们的在终端上的操作翻译成计算机能听得懂得指令，而这个程序就是 Shell，所以shell就是一种命令行解释器。</p>
+<p>Shell俗称壳（用来区别于核 kernel），分为图形界面shell（GUI，就是之前提到过的用户图形界面，windows系统中见到的桌面即explorer.exe（资源管理器））和命令行shell（CLI，例如早期的MS-DOS操作系统和现在的cmd等）两大类。</p>
+<p>Shell管理你与操作系统之间的交互：等待你输入，向操作系统解释你的输入，并且处理各种各样的操作系统的输出结果。不同系统有不同的shell，如bash、C shell、windows power shell 等等；在linux系统中，通常是Bourne Again shell ( 即bash)。</p>
+<p>事实上，Shell不只是一种解释器（在用户和系统间起着桥梁的作用），还是一种称为脚本语言的编程工具。它与编译型语言（比如C/C++/JAVA等）有些不同，这里要先介绍一下这两种语言的区别。</p>
+<p>【2】编译型语言和解释型语言</p>
+<p>任何代码最终都要被“翻译”成二进制的形式才能在计算机中执行。
+有的编程语言，如 C/C++、Pascal、Go语言、汇编等，必须在程序运行之前将所有代码都翻译成二进制形式（执行：预处理（Preprocessing）、编译（Compilation）、汇编（Assembly）、链接（Linking）这四个步骤），也就是生成可执行文件，用户拿到的是最终生成的可执行文件，看不到源码。这个过程叫做编译（Compile），这样的编程语言叫做编译型语言，完成编译过程的软件叫做编译器（Compiler）。</p>
+<p>而有的编程语言，如 Shell、JavaScript、Python、PHP等，需要一边执行一边翻译，不会生成任何可执行文件，用户必须拿到源码才能运行程序。程序运行后会即时翻译，翻译完一部分执行一部分，不用等到所有代码都翻译完。
+这个过程叫做解释，这样的编程语言叫做解释型语言（对应的是编译型语言）或者脚本语言（Script）（对应的是系统语言），完成解释过程的软件叫做解释器。</p>
+<p>编译型语言的优点是执行速度快、对硬件要求低、保密性好，适合开发操作系统、大型应用程序、数据库等。</p>
+<p>解释型语言的优点是使用灵活、部署容易、跨平台性好，非常适合Web开发以及小工具的制作。</p>
+<p>因为shell是一个命令行解释器，所以就可以用来解释shell脚本，因此根据它的这种编译特点shell也是一种脚本语言。（我认为这里可以类比于python,python也是一种脚本语言也需要通过python解释器来翻译源文件进而执行命令）</p>
+<p>到这里我们就把shell介绍完了，但是这个shell作为交互程序一端连接的是终端（也就是我们用户）那另一端连接的是什么呢？或者说这个"壳"包裹的到底是什么呢？这就是计算机的核心部分。</p>
+<p>3.Kernel(核)
+【1】what's the Kernel?</p>
+<p>kernel和shell一样是操作系统的一部分，是真正与硬件交互的那部分软件，与硬件交互包括读写硬盘、读写网盘、读写内存以及任何连接到系统中的硬件。除了与硬件交互外，内核还负责分配资源，分配什么资源呢？所谓资源就是硬件，比如CPU时间、内存、IO等等，这些都是资源。
+内核通过虚拟的方法让每一个进程以为自己在独占CPU，这通过CPU时间片来实现，内核让CPU在各个进程之间快速切换，这样程序员写好程序员后直接运行即可，即使在单核系统中运行成百上千个进程都没有问题。
+总而言之内核就是控制硬件运作的那部分软件，是连接硬件和软件的纽带。在Windows系统里内核为Windows net而在以Linux为内核的系统（如CentOS、Ubuntu、RedHat、Android）里内核为Linux。</p>
+<p>那么kernel和我们的shell 又有什么联系呢？这问题的解释需要我们先了解一下操作系统的结构。</p>
+<p>【2】系统结构（这里仅介绍Windows因为Linux还没学）</p>
+<p>操作系统的结构如下：</p>
+<p>APP（应用层，正常的软件程序都属于这一层）---&gt;Windows API/C标准库（这一层是一大堆库函数供给应用层使用）---&gt;Kernel(这就是我们的内核负责调控硬件)---&gt;Hardware(硬件层，就是我们电脑的主体部分)</p>
+<p>看到这里你对系统的结构应该就有了一个简单的认知，而我们之前所说的shell就属于应用层，它在上层包裹着我们的kernel，两者的关系就像是一个“壳”包裹着一个“核”一样，这也就是它们名字的由来是不是很形象。</p>
+<p>壳与核是这种包裹的关系，壳负责面向终端（也就是用户）核负责面向硬件，那么他们两者之间是怎么交流的呢？这个时候我们的Windows API/C标准库就赶到了战场。当我们的程序（也就是应用层）想要使用内核的服务时就要进行系统调用（system call）Windows API/C标准库。</p>
+<p>下面看一下Windows API的解释：</p>
+<p>Windows API又叫做 API 函数， 是 Windows 的核心，从技术上讲，我们技术人员在 Windows 操作系统里做技术开发，Windows 对我们技术人员来说，里面有大量的 API 函数。
+API 叫做 “应用程序编程接口”（Application Programming Interface） ，我们在使用各种各样的编程语言在 Windows 开发时，都可以使用 API函数。</p>
+<p>做程序设计、软件开发，肯定要调用或者说是使用  Windows 里已经做好的那些 API 函数。
+微软在做 Windows 时，几万人做了十几年做出了大量API函数， Windows 自身在用这些函数，而我们程序员也可以调用这些函数。
+（详情请看原文链接：https://blog.csdn.net/x_y_q_/article/details/52352523）</p>
+<p>再看一下C 标准库的解释：</p>
+<p>C标准库（C Standard Library / ISO C Library），是用于诸如输入/输出处理，字符串处理，内存管理，数学计算和许多其他操作系统服务之类任务的宏，类型和函数的集合。它是在C标准中（例如C11标准）中被指定的。它的内容分布在不同的头文件中，例如math.h。
+（详情请看原文链接：https://blog.csdn.net/lbw520/article/details/104585775）</p>
+<p>应用层的程序就是靠调用这些已经封装好的函数来实现“壳”与“核”的互动的，
+至此所有部分就被串起来形成了一个由内核到外部层层相套的结构——操作系统（所以Linux不能算操作系统因为它只是个内核），如果再加上终端和硬件层部分那么一台完整的计算机就粉墨登场了！</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

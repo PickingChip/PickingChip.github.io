@@ -1,1 +1,0 @@
-lvgl 至少需要 32kB RAM 和 128 kB Flash
