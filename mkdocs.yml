@@ -1,0 +1,5 @@
+site_name: Chips
+nas:
+  - NUM: 计算机组成笔记.md
+  - Driver: bash_shell.md
+theme: material
