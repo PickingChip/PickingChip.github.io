@@ -1,0 +1,802 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1.%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E7%AE%80%E4%BB%8B/">
+      
+      
+        <link rel="next" href="../3.%E4%BB%8E%E7%BB%88%E7%AB%AF%E5%BC%80%E5%A7%8B%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E6%8E%A2%E7%A7%98/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>2.windows操作简介 - Chips</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Chips" class="md-header__button md-logo" aria-label="Chips" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chips
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.windows操作简介
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Chips" class="md-nav__button md-logo" aria-label="Chips" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Chips
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PickingChip's Knowledge base
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.电脑硬件配置简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2.windows操作简介
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.%E4%BB%8E%E7%BB%88%E7%AB%AF%E5%BC%80%E5%A7%8B%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E6%8E%A2%E7%A7%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.从终端开始的系统结构探秘
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.%E7%BC%96%E7%A8%8B%E4%B8%96%E7%95%8C%E9%87%8C%E7%9A%84%E5%B0%9A%E6%96%B9%E5%AE%9D%E5%89%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.编程世界里的尚方宝剑
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.%E6%B5%85%E6%B5%85%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.浅浅理解计算机网络
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GIt%26Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GIt&Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LVGL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LVGL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Stm32/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stm32
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bash shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c%E8%AF%AD%E8%A8%80%E5%BA%93%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一，字符串函数（引用"string.h"）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%B7%A5%E5%85%B7%E9%93%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工具链
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A0%91%E8%8E%93%E6%B4%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    树莓派
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AB%AF%E5%8F%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    端口
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    通信协议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>2.windows操作简介</h1>
+
+<p><strong>历史常识</strong>
+现在使用的Windows系统是以图形用户界面为基础研发的操作系统，而图形用户界面（GUI）最早由施乐（一家研发打印机的公司提出），后来被apple拿去优化做出了当时很惊艳的图形界面，再后来微软也根据这个做出了Windows系统。
+比较经典的windows系统：
+Windows XP  2001
+Windows 7       2009
+Windows 10  2015
+Windows 11  2021</p>
+<p><strong>1.环境变量</strong>
+从名字来看这玩意就是个变量，用于存放文件地址。每一个文件都有一个绝对路径，但是每台电脑的特定文件绝对路径可能都不一样，程序调用的时候就很麻烦，所以给一个“变量”去“赋值”让它去代表这个文件的绝对路径，这样一来就方便程序通过环境变量调用文件。这也就是为什么有的时候移动了文件的位置后程序就无法运行了，这就是因为文件的绝对路径已经发生改变，但是“变量”的值还没变所以程序在使用“变量”调用文件时就会找不到文件的位置，进而使程序无法正常运行。</p>
+<p>在Windows系统中，有两种环境变量：用户变量和系统变量。
+环境变量没有区分大小写，例如path跟PATH是一样的。
+系统变量对所有用户有效。
+用户变量只对当前用户有效。
+用户环境变量存储用户特定的配置信息，系统环境变量存储全局配置信息。
+用户环境变量只对当前用户有效，需要重新登录才能生效；系统环境变量对所有用户有效，修改会立即生效。
+需要强调的是，用户变量的优先级比系统变量高，也就是说如果用户变量和系统变量同名时，用户变量会覆盖上系统变量。
+不过系统变量和用户变量都有path变量，但是它的值是用户变量中的值与系统变量中的值的叠加。 </p>
+<p>eg. %TEMP%这个环境变量表示的就是电脑存放临时文件的绝对路径，不管你的临时文件是存放在C盘还是D盘只要在文件资源管理器路径栏里输入%TEMP%，它就会跳转到你存放临时文件的位置。</p>
+<p>PS.
+    绝对路径，从根目录为起点到某一个目录的路径；
+    相对路径，一个目录为起点到另外一个的目录的路径。</p>
+<p>例如：
+             ┍ A文件夹
+          C -|
+             ┕ B文件夹</p>
+<p>绝对路径： C:\A文件夹</p>
+<p>相对路径（如果你在A文件夹时）： ..\B文件夹  （‘..\’向上一级意思）</p>
+<p><strong>2.注册表</strong>
+在说注册表之前先来讲一讲什么是INI文件</p>
+<p>INI文件是Initialization file的缩写，即为初始化文件，是Windows系统配置文件所采用的存储格式，统管Windows的各项配置。就是说你一个程序的需要的一些初始化参数都存放在这个文件里，程序在运行时会自动调用文件里的参数来完成初始化。
+为什么要用INI文件？如果我们的程序没有任何配置文件时，这样的程序对外是全封闭的，一旦程序需要修改一些参数必须要修改程序代码本身并重新编译，这样很不好，所以要用INI文件，让程序出厂后还能根据需要进行必要的配置。
+但是这样的话每一个程序都会有一个对应的INI文件，程序一多就不方便管理，所以注册表就应运而生，用于存放各个程序的初始化参数。
+注册表是层次化数据库，用于存储系统和应用程序的设置信息。</p>
+<p>注册表的结构
+注册表中，所有的数据都是通过一种树状结构以键和子键的方式组织起来的。
+每个键包含一组特定的信息，每个键的键名都是和它所包含的信息相关联的。
+键值由三部分组成： 名称、类型、数据。</p>
+<p>键值类型由常用的6种组成：</p>
+<p>字符串值（REG_SZ）
+二进制值（REG_BINARY）
+32位值（4个字节）（REG_DWORD）
+64位值（5个字节）（REG_QWORD）
+多字符串值（REG_MULTI_SZ）
+可扩充字符串值（REG_EXPAND_SZ）</p>
+<p>注册表的根键共有5个，且全为大写。
+1.HKEY_CLASSES_ROOT
+包含当前登录用户的配置信息。用户的文件夹、屏幕颜色和“控制面板”设置都存储在这里。
+2.HKEY_USERS
+包含计算机上的所有以活动方式加载的用户配置文件。
+3.HKEY_LOCAL_MACHINE
+包含特定于计算机的配置信息（用于任何用户）。此项有时缩写“HKLM”。
+4.HKEY_CLASSES_ROOT
+HKEY_CLASSES_ROOT预定义项包含了启动应用程序所需的全部信息。
+5.HKEY_CURRENT_CONFIG
+包含有关本地计算机在系统启动时使用的硬件配置文件的信息。</p>
+<p>ps.打开注册表的方法：win+R 输入regedi
+还可以通过注册表实现程序开机自启动程序，感兴趣可自行查询配置方法。</p>
+<p><strong>3.运行库</strong>
+运行库就是程序在运行时所需要的库函数，可以理解为程序运行的工具，基本上所有程序运行都需要用到是由所有程序共用的，因此程序可以删除但是运行库不可以（你删了其它程序用个寂寞）。
+缺少了运行库有些程序就会打不开，所以需要到网上下载完善语和运行库。</p>
+<p>常见运行库：
+Visual Basic Virtual Machine (5.1)</p>
+<p>Visual Basic Virtual Machine (6.0)</p>
+<p>Microsoft C Runtime Library 2002</p>
+<p>Microsoft C Runtime Library 2003</p>
+<p>Microsoft Visual C++2005 SP1</p>
+<p>Microsoft Visual C++2008 SP1</p>
+<p>Microsoft Visual C++2010 SP1</p>
+<p>Microsoft Visual C++2012 UP4</p>
+<p>Microsoft Visual C++2013</p>
+<p>Microsoft Visual C++2019</p>
+<p>Mcr0 soft Visual C+2015-2022</p>
+<p>Microsoft Universal C Runtime</p>
+<p>Microsoft Visual Studio 2010 Tools For Office Runtime</p>
+<p>如果打开程序时提醒你“缺少xxx.dll文件”就是缺少对应的运行库上网自行下载即可。</p>
+<p>运行库一般是DLL文件，  DLL(Dynamic Link Library)文件为动态链接库文件，又称“应用程序拓展”，是软件文件类型。
+在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。当我们执行某一个程序时，相应的DLL文件就会被调用。一个应用程序可使用多个DLL文件，一个DLL文件也可能被不同的应用程序使用，这样的DLL文件被称为共享DLL文件。
+运行库就是程序在运行时才会被动态加载的dll文件，而且不同程序可能会加载相同的dll文件，这样就使得文件更小。
+相对应的还有静态版（LIB）运行库，但是静态版必须在编译的时候需要把C和C++运行库复制到目标程序中（.exe），所以产生的可执行文件会比较大。</p>
+<p><strong>4.windows服务</strong>
+Microsoft Windows 服务（即以前的 NT 服务）就是一种可以在你的电脑上长时间运行的程序，和普通的应用程序不同的地方它像是一种系统的“基础服务”一样，可以在计算机启动时自动启动，可以暂停和重新启动而且不显示任何用户界面。同时它可以供同一台计算机上的不同用户使用。</p>
+<p>首先Windows服务和普通应用一样是是一个应用程序，一个后台进程。但它又十分特殊，特殊在以下几点：  </p>
+<p>1.它通常在系统启动时用户登录Windows之前由NET kernel中的SCM（Service Control manager）加载，并一般在系统启动时自动开启的。  </p>
+<p>2.Windows服务独立于特定用户之上，也就是说它可以被一台计算机上任何用户所共用。   </p>
+<p>如果一个应用需要长时间的后台运行，并且独立于某个特定用户控制台，我们可以考虑把它写成Windows服务。它通常没有界面（没有硬性限制，可以编写有界面的Windows服务），通常随机启动，随机关闭而关闭，但也可以随用户需要手动启动。</p>
+<p>服务列表打开方法：win+R 输入services.msc</p>
+<p><strong>5.磁盘分区</strong>
+右键win图标打开“磁盘管理”右键磁盘可以点击压缩卷进行压缩，如果磁盘有空闲空间可以进行新建卷和扩展卷（扩展卷时空闲空间必须和目标扩展盘相邻）。
+一般C盘是系统盘，需要预留足够的空间，否则可能会造成计算机卡顿，如果需要进行c盘扩容可以使用傲梅分区助手。</p>
+<p><strong>6.装系统</strong>
+可以从微软官方网站获取windows系统的下载文件，不过需要密钥激活，安装时可以先跳过。
+也可以从下面这个网站上获取你需要的操作系统：https://msdn.itellyou.cn/         </p>
+<p>附上一个win10操作系统下载地址：
+ed2k://|file|zh-cn_windows_10_business_editions_version_22h2_updated_april_2024_x64_dvd_a2873093.iso|6433263616|6D6236C84849BDDECA9EC3EF63340EAB|/</p>
+<p>准备一个8G左右的空U盘（装系统时会格式化硬盘）然后把官网的下载文件下载进去，在电脑启动时根据不同的主板在开机时按不同的按键，选择用U盘启动，然后上网上找教程。。。。。。我也没装过系统等以后实践过后再看看有没有什么补充的吧。</p>
+<p><strong>7.系统盘清理</strong></p>
+<p>首先系统盘最好是留足够的空间，毕竟要是不够用了去扩容还要费不少事，其次软件能装在其他盘就尽量放在其他盘，实在不行再放在系统盘。</p>
+<p>1.c盘关闭睡眠
+这个功能对Windows系统比较鸡肋，即使休眠还是会有电量损耗，所以建议关闭
+具体操作：
+右键开始菜单；选择终端管理员；输入 powercfg -h off 回车即可关闭。
+如果想要打开同一样的操作输入 powercfg -h on即可。 </p>
+<p>2.删除Windows.old文件夹
+Windows.old文件夹是Windows中保存上一个Windows安装的所有文件的临时文件夹。它是在重装系统或升级系统时，为了保留旧系统的文件而自动创建的。它的作用是方便用户退回旧系统或恢复旧系统的文件。
+一般来说只有升级过系统才有，而且这个文件在系统盘内是隐藏文件，Windows也会在系统升级一个月后把它删除掉，Windows.old文件夹可以手动删除，也可以使用磁盘清理工具进行清除。</p>
+<p>搜索disk打开磁盘清理即可清理。</p>
+<p>3.关闭备份</p>
+<p>解释一下什么是系统还原点，这个东西就像一个时光机，如果你在未来遭遇不测就可以回到当初你设置的时间点从新来过，它是通过在指定的时间收集当前重要的系统文件（像驱动程序，注册表，系统文件，已安装程序等）保存下来，如果系统文件损坏，就可以将计算机恢复到还原备份的结点。
+当然这么做会占用c盘内存，如果c盘空间不足可以删除系统还原点。</p>
+<p>操作方法：
+设置里搜索系统保护-&gt;创建还原点-&gt;配置里删除还原点，也可以创建还原点。</p>
+<p>4.关闭bit-locker
+据说这玩意没什么用。</p>
+<p>5.软件的调整和配置</p>
+<p>steam默认下载路径；</p>
+<p>adobe暂存盘更改；</p>
+<p>微信,QQ聊天记录更改；</p>
+<p>6.c盘分析工具
+  SpaceSniffer</p>
+<p><strong>8.重置系统和重做系统</strong></p>
+<p>（1）重置系统：
+            电脑文件太乱了，你想恢复出厂设置就可以重置系统，前提是你的电脑还可以正常开机。
+在设置系统恢复里设置，重置系统时只会对系统盘重置，可以选择保留个人文件（就是用户文件夹里的东西），还可以选在云下载（从官网上下载最新的系统）或者本地下载（还是下载当前版本），后面的设置如果选择删除所有驱动器那么你的电脑就会被彻底净化（所有盘都被清空）。</p>
+<p>（2）重做系统：
+            电脑蓝屏了，开不了机。
+            这就是用U盘重装系统，参考重装系统的做法就行了，开机时进入BIOS（BIOS 是计算机启动时加载的第一个软件，BIOS 的设置直接关系到电脑是否可以正常启动，并影响到之后的使用效率。Windows 操作系统，也是在 BIOS 的引导下进行工作的。） 切换U盘启动。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>
