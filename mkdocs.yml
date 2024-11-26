@@ -1,5 +1,76 @@
 site_name: Chips
-nas:
-  - NUM: 计算机组成笔记.md
-  - Driver: bash_shell.md
-theme: material
+site_author: PickingChip
+site_description: PickingChip's Chips
+site_url: https://pickingchip.github.io/
+repo_url: https://github.com/PickingChip/PickingChip.github.io
+repo_name: GitHub
+docs_dir: docs
+
+nav:
+  - Home: "index.md"
+  - About: About.md
+  - 基础知识:
+      个人电脑硬件简介: "./基础知识/1.电脑硬件配置简介.md"
+      Windows系统: "./基础知识/2.Windows操作简介.md"
+      从终端开始的系统结构探秘: "./基础知识/3.从终端开始的系统结构探秘.md"
+      编程世界里的尚方宝剑: "./基础知识/4.编程世界里的尚方宝剑.md"
+
+  - 团队开发:
+      Git: "./团队开发/Git.md"
+      GitHub: "./团队开发/GitHub.md"
+      md语法: "./团队开发/md语法.md"
+
+  - 嵌入式:
+      Stm32: "./嵌入式/Stm32.md"
+      通信协议: "./嵌入式/通信协议.md"
+      工具链: "./嵌入式/工具链.md"
+      树莓派: "./嵌入式/树莓派.md"
+
+  - 操作系统:
+      Linux: "./操作系统/Linux.md"
+      FreeRTOS: "./操作系统/FreeRTOS.md"
+      bash_shell: "./操作系统/bash_shell.md"
+
+  - 计算机网络:
+      计算机网络: "./计算机网络/计算机网络.md"
+
+  - 计算机组成:
+      计算机组成与嵌入式系统笔记: "./计算机组成/计算机组成笔记.md"
+
+  - 计算机语言:
+      C+: "./计算机语言/C+.md"
+      C++: "./计算机语言/C++.md"
+      Python: "./计算机语言/Python.md"
+
+  - 数学类:
+      数模:
+        第一讲:距离优略分析法: "./数学类/数模/第一讲:距离优略分析法.md"
+      Matlab语法: "./数学类/Matlab语法.md"
+      Matlab仿真: "./数学类/Matlab仿真.md"
+
+theme:
+  name: material
+  palette:
+    # 亮色主题
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: yellow
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: 切换至暗色模式
+
+    # 暗色主题
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: 切换至亮色模式
+  loge: "images/electric_bolt.png"
+  favicon: "images/catching_pokem.png"
+# 可用的主题色：
+# red, pink, purple, deep purple, indigo, blue, light blue,
+# cyan, teal, green, light green, lime, yellow, amber,
+# orange, deep orange, brown, grey, blue grey
