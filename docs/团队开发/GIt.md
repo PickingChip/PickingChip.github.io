@@ -1,30 +1,30 @@
 
 
-### Git：
+## Git：
 
-Git简介：
+### Git简介：
 
-​	为什么用Git？使用Git有很多好处，虽然刚开始你只会觉得麻烦（好吧至少我是这样），但是母庸质疑熟练掌握后会给你的日常工作与团队合作带来巨大便利。让我们看看涛哥怎么讲：[为什么要用Git](https://flowus.cn/deadline039/share/6b386014-3c9a-45b0-afd2-8ae472510ea0)
+​	什么是Git？为什么用Git？使用Git有很多好处，让我们看看涛哥怎么讲：[为什么要用Git](https://flowus.cn/deadline039/share/6b386014-3c9a-45b0-afd2-8ae472510ea0)。虽然刚开始你只会觉得麻烦（好吧至少我是这样），但是母庸质疑熟练掌握后会给你的日常工作与团队合作带来巨大便利。
 
 官方Git指南：[Git](https://git-scm.com/book/zh/v2)
 
-Git常用用法
+### Git常用用法：
 
-- Git 创建仓库
+- #### Git 创建仓库
 
 ```bash
-git init [directory]
-git clone  [directory]       #可以选择不同协议（SSH,GIT,HTTP)
+git init [directory]		#在本地创建一个Git仓库
+git clone  [directory]       #将现存的远程仓库克隆到本地，可以选择不同协议（SSH,GIT,HTTP)
 ```
 
-- Git 基本配置指令
+- #### Git 基本配置指令
 
 ```bash
 git config --global user.name '你的用户名'
 git config --global user.email '你的邮箱'	#配置用户名和邮箱地址方便远程提交
 ```
 
-- Git工作常用命令
+- #### Git三连
 
 ```bash
 git add 文件名
@@ -32,107 +32,87 @@ git add 文件名
 #后跟‘.’表示将所有文件提交缓存，跟‘.c’表示将所有.c文件提交 
 
 git commit -m'提交说明'
-#将项目提交本地仓库，-m选项用来在后面添加提交说明
-       
+#将项目提交本地仓库，-m选项用来在后面添加提交说明，-am可以用来跳过add这一步
+
+git push origin
+#将本地仓库提交到远程仓库，第一次要自行设置远程仓库，之后就可以用origin代指远程仓库的地址
 ```
 
+- #### Git状态查看
 
-
-```
-    - 4.**
-
-    - 5. **git status**：查看文件的状态命令
-
-    - 6.**git diff**：查看更新的详细信息命令
-
-    执行 git diff 来查看更新的详细信息，与git status不同的是，git status只显示更新的状态，而 git diff 可以显示已写入缓存与已修改但尚未写入缓存的改动的区别具体的详细信息。
-
-    尚未缓存的改动：git diff
-
-    查看已缓存的改动： git diff --cached
-
-    查看已缓存的与未缓存的所有改动：git diff HEAD
-
-    显示摘要而非整个 diff：git diff --stat
-
-    - 7.**git commit**：提交命令
-
-    ```Plain Text
-git commit -m "第一次版本提交"
-//在后面加-m选项，以在命令行中提供提交注释
-git commit -am "第一次版本提交"
-//想跳过add这一步可以直接使用 -a选项
-- 8.**git reset HEAD**：取消缓存命令
-
-git reset HEAD 命令用于取消已缓存的内容，如我们要取消已提交的test.txt文件，可以如下使用：
-
-```Plain Text
+```bash
+ git status				#查看仓库当前状态，如果有缓存和未提交的文件会有提示。
+ 
+ git diff				#用来查看更新的详细信息。
 ```
 
-git reset HEAD test.txt
+- 尚未缓存的改动：`git diff`
 
-```
-    - 9.**git rm**：删除命令
+- 查看已缓存的改动： `git diff --cached`
 
-    - 10.**git mv**：移动或重命名命令
+- 查看已缓存的与未缓存的所有改动：`git diff HEAD`
 
-      git mv 命令用于移动或重命名一个文件、目录、软连接，如要将一个test.txt文件重命名为newtest.txt，则可以使用如下命令：
+- 显示摘要而非整个 diff：`git diff --stat`
 
-    ```Plain Text
+- #### Git文件操作
+
+```bash
+git reset HEAD <documents>			#取消缓存
+
+git rm							  #删除命令
+
+git mv							  #移动或重命名命令,命令用于移动或重命名一个文件、目录、软连接。
+
+#如要将一个test.txt文件重命名为newtest.txt，则可以使用如下命令：
+
 git mv test.txt newtest.txt
-- 11.**git checkout – <文件名>**放弃未暂存文件的修改命令
+
+git checkout <documents>		#放弃未暂存文件的修改命令
 ```
 
-- Git的分支管理
+- #### Git的分支管理
 
-  - **git branch**：查看分支命令
-  - **git branch (branchname)**：创建分支命令
-  - **git checkout (branchname)**：切换分支命令
-  - **git merge**：合并分支命令
-  - **git branch -d (branchname)**：删除分支命令
+```bash
+git branch				  #查看当前仓库所有分支，并会标记出当前分支
 
-- Git查看提交历史
+git branch (branchname)	   #创建分支
 
-  **git log** 命令查看
+git checkout (branchname)  #切换分支
 
-  –oneline ：查看历史记录的简洁版本
+git merge	(branchname)   #合并分支命令,将目标分支合并到当前分支上
 
-  –graph ：查看历史中什么时候出现了分支、合并
+git branch -d (branchname)	#删除分支命令
+```
 
-  –reverse ：逆向显示所有日志
+- #### Git查看提交历史
 
-  –author ：查找指定用户的提交日志
+```bash
+git log					#命令查看
+```
 
-  –since、–before、 --until、–after： 指定筛选日期
+- –oneline ：查看历史记录的简洁版本
+- –graph ：查看历史中什么时候出现了分支、合并
+- –reverse ：逆向显示所有日志
 
-  –no-merges ：选项以隐藏合并提交
+- –author ：查找指定用户的提交日志
 
-- Git 远程仓库
+- –since、–before、 --until、–after： 指定筛选日期
 
-  - **git remote add**：添加远程仓库
-  - **git remote**：查看当前的远程仓库
-  - **git fetch**、**git pull**：提取远程仓仓库
-  - **git push**：推送到远程仓库
-  - **git remote rm**：删除远程仓库
+- –no-merges ：选项以隐藏合并提交
 
-常用命令：
+- #### Git 远程仓库
 
-​		创建设置仓库
+```bash
+git remote add  <website>	 #添加远程仓库
 
-​		提交/查看版本
+git remote					#查看当前的远程仓库
 
-​		分支管理
+git fetch					#提取远程仓库的所有更新
 
-​		远程仓库
+git pull  <website>			 #提取远程仓仓库,并合并
 
-​	vscode上的Git
+git push					#推送到远程仓库
 
-Github:
+git remote rm				#删除远程仓库
+```
 
-​	获取开源资料	
-
-​	远程仓库创建
-
-​	远程仓库操作
-
-​	
