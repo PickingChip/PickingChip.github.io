@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://pickingchip.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/C%E5%BA%93%E5%87%BD%E6%95%B0/">
       
       
+        <link rel="prev" href="../C%2B/">
+      
+      
+        <link rel="next" href="../C%2B%2B/">
       
       
       <link rel="icon" href="../../images/catching_pokem.png">
@@ -878,17 +882,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -902,7 +908,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             计算机语言
@@ -934,6 +940,294 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    C库函数
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    C库函数
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stringh" class="md-nav__link">
+    <span class="md-ellipsis">
+      一，字符串函数（引用"string.h"）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1strcpy_sstrncpy_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.strcpy_s/strncpy_s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2strlen" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.strlen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3strcat_sstrncat_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.strcat_s/strncat_s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4sprintf_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.sprintf_s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5gets_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.gets_s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6strtok_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.strtok_s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7strcmpstrncmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.strcmp/strncmp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8strchrstrrchr" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.strchr/strrchr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9strspnstrcspn" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.strspn/strcspn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10strstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.strstr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二，文件流函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二，文件流函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1scanf_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.scanf_s
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2fopen_sfclose" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.fopen_s/fclose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3fgetcfgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.fgetc/fgets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4fputcfputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.fputc/fputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5ftell" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.ftell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6rewind" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.rewind
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7fseek" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.fseek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8fscanf" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.fscanf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9fprinf" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.fprinf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10ferror" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.ferror
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11feof" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.feof
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12clearerr" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.clearerr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13freadfwrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.fread/fwrite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -942,6 +1236,27 @@
   
   <span class="md-ellipsis">
     C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qt
   </span>
   
 
@@ -1170,81 +1485,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#2strlen" class="md-nav__link">
     <span class="md-ellipsis">
       2.strlen
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
     </span>
   </a>
   
@@ -1260,81 +1503,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#4sprintf_s" class="md-nav__link">
     <span class="md-ellipsis">
       4.sprintf_s
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
     </span>
   </a>
   
@@ -1350,90 +1521,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#6strtok_s" class="md-nav__link">
     <span class="md-ellipsis">
       6.strtok_s
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
     </span>
   </a>
   
@@ -1449,90 +1539,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_26" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_27" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_28" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_29" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#8strchrstrrchr" class="md-nav__link">
     <span class="md-ellipsis">
       8.strchr/strrchr
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_30" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_31" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_32" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_33" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_34" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
     </span>
   </a>
   
@@ -1548,51 +1557,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_35" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_36" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_37" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_38" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_39" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#10strstr" class="md-nav__link">
     <span class="md-ellipsis">
       10.strstr
@@ -1602,52 +1566,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_40" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_41" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_42" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_43" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_44" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_45" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       二，文件流函数
     </span>
@@ -1675,99 +1594,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_46" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_47" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_48" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_49" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_50" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#3fgetcfgets" class="md-nav__link">
     <span class="md-ellipsis">
       3.fgetc/fgets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_51" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_52" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_53" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_54" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_55" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
     </span>
   </a>
   
@@ -1783,90 +1612,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_56" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_57" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_58" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_59" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#5ftell" class="md-nav__link">
     <span class="md-ellipsis">
       5.ftell
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_60" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_61" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_62" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_63" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_64" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
     </span>
   </a>
   
@@ -1882,81 +1630,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_65" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_66" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_67" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_68" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#7fseek" class="md-nav__link">
     <span class="md-ellipsis">
       7.fseek
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_69" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_70" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_71" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_72" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
     </span>
   </a>
   
@@ -1972,108 +1648,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_73" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_74" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_75" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_76" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_77" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#9fprinf" class="md-nav__link">
     <span class="md-ellipsis">
       9.fprinf
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_78" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_79" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_80" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_81" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_82" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_83" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
     </span>
   </a>
   
@@ -2089,99 +1666,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_84" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_85" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_86" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_87" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_88" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#11feof" class="md-nav__link">
     <span class="md-ellipsis">
       11.feof
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_89" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_90" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_91" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_92" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_93" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
     </span>
   </a>
   
@@ -2197,105 +1684,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_94" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_95" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_96" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_97" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#13freadfwrite" class="md-nav__link">
     <span class="md-ellipsis">
       13.fread/fwrite
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_98" class="md-nav__link">
-    <span class="md-ellipsis">
-      描述
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="描述">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ps" class="md-nav__link">
-    <span class="md-ellipsis">
-      ps.这两个函数是以二进制的形式读写，不像上面的函数适用于所有流，仅适用于文件的读写。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_99" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_100" class="md-nav__link">
-    <span class="md-ellipsis">
-      参数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_101" class="md-nav__link">
-    <span class="md-ellipsis">
-      返回值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_102" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例
     </span>
   </a>
   
@@ -2326,108 +1717,108 @@
 
 <h2 id="stringh">一，字符串函数（引用"string.h"）</h2>
 <h2 id="1strcpy_sstrncpy_s"><strong>1.strcpy_s/strncpy_s</strong></h2>
-<h2 id="_1">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>char *strcpy(char *dest, const char *src)</strong> 把 <strong>src</strong> 所指向的字符串复制到 <strong>dest</strong>。</p>
 <p>需要注意的是如果目标数组 dest 不够大，而源字符串的长度又太长，可能会造成缓冲溢出的情况。</p>
 <p>因此C11标准制定了<strong>strcpy_s</strong>函数，该函数增加了一个形参要求指定目标字符串大小。</p>
 <p>strncpy多一个参数(size_t n)用于指定复制字符的个数。</p>
-<h2 id="_2">声明</h2>
+<p>声明</p>
 <pre><code>char *strcpy(char *dest, const char *src)
 
 errno_t strcpy_s(char* dest, rsize_t destsz, const char* src);
 
 char *strncpy(char *dest, const char *src, size_t n)
 </code></pre>
-<h2 id="_3">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>dest</strong> -- 指向用于存储复制内容的目标数组。</li>
 <li><strong>src</strong> -- 要复制的字符串。</li>
 <li><strong>destsz</strong>--目标数组的大小</li>
 <li><strong>n</strong>--要复制的字符数</li>
 </ul>
-<h2 id="_4">返回值</h2>
+<p>返回值</p>
 <p>strcpy函数返回一个指向最终的目标字符串 dest 的指针。</p>
 <p>strcpy_s函数如果函数成功执行，<code>strcpy_s()</code> 将返回 <code>0</code>。如果出现错误，例如目标缓冲区太小，它将返回一个非零的错误代码。</p>
 <h2 id="2strlen"><strong>2.strlen</strong></h2>
-<h2 id="_5">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>size_t strlen(const char *str)</strong> 计算字符串 <strong>str</strong> 的长度，直到空结束字符，但不包括空结束字符。</p>
-<h2 id="_6">声明</h2>
+<p>声明</p>
 <p>下面是 strlen() 函数的声明。</p>
 <pre><code>size_t strlen(const char *str)
 </code></pre>
-<h2 id="_7">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>str</strong> -- 要计算长度的字符串。</li>
 </ul>
-<h2 id="_8">返回值</h2>
+<p>返回值</p>
 <p>该函数返回字符串的长度。</p>
 <h2 id="3strcat_sstrncat_s"><strong>3.strcat_s/strncat_s</strong></h2>
-<h2 id="_9">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>char *strcat(char *dest, const char *src)</strong> 把 <strong>src</strong> 所指向的字符串追加到 <strong>dest</strong> 所指向的字符串的结尾(覆盖dest结尾处的'\0')并添加'\0'。strncat指定追加src中的n个字符，strcat_s则要求指定dest的大小。</p>
-<h2 id="_10">声明</h2>
+<p>声明</p>
 <pre><code>char *strcat(char *dest, const char *src)
 
 char *strncat(char *dest, const char *src, size_t n)
 
 errno_t strcat_s(char *dest, size_t numberOfelement, const char *str);
 </code></pre>
-<h2 id="_11">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>dest</strong> -- 指向目标数组，该数组包含了一个 C 字符串，且足够容纳追加后的字符串。</li>
 <li><strong>src</strong> -- 指向要追加的字符串，该字符串不会覆盖目标字符串。</li>
 <li><strong>n</strong>--要 追加的字符个数。</li>
 <li><strong>numberOfelement</strong>--拼接后的字符串大小<strong>(strlen(src)+strlen(dst)+1)</strong></li>
 </ul>
-<h2 id="_12">返回值</h2>
+<p>返回值</p>
 <p>strcat函数返回一个指向最终的目标字符串 dest 的指针。</p>
 <p>strcat_s函数如果执行成功返回0，不成功返回非零值</p>
 <h2 id="4sprintf_s"><strong>4.sprintf_s</strong></h2>
-<h2 id="_13">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int sprintf(char *str, const char *format, ...)</strong> 发送格式化输出到 <strong>str</strong> 所指向的字符串。</p>
-<h2 id="_14">声明</h2>
+<p>声明</p>
 <pre><code>int sprintf(char *str, const char *format, ...)
 
 int sprintf_s(char *str， size_t sizeOfStr, const char *format,...);
 </code></pre>
-<h2 id="_15">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>str</strong> -- 这是指向一个字符数组的指针，该数组存储了 C 字符串。</li>
 <li><strong>format</strong> -- 这是字符串，包含了要被写入到字符串 str 的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化。</li>
 <li><strong>sizeofstr</strong>--str字符串大小</li>
 </ul>
-<h2 id="_16">返回值</h2>
+<p>返回值</p>
 <p>如果成功，则返回写入的字符总数，不包括字符串追加在字符串末尾的空字符。如果失败，则返回一个负数。</p>
 <h2 id="5gets_s"><strong>5.gets_s</strong></h2>
-<h2 id="_17">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>char *gets(char *str)</strong> 从标准输入 stdin 读取一行（读到换行符为止），并把它存储在 str 所指向的字符串中。当读取到换行符时，或者到达文件末尾时，它会停止，具体视情况而定。</p>
-<h2 id="_18">声明</h2>
+<p>声明</p>
 <pre><code>char *gets(char *str)
 char *gets_s(char *str,size_t sizeInCharacters)
 </code></pre>
-<h2 id="_19">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>str</strong> -- 这是指向一个字符数组的指针，该数组存储了 C 字符串。</li>
 <li><strong>sizeInCharacters</strong>--缓冲区大小</li>
 </ul>
-<h2 id="_20">返回值</h2>
+<p>返回值</p>
 <p>如果成功，该函数返回 str。如果发生错误或者到达文件末尾时还未读取任何字符，则返回 NULL。</p>
 <h2 id="6strtok_s"><strong>6.strtok_s</strong></h2>
-<h2 id="_21">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>char *strtok(char *str, const char *delim)</strong> 分解字符串 <strong>str</strong> 为一组字符串，<strong>delim</strong> 为分隔符。</p>
-<h2 id="_22">声明</h2>
+<p>声明</p>
 <pre><code>char *strtok(char *str, const char *delim)
 
 char *strtok_s(char *str, const char *delim，char** context)
 </code></pre>
-<h2 id="_23">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>str</strong> -- 要被分解成一组小字符串的字符串。</li>
 <li><strong>delim</strong> -- 包含分隔符的 C 字符串。</li>
 <li><strong>context</strong>--二级指针保存函数内部位置之间的上下文指针</li>
 </ul>
-<h2 id="_24">返回值</h2>
+<p>返回值</p>
 <p>该函数返回被分解的第一个子字符串，如果没有可检索的字符串，则返回一个空指针。如果想输出被分解的每一个字符串，则在接下来的调用中用NULL代替str的值，函数会在上一次输出的基础上继续执行。</p>
-<h2 id="_25">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了 strtok() 函数的用法。</p>
 <pre><code>  #include &lt;string.h&gt;
 #include &lt;stdio.h&gt;
@@ -2455,21 +1846,21 @@ int main () {
  website
 </code></pre>
 <h2 id="7strcmpstrncmp"><strong>7.strcmp/strncmp</strong></h2>
-<h2 id="_26">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int strcmp(const char *str1, const char *str2)</strong> 把 <strong>str1</strong> 所指向的字符串和 <strong>str2</strong> 所指向的字符串进行比较（<strong>按照ASCII码的大小比较</strong>最先有较大字符的字符串为大）。</p>
 <p><strong>strncmp()</strong> 是一个标准库函数，用于比较两个字符串的前 <strong>n</strong> 个字符是否相等。</p>
-<h2 id="_27">声明</h2>
+<p>声明</p>
 <pre><code>int strcmp(const char *str1, const char *str2)
 
 int strncmp(const char *str1, const char *str2, size_t n)
 </code></pre>
-<h2 id="_28">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>str1</strong> -- 要进行比较的第一个字符串。</li>
 <li><strong>str2</strong> -- 要进行比较的第二个字符串。</li>
 <li><strong>n</strong> -- 要比较的最大字符数。</li>
 </ul>
-<h2 id="_29">返回值</h2>
+<p>返回值</p>
 <p>该函数返回值如下：</p>
 <ul>
 <li>如果返回值小于 0，则表示 str1 小于 str2。</li>
@@ -2477,21 +1868,21 @@ int strncmp(const char *str1, const char *str2, size_t n)
 <li>如果返回值等于 0，则表示 str1 等于 str2。</li>
 </ul>
 <h2 id="8strchrstrrchr"><strong>8.strchr/strrchr</strong></h2>
-<h2 id="_30">描述</h2>
+<p>描述</p>
 <p>strchr() 用于查找字符串中的一个字符，并返回该字符在字符串中<strong>第一次</strong>出现的位置。</p>
 <p>strchrr()函数 用于查找在参数 <strong>str</strong> 所指向的字符串中搜索<strong>最后一次</strong>出现字符 <strong>c</strong>（一个无符号字符）的位置。</p>
-<h2 id="_31">声明</h2>
+<p>声明</p>
 <pre><code>char *strchr(const char *str, int c)
 char *strrchr(const char *str, int c)
 </code></pre>
-<h2 id="_32">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>str</strong> -- 要查找的字符串。</li>
 <li><strong>c</strong> -- 要查找的字符。</li>
 </ul>
-<h2 id="_33">返回值</h2>
+<p>返回值</p>
 <p>如果在字符串 str 中找到字符 c，则函数返回指向该字符的指针，如果未找到该字符则返回 NULL。</p>
-<h2 id="_34">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了 strrchr() 函数的用法。</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
@@ -2514,23 +1905,23 @@ int main ()
 <pre><code>|.| 之后的字符串是 - |.com|
 </code></pre>
 <h2 id="9strspnstrcspn"><strong>9.strspn/strcspn</strong></h2>
-<h2 id="_35">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>size_t strspn(const char *str1, const char *str2)</strong> 检索字符串 <strong>str1</strong> 中第一个不在字符串 <strong>str2</strong> 中出现的字符下标（实际就是返回两个字符串匹配的长度）。</p>
 <p>C 库函数 <strong>size_t strcspn(const char *str1, const char *str2)</strong> 检索字符串 <strong>str1</strong> 开头连续有几个字符都不含字符串 <strong>str2</strong> 中的字符。</p>
-<h2 id="_36">声明</h2>
+<p>声明</p>
 <pre><code>size_t strspn(const char *str1, const char *str2)
 
 size_t strcspn(const char *str1, const char *str2)
 </code></pre>
-<h2 id="_37">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>str1</strong> -- 要被检索的 C 字符串。</li>
 <li><strong>str2</strong> -- 该字符串包含了要在 str1 中进行匹配的字符列表。</li>
 </ul>
-<h2 id="_38">返回值</h2>
+<p>返回值</p>
 <p>strspn()函数返回 str1 中第一个不在字符串 str2 中出现的字符下标。</p>
 <p>strcspn()函数返回 str1 开头连续都不含字符串 str2 中字符的字符数。</p>
-<h2 id="_39">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了 strcspn() 函数的用法。</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
@@ -2553,20 +1944,20 @@ int main ()
 <pre><code>第一个匹配的字符是在 10
 </code></pre>
 <h2 id="10strstr"><strong>10.strstr</strong></h2>
-<h2 id="_40">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>char *strstr(const char *haystack, const char *needle)</strong> 在字符串 <strong>haystack</strong> 中查找第一次出现字符串 <strong>needle</strong> 的位置，不包含终止符 '\0'。</p>
-<h2 id="_41">声明</h2>
+<p>声明</p>
 <p>下面是 strstr() 函数的声明。</p>
 <pre><code>char *strstr(const char *haystack, const char *needle)
 </code></pre>
-<h2 id="_42">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>haystack</strong> -- 要被检索的 C 字符串。</li>
 <li><strong>needle</strong> -- 在 haystack 字符串内要搜索的小字符串。</li>
 </ul>
-<h2 id="_43">返回值</h2>
+<p>返回值</p>
 <p>该函数返回在 haystack 中第一次出现 needle 字符串的位置，如果未找到则返回 null。</p>
-<h2 id="_44">实例</h2>
+<p>实例</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 
@@ -2586,7 +1977,7 @@ int main()
 <p>让我们编译并运行上面的程序，这将产生以下结果：</p>
 <pre><code>子字符串是： NOOB
 </code></pre>
-<h1 id="_45">二，文件流函数</h1>
+<h1 id="_1">二，文件流函数</h1>
 <p>关于文件和及其函数的相关概念可参考以下文章：</p>
 <p><a href="https://blog.csdn.net/challenglistic/article/details/127524074">C语言文件流(字节流) IO 操作(二) —— 初识“流”以及文件的顺序读写（fgetc / fgets / fscanf / fread ）_c语言流-CSDN博客</a></p>
 <p><a href="https://blog.csdn.net/Jacky_Feng/article/details/109247048">【C语言】计算机中的流和文件概述（文件的概念及打开关闭）_计算机中流-CSDN博客</a></p>
@@ -2595,18 +1986,18 @@ int main()
 <pre><code>scanf_s(&quot;%s&quot;, arr1, sizeof(arr1));
 </code></pre>
 <h2 id="2fopen_sfclose"><strong>2.fopen_s/fclose</strong></h2>
-<h2 id="_46">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>FILE *fopen(const char *filename, const char *mode)</strong> 使用给定的模式 <strong>mode</strong> 打开 <strong>filename</strong> 所指向的文件。</p>
 <p>C 库函数 <strong>int fclose(FILE *stream)</strong> 关闭流 stream。<strong>刷新所有的缓冲区</strong>。</p>
 <p><strong>ps.C语言在操作文件时会为文件在内存里创建文件缓存区，以提高磁盘的读写效率，因此每一次操作完文件时应调用fclose函数来清除缓存区，否则将会慢慢耗尽系统资源。</strong></p>
-<h2 id="_47">声明</h2>
+<p>声明</p>
 <pre><code>FILE *fopen(const char *filename, const char *mode)
 
 errno_t fopen_s(FILE** pFile,const char *filename,const char *mode);
 
 int fclose(FILE *stream)
 </code></pre>
-<h2 id="_48">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>filename</strong> -- 字符串，表示要打开的文件名称。</li>
 <li><strong>mode</strong> -- 字符串，表示文件的访问模式，可以是以下表格中的值：</li>
@@ -2647,10 +2038,10 @@ int fclose(FILE *stream)
 </tr>
 </tbody>
 </table>
-<h2 id="_49">返回值</h2>
+<p>返回值</p>
 <p>fopen函数返回一个 FILE 指针。否则返回 NULL，且设置<strong>全局变量 errno</strong> 来标识错误。</p>
 <p>如果流成功关闭，fclose函数返回零。如果失败，则返回 <strong>EOF</strong>。</p>
-<h2 id="_50">实例</h2>
+<p>实例</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt; 
 int main() 
@@ -2688,24 +2079,24 @@ int main ()
 }
 </code></pre>
 <h2 id="3fgetcfgets"><strong>3.fgetc/fgets</strong></h2>
-<h2 id="_51">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int fgetc(FILE *stream)</strong> 从指定的流 stream 获取下一个字符（一个无符号字符），并把位置标识符往前移动。</p>
 <p>C 库函数 <strong>char *fgets(char *str, int n, FILE *stream)</strong> 从指定的流 stream 读取一行，并把它存储在 <strong>str</strong> 所指向的字符串内。当读取 <strong>(n-1)</strong> 个字符时，或者读取到换行符时，或者到达文件末尾时，它会停止，具体视情况而定。</p>
-<h2 id="_52">声明</h2>
+<p>声明</p>
 <pre><code>int fgetc(FILE *stream)
 
 char *fgets(char *str, int n, FILE *stream)
 </code></pre>
-<h2 id="_53">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了要在上面执行操作的流。</li>
 <li><strong>str</strong> -- 这是指向一个字符数组的指针，该数组存储了要读取的字符串。</li>
 <li><strong>n</strong> -- 这是要读取的最大字符数（包括最后的空字符）。通常是使用以 str 传递的数组长度。</li>
 </ul>
-<h2 id="_54">返回值</h2>
+<p>返回值</p>
 <p>fgetc函数以无符号 char 强制转换为 int 的形式返回读取的字符，如果到达文件末尾或发生读错误，则返回 EOF。</p>
 <p>如果成功，fgets函数返回相同的 str 参数。如果到达文件末尾或者没有读取到任何字符，str 的内容保持不变，并返回一个空指针。如果发生错误，返回一个空指针。</p>
-<h2 id="_55">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了两个函数的用法。</p>
 <pre><code>#include &lt;stdio.h&gt;
 
@@ -2744,38 +2135,38 @@ int main ()
 We are in 2014
 </code></pre>
 <h2 id="4fputcfputs"><strong>4.fputc/fputs</strong></h2>
-<h2 id="_56">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int fputc(int char, FILE *stream)</strong> 把参数 <strong>char</strong> 指定的字符（一个无符号字符）写入到指定的流 stream 中，并把位置标识符往前移动。</p>
 <p>C 库函数 <strong>int fputs(const char *str, FILE *stream)</strong> 把字符串写入到指定的流 stream 中，但不包括空字符。</p>
-<h2 id="_57">声明</h2>
+<p>声明</p>
 <pre><code>int fputc(int char, FILE *stream)
 
 int fputs(const char *str, FILE *stream)
 </code></pre>
-<h2 id="_58">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>char</strong> -- 这是要被写入的字符。该字符以其对应的 int 值进行传递。</li>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了要被写入字符的流。</li>
 <li><strong>str</strong> -- 这是一个数组，包含了要写入的以空字符终止的字符序列。</li>
 </ul>
-<h2 id="_59">返回值</h2>
+<p>返回值</p>
 <p>fputc函数如果没有发生错误，则返回被写入的字符。如果发生错误，则返回 EOF，并设置错误标识符。</p>
 <p>fputs函数返回一个非负值，如果发生错误则返回 EOF。</p>
 <h2 id="5ftell"><strong>5.ftell</strong></h2>
-<h2 id="_60">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>long int ftell(FILE *stream)</strong> 返回给定流 stream 的当前文件位置。</p>
 <p>获取文件的当前指针位置相对于文件首地址的偏移字节数（可用该函数计算文件大小） 。</p>
-<h2 id="_61">声明</h2>
+<p>声明</p>
 <p>下面是 ftell() 函数的声明。</p>
 <pre><code>long int ftell(FILE *stream)
 </code></pre>
-<h2 id="_62">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 </ul>
-<h2 id="_63">返回值</h2>
+<p>返回值</p>
 <p>该函数返回位置标识符的当前值。如果发生错误，则返回 -1L，全局变量 errno 被设置为一个正值。</p>
-<h2 id="_64">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了 ftell() 函数计算文件大小的用法。</p>
 <pre><code>#include &lt;stdio.h&gt;
 
@@ -2807,26 +2198,26 @@ int main ()
 <pre><code>file.txt 的总大小 = 19 字节
 </code></pre>
 <h2 id="6rewind"><strong>6.rewind</strong></h2>
-<h2 id="_65">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>void rewind(FILE *stream)</strong> 设置文件位置为给定流 <strong>stream</strong> 的文件的开头。</p>
-<h2 id="_66">声明</h2>
+<p>声明</p>
 <p>下面是 rewind() 函数的声明。</p>
 <pre><code>void rewind(FILE *stream)
 </code></pre>
-<h2 id="_67">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 </ul>
-<h2 id="_68">返回值</h2>
+<p>返回值</p>
 <p>该函数不返回任何值。</p>
 <h2 id="7fseek"><strong>7.fseek</strong></h2>
-<h2 id="_69">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int fseek(FILE *stream, long int offset, int whence)</strong> 设置流 <strong>stream</strong> 的文件位置为给定的偏移 <strong>offset</strong>，参数 offset 意味着从给定的 <strong>whence</strong> 位置查找的字节数。</p>
-<h2 id="_70">声明</h2>
+<p>声明</p>
 <p>下面是 fseek() 函数的声明。</p>
 <pre><code>int fseek(FILE *stream, long int offset, int whence)
 </code></pre>
-<h2 id="_71">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 <li><strong>offset</strong> -- 这是相对 whence 的偏移量，以字节为单位。</li>
@@ -2854,23 +2245,23 @@ int main ()
 </tr>
 </tbody>
 </table>
-<h2 id="_72">返回值</h2>
+<p>返回值</p>
 <p>如果成功，则该函数返回零，否则返回非零值。</p>
 <h2 id="8fscanf">8.fscanf</h2>
-<h2 id="_73">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int fscanf(FILE *stream, const char *format, ...)</strong> 从流 stream 读取格式化输入。（将文件中的数据格式化输入到缓冲区）</p>
-<h2 id="_74">声明</h2>
+<p>声明</p>
 <p>下面是 fscanf() 函数的声明。</p>
 <pre><code>int fscanf(FILE *stream, const char *format, ...)
 </code></pre>
-<h2 id="_75">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 <li><strong>format</strong> -- 这是 C 字符串，包含了以下各项中的一个或多个：<em>空格字符、非空格字符</em> 和 <em>format 说明符</em>。</li>
 </ul>
-<h2 id="_76">返回值</h2>
+<p>返回值</p>
 <p>如果成功，该函数返回成功匹配和赋值的个数。如果到达文件末尾或发生读错误，则返回 EOF。</p>
-<h2 id="_77">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了 fscanf() 函数的用法。</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
@@ -2907,22 +2298,20 @@ Read Integer |2014|
 <p>ps.fscanf_s函数也要多一个参数指定变量位宽，</p>
 <p>详见：<a href="https://blog.csdn.net/apple_52109766/article/details/118084359">你真的会用C语言的fscanf_s吗_fscanf %s-CSDN博客</a></p>
 <h2 id="9fprinf"><strong>9.fprinf</strong></h2>
-<h2 id="_78">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int fprintf(FILE *stream, const char *format, ...)</strong> 发送格式化输出到流 stream 中。</p>
-<h2 id="_79">声明</h2>
+<p>声明</p>
 <p>下面是 fprintf() 函数的声明。</p>
 <pre><code>int fprintf(FILE *stream, const char *format, ...)
 </code></pre>
-<h2 id="_80">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 <li><strong>format</strong> -- 这是 C 字符串，包含了要被写入到流 stream 中的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化。</li>
 </ul>
-<h2 id="_81">返回值</h2>
+<p>返回值</p>
 <p>如果成功，则返回写入的字符总数，否则返回一个负数。</p>
-<h2 id="_82">实例</h2>
-<p>下面的实例演示了 fprintf() 函数的用法。</p>
-<h2 id="_83">实例</h2>
+<p>实例</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
@@ -2942,19 +2331,19 @@ int main()
 <pre><code>We are in 2014
 </code></pre>
 <h2 id="10ferror"><strong>10.ferror</strong></h2>
-<h2 id="_84">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int ferror(FILE *stream)</strong> 测试给定流 stream 的错误标识符。</p>
-<h2 id="_85">声明</h2>
+<p>声明</p>
 <p>下面是 ferror() 函数的声明。</p>
 <pre><code>int ferror(FILE *stream)
 </code></pre>
-<h2 id="_86">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 </ul>
-<h2 id="_87">返回值</h2>
+<p>返回值</p>
 <p>如果设置了与流关联的错误标识符，该函数返回一个非零值，否则返回一个零值。</p>
-<h2 id="_88">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了 ferror() 函数的用法。</p>
 <pre><code>#include &lt;stdio.h&gt;
 
@@ -2980,19 +2369,19 @@ int main()
 <pre><code>读取文件：file.txt 时发生错误
 </code></pre>
 <h2 id="11feof"><strong>11.feof</strong></h2>
-<h2 id="_89">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>int feof(FILE *stream)</strong> 测试给定流 stream 的文件结束标识符。</p>
-<h2 id="_90">声明</h2>
+<p>声明</p>
 <p>下面是 feof() 函数的声明。</p>
 <pre><code>int feof(FILE *stream)
 </code></pre>
-<h2 id="_91">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 </ul>
-<h2 id="_92">返回值</h2>
+<p>返回值</p>
 <p>当设置了与流关联的文件结束标识符时，该函数返回一个非零值，否则返回零。</p>
-<h2 id="_93">实例</h2>
+<p>实例</p>
 <p>下面的实例演示了 feof() 函数的用法。</p>
 <pre><code>#include &lt;stdio.h&gt;
 
@@ -3027,39 +2416,39 @@ int main ()
 <pre><code>这里是 runoob.com
 </code></pre>
 <h2 id="12clearerr"><strong>12.clearerr</strong></h2>
-<h2 id="_94">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>void clearerr(FILE *stream)</strong> 清除给定流 stream 的文件结束和错误标识符。</p>
-<h2 id="_95">声明</h2>
+<p>声明</p>
 <p>下面是 clearerr() 函数的声明。</p>
 <pre><code>void clearerr(FILE *stream)
 </code></pre>
-<h2 id="_96">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象标识了流。</li>
 </ul>
-<h2 id="_97">返回值</h2>
+<p>返回值</p>
 <p>这不会失败，且不会设置外部变量 errno，但是如果它检测到它的参数不是一个有效的流，则返回 -1，并设置 errno 为 EBADF。</p>
 <h2 id="13freadfwrite"><strong>13.fread</strong>/fwrite</h2>
-<h2 id="_98">描述</h2>
+<p>描述</p>
 <p>C 库函数 <strong>size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)</strong> 从给定流 <strong>stream</strong> 读取数据到 <strong>ptr</strong> 所指向的数组中。</p>
 <p>C 库函数 <strong>size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)</strong> 把 <strong>ptr</strong> 所指向的数组中的数据写入到给定流 <strong>stream</strong> 中。</p>
-<h5 id="ps"><strong>ps.这两个函数是以二进制的形式读写，不像上面的函数适用于所有流，仅适用于文件的读写。</strong></h5>
-<h2 id="_99">声明</h2>
+<p><strong>ps.这两个函数是以二进制的形式读写，不像上面的函数适用于所有流，仅适用于文件的读写。</strong></p>
+<p>声明</p>
 <pre><code>size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 
 size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
 </code></pre>
-<h2 id="_100">参数</h2>
+<p>参数</p>
 <ul>
 <li><strong>ptr</strong> -- 这是指向带有最小尺寸 <em>size*nmemb</em> 字节的内存块的指针。</li>
 <li><strong>size</strong> -- 这是要读取的每个元素的大小，以字节为单位。</li>
 <li><strong>nmemb</strong> -- 这是元素的个数，每个元素的大小为 size 字节。</li>
 <li><strong>stream</strong> -- 这是指向 FILE 对象的指针，该 FILE 对象指定了一个输入流。</li>
 </ul>
-<h2 id="_101">返回值</h2>
+<p>返回值</p>
 <p>fread读取的元素总数会以 size_t 对象返回，size_t 对象是一个整型数据类型。如果总数与 nmemb 参数不同，则可能发生了一个错误或者到达了文件末尾。</p>
 <p>fwrite函数返回一个 size_t 对象，表示元素的总数，该对象是一个整型数据类型。如果该数字与 nmemb 参数不同，则会显示一个错误。</p>
-<h2 id="_102">实例</h2>
+<p>实例</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 int main()
