@@ -1704,7 +1704,7 @@
 </blockquote>
 <h3 id="whats-raspberry-pi">What's Raspberry Pi?</h3>
 <p>树莓派是微型计算机，别看它只有一张信用卡大小，实际上它除了性能低其它和电脑没什么区别，能够轻松运行Linux炒作系统。同时它拥有着很强的拓展性，方便去手动探索了解计算机。树莓派是一个大的家族，下面有着许多系列和型号的版本，这里我仅介绍树莓派4B版本。(因为我只有这个😭)</p>
-<p><img src=".\Picture\树莓派型号参数.png" alt="树莓派型号参数"  /></p>
+<p><img alt="树莓派型号参数" src="../Picture/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9E%8B%E5%8F%B7%E5%8F%82%E6%95%B0.png" /></p>
 <h3 id="_2">开机必备：</h3>
 <ul>
 <li>树莓派开发板，最好要有散热不然会降频影响性能</li>
@@ -1717,29 +1717,29 @@
 <p>树莓派系统下载：<a href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit">官方地址</a></p>
 <p>下载好镜像后将其缓存在我们磁盘中任意位置都行，接着我们需要借助镜像烧录工具将系统文件烧录到TF卡之中，我们使用官方的镜像烧录工具：Raspberry Pi Imager（下面是官方下载地址）</p>
 <p>树莓派镜像烧录器：<a href="https://www.raspberrypi.com/software/">官方地址</a></p>
-<p><img src=".\Picture\树莓派镜像烧录1.png" alt="树莓派镜像烧录1"  /></p>
+<p><img alt="树莓派镜像烧录1" src="../Picture/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%95%9C%E5%83%8F%E7%83%A7%E5%BD%951.png" /></p>
 <p>按NEXT之后，点击编辑设置，设置主机名，密码，和WIFI（不要用校园网，可以连热点或者实验室的路由器）</p>
-<p><img src=".\Picture\树莓派镜像烧录2.png" alt="树莓派镜像烧录2"  /></p>
+<p><img alt="树莓派镜像烧录2" src="../Picture/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%95%9C%E5%83%8F%E7%83%A7%E5%BD%952.png" /></p>
 <p>点击第二个菜单栏SERVICES把ssh服务打开然后开始烧录，这个过程可能会要10分钟左右的时间烧录完成后即可把TF卡插入树莓派，然后就可以上电启动了。</p>
 <h3 id="_4">远程连接：</h3>
 <p>有屏幕的话，正常连接HDMI数据线接通电源树莓派就可以正常开机了（没屏幕的话插电也能开机但是你只能看见两个闪烁的LED灯）。</p>
 <p>开机后会自动连接到之前烧录时设置的网络上，如果像进行远程连接还需要知道树莓派的ip地址，在树莓派上连接键盘Ctrl+Alt+T打开终端输入ifconfig找到IP地址，记下来。</p>
-<p><img src=".\Picture\ip查询.PNG" alt="ip查询"  /></p>
+<p><img alt="ip查询" src="../Picture/ip%E6%9F%A5%E8%AF%A2.PNG" /></p>
 <p>然后可以选择以下方法连接：</p>
 <h4 id="putty">PuTTY连接：</h4>
 <p>PuTTY软件进行ssh连接但是仅有终端，自行在官网下载，下载后在如下界面输入树莓派ip即可连接</p>
-<p><img src=".\Picture\PuTTY连接.PNG" alt="PuTTY连接"  /></p>
+<p><img alt="PuTTY连接" src="../Picture/PuTTY%E8%BF%9E%E6%8E%A5.PNG" /></p>
 <p>然后accept它的警告后依次输入主机名（烧录时期的名字）和密码即可。</p>
 <h4 id="power-shell">Power shell连接:</h4>
 <p>打开power shell输入：</p>
 <pre><code class="language-powershell">ssh 主机名@ip
 </code></pre>
 <p>接着输入密码即可，如下图即可在powershell中使用树莓派终端</p>
-<p><img src=".\Picture\powershell连接.PNG" alt="powershell连接"  /></p>
+<p><img alt="powershell连接" src="../Picture/powershell%E8%BF%9E%E6%8E%A5.PNG" /></p>
 <h4 id="vnc">Vnc远程桌面连接：</h4>
 <p>下载地址：https://www.realvnc.com/en/connect/download/vnc/</p>
 <p>下载后在下图位置输入ip地址，然后在后面的对话框中依次输入主机名和密码即可</p>
-<p><img src=".\Picture\Vnc连接.PNG" alt="Vnc连接"  /></p>
+<p><img alt="Vnc连接" src="../Picture/Vnc%E8%BF%9E%E6%8E%A5.PNG" /></p>
 <p>有点卡不是很推荐</p>
 <h4 id="windowsmstsc">Windows自带的mstsc连接</h4>
 <p>开始菜单搜索mstsc，在程序中输入树莓派信息即可连接，推荐使用，清晰流畅（甚至可以调分辨率）还能访问计算机本地磁盘（虽然会比较慢）</p>
@@ -1824,13 +1824,13 @@ set brightness=80             # 亮度调节（数值在 0-100 之间，根据�
 <p>安装完成后执行下面命令打开选项栏进行基础配置</p>
 <pre><code class="language-shell">minicom -s
 </code></pre>
-<p><img src=".\Picture\minicom选项配置1.png" alt="minicom选项配置1" style="zoom: 67%;" /></p>
+<p><img alt="minicom选项配置1" src="../Picture/minicom%E9%80%89%E9%A1%B9%E9%85%8D%E7%BD%AE1.png" /></p>
 <p>选择第三个选项接口配置，然后按A添加要交流的串口挂载的路径（下图所示位置）</p>
-<p><img src=".\Picture\minicom操作2.png" alt="minicom操作2" style="zoom:50%;" /></p>
+<p><img alt="minicom操作2" src="../Picture/minicom%E6%93%8D%E4%BD%9C2.png" /></p>
 <p>然后enter, ESC返回上一界面接着选择<code>Save setup as dfl</code>选项来保存配置</p>
 <p>（如果保存失败，使用sudo来执行<code>minicom -s</code>）、</p>
 <p>如果配置成功就会进入如下界面</p>
-<p><img src=".\Picture\minicom3.png" alt="minicom3" style="zoom: 50%;" /></p>
+<p><img alt="minicom3" src="../Picture/minicom3.png" /></p>
 <p>常见操作：</p>
 <ul>
 <li>crtl+A-&gt;x 退出minicom</li>
@@ -1906,7 +1906,7 @@ pip config unset global.indexl-url  #pip删除源
 </code></pre>
 <h3 id="_7">引脚拓展：</h3>
 <p>树莓派4B上有40个IO引脚：</p>
-<p><img src=".\Picture\树莓派引脚定义.png" alt="树莓派引脚定义" style="zoom: 80%;" /></p>
+<p><img alt="树莓派引脚定义" src="../Picture/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89.png" /></p>
 <p><a href="https://www.cnblogs.com/vamei/p/6751992.html">树莓派的GPIO编程 - Vamei - 博客园</a></p>
 
 
