@@ -1,6 +1,6 @@
-## 一，字符串函数（引用"string.h"）
+# 一，字符串函数（引用"string.h"）
 
-## **1.strcpy_s/strncpy_s**
+### **1.strcpy_s/strncpy_s**
 
 描述
 
@@ -35,7 +35,7 @@ strcpy函数返回一个指向最终的目标字符串 dest 的指针。
 
 strcpy_s函数如果函数成功执行，`strcpy_s()` 将返回 `0`。如果出现错误，例如目标缓冲区太小，它将返回一个非零的错误代码。
 
-## **2.strlen**
+### **2.strlen**
 
 描述
 
@@ -57,7 +57,7 @@ size_t strlen(const char *str)
 
 该函数返回字符串的长度。
 
-## **3.strcat_s/strncat_s**
+### **3.strcat_s/strncat_s**
 
 描述
 
@@ -86,7 +86,7 @@ strcat函数返回一个指向最终的目标字符串 dest 的指针。
 
 strcat_s函数如果执行成功返回0，不成功返回非零值
 
-## **4.sprintf_s**
+### **4.sprintf_s**
 
 描述
 
@@ -110,7 +110,7 @@ int sprintf_s(char *str， size_t sizeOfStr, const char *format,...);
 
 如果成功，则返回写入的字符总数，不包括字符串追加在字符串末尾的空字符。如果失败，则返回一个负数。
 
-## **5.gets_s**
+### **5.gets_s**
 
 描述
 
@@ -132,7 +132,7 @@ char *gets_s(char *str,size_t sizeInCharacters)
 
 如果成功，该函数返回 str。如果发生错误或者到达文件末尾时还未读取任何字符，则返回 NULL。
 
-## **6.strtok_s**
+### **6.strtok_s**
 
 描述
 
@@ -187,7 +187,7 @@ This is
  website
 ```
 
-## **7.strcmp/strncmp**
+### **7.strcmp/strncmp**
 
 描述
 
@@ -217,7 +217,7 @@ int strncmp(const char *str1, const char *str2, size_t n)
 - 如果返回值大于 0，则表示 str1 大于 str2。
 - 如果返回值等于 0，则表示 str1 等于 str2。
 
-## **8.strchr/strrchr**
+### **8.strchr/strrchr**
 
 描述
 
@@ -270,7 +270,7 @@ int main ()
 |.| 之后的字符串是 - |.com|
 ```
 
-## **9.strspn/strcspn**
+### **9.strspn/strcspn**
 
 描述
 
@@ -326,7 +326,7 @@ int main ()
 第一个匹配的字符是在 10
 ```
 
-## **10.strstr**
+### **10.strstr**
 
 描述
 
@@ -1023,3 +1023,8 @@ int main()
 This is runoob
 ```
 
+
+
+[muslC库代码](https://musl.libc.org/)
+
+[glibcC库代码](https://www.gnu.org/software/libc/)

@@ -80,7 +80,7 @@ git branch (branchname)	   #创建分支
 
 git checkout (branchname)  #切换分支
 
-git merge	(branchname)   #合并分支命令,将目标分支合并到当前分支上
+git merge	(branchname)   #合并分支命令,将目标分支合并到当前分支上，如果存在冲突需要手动打开编辑器，处理冲突然后进行分支合并。
 
 git branch -d (branchname)	#删除分支命令
 ```
@@ -110,10 +110,17 @@ git remote					#查看当前的远程仓库
 
 git fetch					#提取远程仓库的所有更新
 
-git pull  <website>			 #提取远程仓仓库,并合并
+git pull  <website>			 #提取远程仓仓库,并自动合并
 
 git push					#推送到远程仓库
 
 git remote rm				#删除远程仓库
+```
+
+Git设置clash的代理：
+
+```shell
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy https://127.0.0.1:7890
 ```
 

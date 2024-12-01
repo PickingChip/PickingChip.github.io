@@ -96,8 +96,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Chips" class="md-header__button md-logo" aria-label="Chips" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../images/catching_pokem.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -229,8 +228,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Chips" class="md-nav__button md-logo" aria-label="Chips" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../images/catching_pokem.png" alt="logo">
 
     </a>
     Chips
@@ -1430,13 +1428,13 @@ fck为串口接入的系统时钟频率（2，3，4，5为PCLK1，1为PCLK2）</
 <p>3.应答信号：发送器每传输一字节数据（8个时钟脉冲）就会在第九个时钟脉冲期间释放对数据总线的控制（此时总线默认回到高电平状态）等待接收器给一个应答信号，如果接受器在第九个时钟脉冲期间将数据总线拉低，就说明接受器已经成功接收到上一个字节的数据（有效应答），否则数据总线则为高电位证明没有接受到上一字节的数据（无效应答）。</p>
 <p>两根总线在最开始状态均为高电位，有起始信号后电位开始改变，数据传输过程中数据总线上电位的改变总是在时间总线低电位期间改变，高电位期间维持稳定（防止产生起始/终止信号）</p>
 <p>通信过程：主机在发送起始信号后会发送一段由<strong>从机地址+0/1（写/读操作）</strong>组成的8bit数据，之后只有对应地址的从机会响应主机进行通讯</p>
-<p><img alt="image-20240914133302184.png" src="https://tc-cdn.flowus.cn/oss/b27b249f-ee7d-4739-b2dd-fe66d0079827/image-20240914133302184.png?time=1732074300&amp;token=a02b92917781c6fdfc6e22f549545e2b533ffb238ff09483a28c2c34c01d2a8f&amp;role=sharePaid" /></p>
-<p><img alt="image-20240914133324252.png" src="https://tc-cdn.flowus.cn/oss/d555d652-0d6b-445e-8933-7b88ed54d188/image-20240914133324252.png?time=1732074300&amp;token=ddd902c86ff46a04a075d857a21e7b0e1d385edf466741e4dc298df752def844&amp;role=sharePaid" /></p>
+<p><img alt="IIC1" src="../Picture/IIC1.png" /></p>
+<p><img alt="IIC2" src="../Picture/IIC2.png" /></p>
 <h3 id="3spiserial-peripheral-interface">3.SPI（Serial Peripheral interface ）通信：</h3>
 <p>概括：SPI通信需要3+n(从机个数)条总线，仅支持一主多从，传输方式有单双工，半双工，全双工三种方式。</p>
 <p>工作原理：</p>
 <p>主机和从机都有一个串行移位寄存器，主机通过向它的 SPI 串行寄存器写入一个字节来发起一次传输。串行移位寄存器通过 MOSI 信号线将字节传送给从机，从机也将自己的串行移位寄存器中的内容通过 MISO 信号线返回给主机。这样，两个移位寄存器中的内容就被交换。外设的写操作和读操作是同步完成的。如果只是进行写操作，主机只需忽略接收到的字节。反之，若主机要读取从机的一个字节，就必须发送一个空字节引发从机传输。</p>
-<p><img alt="image-20240914140614195.png" src="https://tc-cdn.flowus.cn/oss/ffefecfe-50bb-4a69-a786-bdafb18c8a46/image-20240914140614195.png?time=1732074300&amp;token=62671bca77aa99358abc5e8492994e6af54f8cd0edb9035256db64bb4483534a&amp;role=sharePaid" /></p>
+<p><img alt="SPI1" src="../Picture/SPI1.png" /></p>
 <p>引脚：</p>
 <ol>
 <li>MISO（Master In / Slave Out）主设备数据输入，从设备数据输出。</li>
@@ -1453,7 +1451,7 @@ fck为串口接入的系统时钟频率（2，3，4，5为PCLK1，1为PCLK2）</
 <p><a href="https://www.bilibili.com/video/BV1vu4m1F7Gt/?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1vu4m1F7Gt/?spm<em>id</em>from=333.999.0.0</a></p>
 <p>CAN（Controller Area Network ）通信协议<strong>利用差分信号进行半双工异步通信</strong>，支持多主多从。分为高速CAN通信（节点挂在一个回环电路上电路两端各需要一个120欧的电阻，最大传输速率为1Mbps，最远40m），低速CAN通信（挂载在两根线上，每根线上需要一个2.2千欧的电阻，最远可达10KM，速率低于5Kbps）。每一个节点分为CAN控制器和CAN收发器组成，控制器通过GPIO引出CAN<em>TX和CAN</em>RX与收发器连接，收发器与总线相连。</p>
 <p>CAN控制器的结构：</p>
-<p><img alt="image-20240921130315299.png" src="https://tc-cdn.flowus.cn/oss/e4aa1eb6-cd0a-46f7-b453-90e8ebe66380/image-20240921130315299.png?time=1732074300&amp;token=c201349206a76c5ee9eedc08a894774159844bd15b7d50c4504f3473da67690b&amp;role=sharePaid" /></p>
+<p><img alt="CAN1" src="../Picture/CAN1.png" /></p>
 <p>过滤器：</p>
 <p>过滤器有两个32位的核心寄存器，根据不同的配置方法有四种模式：</p>
 <ul>
@@ -1467,11 +1465,11 @@ fck为串口接入的系统时钟频率（2，3，4，5为PCLK1，1为PCLK2）</
 <p>接收邮箱：</p>
 <p>接收邮箱相当于接收缓存（两个队列），当读取速度小于接受速度时起作用，每一个过滤器都可以配置将过滤后的报文发送到哪个邮箱队列（0或者1），读取时按照先进显出的规则进行，同时队列满时你可以配置是将后续接收到的报文丢弃还是将队列最后一个报文替换。</p>
 <p>三种调试模式：</p>
-<p><img alt="image-20240921124159077.png" src="https://tc-cdn.flowus.cn/oss/7c5fa370-d90d-4685-8c67-78d71e6479a4/image-20240921124159077.png?time=1732074300&amp;token=c5cc13a8042370f0fdebd377be23f168e4dde6ee6bec80ed9eec5a95bd979a53&amp;role=sharePaid" /></p>
+<p><img alt="CAN2" src="../Picture/CAN2.png" /></p>
 <p>三种工作模式：</p>
-<p><img alt="image-20240921124306983.png" src="https://tc-cdn.flowus.cn/oss/9bb9e625-b71b-49eb-a06a-49331ed8e070/image-20240921124306983.png?time=1732074300&amp;token=c286843c25444117cf168f2933a96ecce2c0cd5664078d42d74f90b2296afcc4&amp;role=sharePaid" /></p>
+<p><img alt="CAN3" src="../Picture/CAN3.png" /></p>
 <p>CAN也可以申请中断：</p>
-<p><img alt="image-20240921124901399.png" src="https://tc-cdn.flowus.cn/oss/a07da4ba-e36c-402d-9fd8-f5f639d0b898/image-20240921124901399.png?time=1732074300&amp;token=10ffafe93e9db74034e84ad2896e3b5847d7a88df1c9cd18ec2cb3bc477cd7c4&amp;role=sharePaid" /></p>
+<p><img alt="CAN4" src="../Picture/CAN4.png" /></p>
 
 
 

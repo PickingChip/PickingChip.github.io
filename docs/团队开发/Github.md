@@ -1,6 +1,6 @@
 ### What's  GitHub?
 
-<img src=".\Picture\git-github.png" alt="git-github" style="zoom: 33%;" />
+![git-github](.\Picture\git-github.png)
 
 我们知道Git作为版本控制程序能够创建本地仓库并连接远程仓库，本地仓库在我们的个人电脑上，而远程仓库就托管在GitHub上。GitHub是全球最大的开源代码托管平台，在平台上创建开源仓库完全免费，上面有着来自全球优秀程序员的开源项目，是互联网精神的具象化的产物。作为全球最大的程序员社交平台，它于2018年被微软收购，如果硬要说缺点的话那就是国内需要科学上网才能稳定访问。
 
