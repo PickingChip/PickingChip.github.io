@@ -1,8 +1,4 @@
-## Linux的一些些总结
-
 > **一切皆文件**
-
-[Linux命令搜索引擎](https://wangchujiang.com/linux-command/list.html)
 
 ### Linux介绍：
 
@@ -22,6 +18,12 @@ Linux操作系统最初由林纳斯
 - /home目录就是用户的个人目录，所有用户的个人目录在这。
 - /temp目录存放临时文件
 - /usr目录曾经是用户目录但是后来被/home取代，现在存放的是系统文件。
+
+### 常用命令：
+
+在Linux操作系统中绝大多数任务都是通过命令行来执行的，因此命令行的学习是Linux学习中很重要的一部分。
+
+命令行查询网站：[Linux命令搜索引擎](https://wangchujiang.com/linux-command/list.html)
 
 ### 基础概念：
 
@@ -147,10 +149,6 @@ alias -p查看别名
 
 alias 命令=“别名”
 
-
-
-
-
 #### 压缩&解压缩
 
 .Z Unix上的上古压缩格式
@@ -198,9 +196,6 @@ apt remove 卸载已安装的软件
 GUI的方法 可以在软件和更新里更改
 
 CLI方法 可以在 /etc/apt/sources.list 文件中添加
-
-### 常用命令：
-
 
 
 

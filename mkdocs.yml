@@ -10,15 +10,15 @@ nav:
   - Home: "index.md"
   - About: About.md
   - 基础知识:
-      个人电脑硬件简介: "./基础知识/1.电脑硬件配置简介.md"
+      PC硬件简介: "./基础知识/1.电脑硬件配置简介.md"
       Windows系统: "./基础知识/2.Windows操作简介.md"
       从终端开始的系统结构探秘: "./基础知识/3.从终端开始的系统结构探秘.md"
-      编程世界里的尚方宝剑: "./基础知识/4.编程世界里的尚方宝剑.md"
+      编程世界里的尚方宝剑IDE: "./基础知识/4.编程世界里的尚方宝剑.md"
 
   - 团队开发:
       Git: "./团队开发/Git.md"
       GitHub: "./团队开发/GitHub.md"
-      # md语法: "./团队开发/md语法.md"
+      Markdown: "./团队开发/Markdown.md"
 
   - 嵌入式:
       Stm32:
@@ -37,11 +37,11 @@ nav:
       bash_shell: "./操作系统/bash_shell.md"
 
   - 计算机组成:
-      计算机基本结构: "./计算机组成/计算机基本结构.md"
-      指令集系统结构: "./计算机组成/指令集系统结构.md"
-      输入输出结构: "./计算机组成/输入输出结构.md"
-      重要的软件部分: "./计算机组成/软件.md"
-      存储器系统: "./计算机组成/存储器系统.md"
+      1.计算机基本结构: "./计算机组成/计算机基本结构.md"
+      2.指令集系统结构: "./计算机组成/指令集系统结构.md"
+      3.输入输出结构: "./计算机组成/输入输出结构.md"
+      4.重要的软件部分: "./计算机组成/软件.md"
+      5.存储器系统: "./计算机组成/存储器系统.md"
 
   - 计算机网络:
       计算机网络: "./计算机网络/计算机网络.md"
@@ -87,3 +87,27 @@ theme:
 # red, pink, purple, deep purple, indigo, blue, light blue,
 # cyan, teal, green, light green, lime, yellow, amber,
 # orange, deep orange, brown, grey, blue grey
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - admonition #MkDocs 警告框
+  - footnotes #脚注
+  - meta #自定义文章元数据
+  - pymdownx.caret #下划线
+  - pymdownx.mark #文本高亮
+  - pymdownx.tilde #删除线
+  - mdx_truly_sane_lists
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

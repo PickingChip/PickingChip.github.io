@@ -1,4 +1,4 @@
-# 一，字符串函数（引用"string.h"）
+## 一，字符串函数（引用"string.h"）
 
 ### **1.strcpy_s/strncpy_s**
 
@@ -375,7 +375,7 @@ int main()
 子字符串是： NOOB
 ```
 
-# 二，文件流函数
+## 二，文件流函数
 
 关于文件和及其函数的相关概念可参考以下文章：
 
@@ -383,7 +383,7 @@ int main()
 
 [【C语言】计算机中的流和文件概述（文件的概念及打开关闭）_计算机中流-CSDN博客](https://blog.csdn.net/Jacky_Feng/article/details/109247048)
 
-## **1.scanf_s**
+### **1.scanf_s**
 
 需要的参数比scanf()多一个，需要指定输入变量的大小，例如：
 
@@ -393,7 +393,7 @@ scanf_s("%s", arr1, sizeof(arr1));
 
 
 
-## **2.fopen_s/fclose**
+### **2.fopen_s/fclose**
 
 描述
 
@@ -481,7 +481,7 @@ int main ()
 }
 ```
 
-## **3.fgetc/fgets**
+### **3.fgetc/fgets**
 
 描述
 
@@ -554,7 +554,7 @@ We are in 2014
 We are in 2014
 ```
 
-## **4.fputc/fputs**
+### **4.fputc/fputs**
 
 描述
 
@@ -582,7 +582,7 @@ fputc函数如果没有发生错误，则返回被写入的字符。如果发生
 
 fputs函数返回一个非负值，如果发生错误则返回 EOF。
 
-## **5.ftell**
+### **5.ftell**
 
 描述
 
@@ -647,7 +647,7 @@ This is runoob.com
 file.txt 的总大小 = 19 字节
 ```
 
-## **6.rewind**
+### **6.rewind**
 
 描述
 
@@ -669,7 +669,7 @@ void rewind(FILE *stream)
 
 该函数不返回任何值。
 
-## **7.fseek**
+### **7.fseek**
 
 描述
 
@@ -699,7 +699,7 @@ int fseek(FILE *stream, long int offset, int whence)
 
 如果成功，则该函数返回零，否则返回非零值。
 
-## 8.fscanf
+### 8.fscanf
 
 描述
 
@@ -767,7 +767,7 @@ ps.fscanf_s函数也要多一个参数指定变量位宽，
 
 详见：[你真的会用C语言的fscanf_s吗_fscanf %s-CSDN博客](https://blog.csdn.net/apple_52109766/article/details/118084359)
 
-## **9.fprinf**
+### **9.fprinf**
 
 描述
 
@@ -815,7 +815,7 @@ int main()
 We are in 2014
 ```
 
-## **10.ferror**
+### **10.ferror**
 
 描述
 
@@ -869,7 +869,7 @@ int main()
 读取文件：file.txt 时发生错误
 ```
 
-## **11.feof**
+### **11.feof**
 
 描述
 
@@ -935,7 +935,7 @@ int main ()
 这里是 runoob.com
 ```
 
-## **12.clearerr**
+### **12.clearerr**
 
 描述
 
@@ -957,7 +957,7 @@ void clearerr(FILE *stream)
 
 这不会失败，且不会设置外部变量 errno，但是如果它检测到它的参数不是一个有效的流，则返回 -1，并设置 errno 为 EBADF。
 
-## **13.fread**/fwrite
+### **13.fread**/fwrite
 
 描述
 

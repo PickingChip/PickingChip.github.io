@@ -1,11 +1,7 @@
+### 什么是Git？为什么用Git？
 
-
-## Git：
-
-### Git简介：
-
-​	什么是Git？为什么用Git？Git是一个分布式版本控制软件，是Linux之父为了维护Linux内核开发，花费整整十天时间开发出来的。使用Git有很多好处，它方便我们在对项目不断更改时记录不同的版本，同时也方便团队内部协作开发。让我们看看DDL怎么讲：[为什么要用Git](https://flowus.cn/deadline039/share/6b386014-3c9a-45b0-afd2-8ae472510ea0)。
-Git使用命令行进行操作，虽然刚开始你只会觉得麻烦（好吧至少我是这样），但是无庸质疑熟练掌握后会给你的日常工作与团队合作带来巨大便利。
+​	Git是一个分布式版本控制软件，是Linux之父为了维护Linux内核开发，花费整整十天时间开发出来的。使用Git有很多好处，它方便我们在对项目不断更改时记录不同的版本，同时也方便团队内部协作开发。让我们看看DDL怎么讲：[为什么要用Git](https://flowus.cn/deadline039/share/6b386014-3c9a-45b0-afd2-8ae472510ea0)。
+Git使用命令行进行操作，虽然在不熟悉的时候会觉得好麻烦（好吧至少我是这样），但是熟练掌握后会给你的日常工作与团队合作带来巨大便利。
 
 官方Git指南：[Git](https://git-scm.com/book/zh/v2)
 
@@ -104,9 +100,9 @@ git log					#命令查看
 - #### Git 远程仓库
 
 ```bash
-git remote add  <website>	 #添加远程仓库
+git remote add origin <website>	 #添加远程仓库
 
-git remote					#查看当前的远程仓库
+git remote					#查看当前的远程仓库 -v查看网址
 
 git fetch					#提取远程仓库的所有更新
 
