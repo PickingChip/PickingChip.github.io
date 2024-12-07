@@ -330,7 +330,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -393,7 +393,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -478,6 +478,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -920,7 +941,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -941,7 +962,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -962,7 +983,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -983,7 +1004,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1004,7 +1025,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1345,35 +1366,35 @@
 <p>编写一个（C语言）程序不过光需要编写源文件，在编写完成之后还需要考虑，如何将文件转化成为计算机可以执行的二进制程序，这个过程需要经历预<strong>处理，编译，汇编，链接</strong>这四个过程才能得到可执行程序，这时就需要一套专门的程序来进行这个过程，而这一套过程所需要的全部程序就是我们这里讲工具链。也许在初学的时候你没有注意过需要这样的程序来为我们做这样的事（那是因为IDE为我们做好了大部分的事情），但是如果想要进一步深入就需要掌握工具链搭建的过程。</p>
 <h3 id="c">C语言的编译过程：</h3>
 <ul>
-<li>
-<p>预处理：将源文件中的宏展开，对条件编译部分进行处理，头文件插入源文件</p>
-</li>
-<li>
-<p>编译：将预处理过的源文件转换成为汇编文件</p>
-</li>
-<li>
-<p>汇编：将汇编文件转换成为由二进制组成的目标文件</p>
-</li>
-<li>
-<p>链接：将所有目标文件和库链接在一起生成可执行程序</p>
-</li>
+<li>预处理：将源文件中的宏展开，对条件编译部分进行处理，头文件插入源文件</li>
+</ul>
+<ul>
+<li>编译：将预处理过的源文件转换成为汇编文件</li>
+</ul>
+<ul>
+<li>汇编：将汇编文件转换成为由二进制组成的目标文件</li>
+</ul>
+<ul>
+<li>链接：将所有目标文件和库链接在一起生成可执行程序</li>
 </ul>
 <h3 id="_3">编译器</h3>
 <p>在上面所说的源文件转化的过程中，大部分任务是由编译器完成的，编译器是相当复杂的，常见的C语言编译器如下</p>
 <h4 id="pc">PC编译器：</h4>
 <ul>
-<li>GCC：</li>
-</ul>
+<li>
+<p>GCC：</p>
 <p>GCC(<strong>GNU Compiler Collection</strong>)是一个由GNU组织编写的开源的编译器，在最开始的时候它仅作为C语言编译器（所以它的原名是“GNU C Compiler”），后来逐渐支持多种语言（如C++、Go等）便改为现在的名字。它能支持多种操作系统，如Linux，Windows，Mac等。</p>
 <p>1.在Linux平台上获取GCC仅需要执行下面的命令：</p>
-<p><code>shell
-  sudo apt install build-essential</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential
+</code></pre></div>
 <p>2.在Windows平台上使用GCC需要下载MinGW（<em>Minimalist</em> GNU <em>for Windows</em>），然后将所下载文件夹中的<code>/bin</code>目录添加到环境变量当中，就可以在终端中使用gcc命令了。</p>
 <p>3.在Mac平台获取，没玩过我也不造啊。</p>
-<ul>
-<li>Clang：</li>
+</li>
 </ul>
-<p>Clang编译器是由苹果公司开发的，最开始的时候苹果公司也是使用GCC的，据说是苹果想要实现一些C语言的特性但是GNU的人不给苹果添加，于是苹果公司便开始研发自家的编译器，这才有了Clang（~~Only Apple can do~~），但是Clang也是开源的。</p>
+<ul>
+<li>
+<p>Clang：</p>
+<p>Clang编译器是由苹果公司开发的，最开始的时候苹果公司也是使用GCC的，据说是苹果想要实现一些C语言的特性但是GNU的人不给苹果添加，于是苹果公司便开始研发自家的编译器，这才有了Clang（<del>Only Apple can do</del>），但是Clang也是开源的。</p>
 <p>Clang编译器的前端是Clang，后端是LLVM（Low Level Virtual Machine）。这里解释一下编译器的前端和后端，可以理解为编译器的两个功能不同的组成部分。</p>
 <ul>
 <li>前端主要负责源码的语法检查，分析源文件生成抽象语法树，中间代码的生成（将抽象语法树转换为中间表示（IR），一种与机器无关的中间代码用于后端优化和目标代码的生成）</li>
@@ -1381,9 +1402,11 @@
 </ul>
 <p>Clang编译器在Github上开源：<a href="https://github.com/llvm/llvm-project/releases">Clang编译器获取</a>  </p>
 <p>如何配置：                              <a href="https://www.cnblogs.com/RioTian/p/17758813.html">在Windows下配置Clang编译器</a></p>
-<ul>
-<li>MSVC：</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>MSVC：</p>
 <p>MSVC(Microsoft Visual C++)是微软公司的C/C++开发工具，Windows原生环境不提供类似<strong>gcc</strong>，<strong>Clang</strong>的C/C++语言源程序编译运行工具链，它的编译器都是包含在集成开发环境里的（当然这不是开源的），可以通过下载Microsoft Visual Studio来获取。</p>
 <p>MSVC编译器工具链主要由cl.exe与link.exe构成。其中：</p>
 <ol>
@@ -1396,6 +1419,8 @@
 <li>用户只需要调用cl.exe，即可完成编译-链接全过程。</li>
 </ol>
 <p>如何使用：<a href="https://learn.microsoft.com/zh-cn/cpp/build/reference/compiler-command-line-syntax?view=msvc-170&amp;viewFallbackFrom=vs-2019">MSVC 编译器命令行语法 | Microsoft Learn</a></p>
+</li>
+</ul>
 <h4 id="_4">嵌入式编译器：</h4>
 <p>因为编译器是要将源码转换成为机器码的，由于不同的处理器使用不同的指令集，因此相同的源码对于不同的处理器转换成的机器码也不相同。主流的PC计算机都是X86的处理器架构，而嵌入式设备则是arm架构，因此嵌入式开发使用的编译器和和上面介绍的编译器不同，主要由下面三种：</p>
 <ul>
@@ -1408,8 +1433,8 @@
 <p>GCC的使用方法：</p>
 <h3 id="makecmake">Make&amp;Cmake</h3>
 <p>简介：</p>
-<p>~~绝大多数写在单个文件的程序是没有价值的~~,有价值的程序通常是由许多源文件组成的大工程，当你编译这样的大工程时，如何使用编译器按照依赖关系依次编译源文件并链接就成了一个让人头疼的问题。这时候人们想到能不能有一个程序代替人去指挥编译器完成项目的编译，于是便有了<code>make</code>，人们只需要将需要编译的程序的依赖写到<code>makefile</code>这个文本文件当中（当然这是要遵循特定语法的），<code>make</code>便会根据这个文件去指挥编译生成可执行文件。</p>
-<p>然而对于大项目来说手动去编写<code>makefile</code>依旧是个麻烦的事情，同时对于相同的源文件在不同的平台上编译需要调用不同的编译器，如果每一次更改平台都需要重新编写<code>makefile</code>那实在是令人头疼。于是人们编写了<code>Cmake</code>程序根据不同平台生成<code>makefile</code>以供<code>make</code>调用（~~没错偷懒是人类进步的阶梯~~），当然<code>Cmake</code>生成<code>makefile</code>需要根据<code>makelist.txt</code>这个文本文件，但是这个文本文件又需要人去手动编写。是不是感觉有点套娃的意味？但是这样做并不是毫无意义，<code>makelist.txt</code>只需要编写一次就可以在不同的平台上使用，同时它使用了更高级的语法使得依赖关系的编写更加简洁有利于维护。</p>
+<p><del>绝大多数写在单个文件的程序是没有价值的</del>,有价值的程序通常是由许多源文件组成的大工程，当你编译这样的大工程时，如何使用编译器按照依赖关系依次编译源文件并链接就成了一个让人头疼的问题。这时候人们想到能不能有一个程序代替人去指挥编译器完成项目的编译，于是便有了<code>make</code>，人们只需要将需要编译的程序的依赖写到<code>makefile</code>这个文本文件当中（当然这是要遵循特定语法的），<code>make</code>便会根据这个文件去指挥编译生成可执行文件。</p>
+<p>然而对于大项目来说手动去编写<code>makefile</code>依旧是个麻烦的事情，同时对于相同的源文件在不同的平台上编译需要调用不同的编译器，如果每一次更改平台都需要重新编写<code>makefile</code>那实在是令人头疼。于是人们编写了<code>Cmake</code>程序根据不同平台生成<code>makefile</code>以供<code>make</code>调用（<del>没错偷懒是人类进步的阶梯</del>），当然<code>Cmake</code>生成<code>makefile</code>需要根据<code>makelist.txt</code>这个文本文件，但是这个文本文件又需要人去手动编写。是不是感觉有点套娃的意味？但是这样做并不是毫无意义，<code>makelist.txt</code>只需要编写一次就可以在不同的平台上使用，同时它使用了更高级的语法使得依赖关系的编写更加简洁有利于维护。</p>
 <p>make语法：</p>
 <p>Cmake语法：</p>
 <h3 id="_5">调试器：</h3>
@@ -1417,49 +1442,63 @@
 <p>GDB</p>
 <p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb.html/">GDB在线文档</a></p>
 <p>GNU symbolic debugger，一个符号式命令行调试器。所谓“符号式" (symbolic) ，意思是在执行程序时，可以使用在源代码中对变量和函数定义的名称，引用这些变量和函数。为了显示和翻译这些名称，调试器需要程序中变量类型和函数类型的相关信息，以及可执行文件中哪条命令对应到源文件中哪行代码的信息。这类信息以符号表（ symbol table ）的形式出现，当使用<code>- g</code> 选项进行编译和链接时，将生成符号表，符号表被包含在可执行文件中：</p>
-<pre><code class="language-shell">$ gcc -g gdb—example. c
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>gcc<span class="w"> </span>-g<span class="w"> </span>gdb—example.<span class="w"> </span>c
+</code></pre></div>
 <p>在由多个源文件组成的大型程序中，必须在编译每个模块时都使用<code>-g</code> 选项。</p>
 <p>在 shell 命令提示符中输人 gdb 命令就可以启动 GDB 。 GDB 支持许多命令行选项与参数：</p>
-<pre><code class="language-shell">$gdb [options] [executable_file [core_file | process_id]] 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">$gdb</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="o">[</span>executable_file<span class="w"> </span><span class="o">[</span>core_file<span class="w"> </span><span class="p">|</span><span class="w"> </span>process_id<span class="o">]]</span><span class="w"> </span>
+</code></pre></div>
 <p>命令解析：</p>
 <p>[options] :</p>
 <ul>
-<li>-verslon 、-v:</li>
-</ul>
+<li>
+<p>-verslon 、-v:</p>
 <p>GDB 在控制台上输出它的版本和版权信息，然后退出，不会启动任何调试过程。</p>
-<ul>
-<li>--quiet 、-silent:</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>--quiet 、-silent:</p>
 <p>GDB 启动一个交互式的调试过程，不显示版本和版权信息。</p>
-<ul>
-<li>--help 、 -h:</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>--help 、 -h:</p>
 <p>GDB 显示它的命令行语法，它简要地描述所有的选项，然后退出，不会启动任何调试过程。</p>
-<ul>
-<li>-args:</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>-args:</p>
 <p>使用 --args 选项，启动一个调试会话，将命令行参数传人到被 GDB 加载用来的调试程序中。</p>
 <p>在下例中， myprog 是被调试程序：</p>
-<p><code>shell
-  $ gdb --args myprog -d "$HOME" #这里的 -d和“$HOME”都是myprog的参数</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>gdb<span class="w"> </span>--args<span class="w"> </span>myprog<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1">#这里的 -d和“$HOME”都是myprog的参数</span>
+</code></pre></div>
 <p>一 args 选项后面必须紧接着被调试程序。该命令由被调试程序名称以及它的参数组成，参数的次序与不采用 GDB 调试而是正常执行该程序时的次序一样。 --args 必须是 GDB最后出现的选项。</p>
-<ul>
-<li>-symbols filename 、 -S filename:</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>-symbols filename 、 -S filename:</p>
 <p>如果调试符号表没有被包含在可执行文件中，可以使用-symbols 选项加载一个单独的符号表文件。 GDB 会从指定的文件中读取符号表信息。</p>
-<ul>
-<li>-exec fllename 、 -e  fllename:</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>-exec fllename 、 -e  fllename:</p>
 <p>指定要被调试的可执行文件。</p>
-<ul>
-<li>-se fllename:</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>-se fllename:</p>
 <p>所指定的文件是希望使用 GDB 测试的可执行文件，并包括了符号表。这个选项通常不是必须的，如果 GDB 命令行包含了一个文件名，并且该文件名并非任何选项的参数，那么 GDB 会将首个出现的文件名视为-se 选项的参数。</p>
+</li>
+</ul>
 <p>下面的命令将直接启动调试器，不显示启动信息：</p>
-<pre><code class="language-shell">$ gdb -silent #该命令没有指定要调试的文件，可使用file命令指定可执行文件
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>gdb<span class="w"> </span>-silent<span class="w"> </span><span class="c1">#该命令没有指定要调试的文件，可使用file命令指定可执行文件</span>
+</code></pre></div>
 <p>GDB的使用命令：</p>
 <ul>
 <li>l : list 列出程序源码，一般展示十行，将要执行的那一行在中间。</li>

@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -1000,7 +1021,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -1021,7 +1042,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -1042,7 +1063,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -1063,7 +1084,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1084,7 +1105,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1373,11 +1394,10 @@
 <p>通信协议</p>
 <h3 id="1">1.串口通信：</h3>
 <p>串口通信属于全双工串行通信，分为异步（无时钟线）和同步（有）两种通讯方式，F1开发板有五个串口1，2(usart)支持两种方式，剩下的（uart）仅支持异步通讯.</p>
-<p>如果选用异步通讯需要设置通讯双方的波特率一致，
-$$
-baud=fck/16∗USARTDIV
-$$
-- fck为串口接入的系统时钟频率（2，3，4，5为PCLK1，1为PCLK2）</p>
+<p>如果选用异步通讯需要设置通讯双方的波特率一致，大小为<code>baud=fck/16∗USARTDIV</code>。                           </p>
+<ul>
+<li>fck为串口接入的系统时钟频率（2，3，4，5为PCLK1，1为PCLK2）</li>
+</ul>
 <ul>
 <li>USARTDIV为寄存器设置的值</li>
 </ul>
@@ -1423,9 +1443,8 @@ $$
 <p>时钟相位CPHA有两种状态，CPHA=1/0时，数据传输过程中数据线上的数据在时钟脉冲的偶数/奇数边缘采样</p>
 <p>两者组合SPI就有了四种工作模式，同时一个数据帧是8位还是16位由SPI_CR1决定</p>
 <h3 id="4can">4.CAN通信协议</h3>
-<p>江科大CAN通信（讲的很清楚）：</p>
-<p><a href="https://www.bilibili.com/video/BV1vu4m1F7Gt/?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1vu4m1F7Gt/?spm<em>id</em>from=333.999.0.0</a></p>
-<p>CAN（Controller Area Network ）通信协议<strong>利用差分信号进行半双工异步通信</strong>，支持多主多从。分为高速CAN通信（节点挂在一个回环电路上电路两端各需要一个120欧的电阻，最大传输速率为1Mbps，最远40m），低速CAN通信（挂载在两根线上，每根线上需要一个2.2千欧的电阻，最远可达10KM，速率低于5Kbps）。每一个节点分为CAN控制器和CAN收发器组成，控制器通过GPIO引出CAN<em>TX和CAN</em>RX与收发器连接，收发器与总线相连。</p>
+<p>江科大CAN通信（讲的很清楚）：<a href="https://www.bilibili.com/video/BV1vu4m1F7Gt/?spm_id_from=333.999.0.0">江科CAN通信</a></p>
+<p>CAN（Controller Area Network ）通信协议<strong>利用差分信号进行半双工异步通信</strong>（差分信号抗干扰性强），支持多主多从。分为高速CAN通信（节点挂在一个回环电路上电路两端各需要一个120欧的电阻，最大传输速率为1Mbps，最远40m），低速CAN通信（挂载在两根线上，每根线上需要一个2.2千欧的电阻，最远可达10KM，速率低于5Kbps）。每一个节点分为CAN控制器和CAN收发器组成，控制器通过GPIO引出CAN<em>TX和CAN</em>RX与收发器连接，收发器与总线相连。</p>
 <p>CAN控制器的结构：</p>
 <p><img alt="CAN1" src="../Picture/CAN1.png" /></p>
 <p>过滤器：</p>

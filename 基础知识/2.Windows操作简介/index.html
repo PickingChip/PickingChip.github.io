@@ -336,7 +336,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -516,7 +516,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -601,6 +601,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -1043,7 +1064,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -1064,7 +1085,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -1085,7 +1106,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -1106,7 +1127,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1127,7 +1148,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1458,57 +1479,63 @@
 
   <h1>Windows系统</h1>
 
-<p>计算机的正常运作除了依托于硬件更离不开操作系统的调度，我们的个人计算机大多都使用Windows操作系统，它就像一扇让大家窥探计算机的窗户，让我们指挥计算机。这部分内容我们就来了解一下Windows。</p>
-<p><a href="https://www.bilibili.com/video/BV1vR4y1Q7iF/?spm_id_from=333.999.0.0">Windows11教学：计算机基础实战_哔哩哔哩_bilibili</a></p>
+<p>计算机的正常运作除了依托于硬件更离不开操作系统的调度，我们的个人计算机大多都使用Windows操作系统，它就像一扇计算机上的窗户，让我们通过它看到计算机的方方面面。这部分内容我们就来了解一下Windows操作系统的一些基础知识。</p>
+<p>推荐教学视频：<a href="https://www.bilibili.com/video/BV1vR4y1Q7iF/?spm_id_from=333.999.0.0">Windows11教学：计算机基础实战</a></p>
 <h3 id="_1"><strong>历史常识</strong></h3>
 <p>现在使用的Windows系统是以图形用户界面为基础研发的操作系统，而图形用户界面（GUI）最早由施乐（一家研发打印机的公司提出），后来被apple拿去优化做出了当时很惊艳的图形界面，再后来微软也根据这个做出了Windows系统。</p>
 <p>比较经典的windows系统：</p>
 <ul>
 <li>Windows XP    2001</li>
-<li>Windows 7     2009</li>
-<li>Windows 10    2015</li>
-<li>Windows 11    2021</li>
+<li>Windows 7      2009</li>
+<li>Windows 10     2015</li>
+<li>Windows 11      2021</li>
 </ul>
 <p><img alt="XP" src="../Picture/XP.jpg" /></p>
 <p>XP系统经典的蓝天白云绿草地😌</p>
 <h3 id="_2"><strong>环境变量</strong></h3>
-<p>从名字来看这玩意就是个变量，用于存放文件地址。每一个文件都有一个绝对路径，但是每台电脑的特定程序绝对路径可能都不一样，操作系统调用程序的时候就很麻烦。所以给一个“变量”去“赋值”，让这个变量去代表这个程序的绝对路径，这样一来就方便程序通过环境变量调用文件。这也就是为什么有的时候移动了程序的位置后程序就无法运行了，这就是因为程序的绝对路径已经发生改变，但是“变量”的值还没变所以程序在使用“变量”调用程序时就会找不到文件的位置，进而使程序无法正常运行。</p>
+<p>环境变量顾名思义就是个变量，用于存放特定程序的地址。每一个程序在计算机中存放的位置都有一个绝对路径，但是每台电脑的特定程序绝对路径可能都不一样，操作系统调用程序的时候就很麻烦。所以给一个“变量”去“赋值”，让这个变量去代表这个程序的绝对路径，这样一来就方便程序通过环境变量调用程序。这也就是为什么有的时候移动了程序的位置后程序就无法运行了，这就是因为程序的绝对路径已经发生改变，但是“变量”的值还没变所以程序在使用“变量”调用程序时就会找不到文件的位置，进而使程序无法正常运行。</p>
 <p>在Windows系统中，有两种环境变量：<strong>用户变量</strong>和<strong>系统变量</strong>。(环境变量没有区分大小写，例如path跟PATH是一样的。)</p>
 <p>两者的区别：</p>
 <ul>
 <li>系统变量对所有用户有效，用户变量只对当前用户有效。</li>
 <li>用户环境变量存储用户特定的配置信息，系统环境变量存储全局配置信息。</li>
-<li>用户环境变量只对当前用户有效，需要重新登录才能生效；系统环境变量对所有用户有效，修改会立即生效。</li>
-<li>用户变量的优先级比系统变量高，也就是说如果用户变量和系统变量同名时，用户变量会覆盖上系统变量。</li>
+<li>用户环境变量只对当前用户有效，需要重新登录才能生效（重新加载环境即可生效）；系统环境变量对所有用户有效，修改会立即生效。</li>
+<li><strong>用户变量的优先级比系统变量高</strong>，也就是说如果用户变量和系统变量同名时，用户变量会覆盖上系统变量。</li>
 <li>系统变量和用户变量都有path变量，但是它的值是用户变量中的值与系统变量中的值的叠加。 </li>
 </ul>
-<p>eg. %TEMP%这个环境变量表示的就是电脑存放临时文件的绝对路径，不管你的临时文件是存放在C盘还是D盘只要在文件资源管理器路径栏里输入%TEMP%，它就会跳转到你存放临时文件的位置。</p>
-<p>据对路径和相对路径：</p>
-<p>​   绝对路径：从根目录为起点到某一个目录的路径。</p>
-<p>​   相对路径：一个目录为起点到另外一个的目录的路径。</p>
-<p>例如：
-             ┍ A文件夹</p>
+<p>举例：</p>
+<p>%TEMP%这个环境变量表示的就是电脑存放临时文件的绝对路径，不管你的临时文件是存放在C盘还是D盘只要在文件资源管理器路径栏里输入%TEMP%，它就会跳转到你存放临时文件的位置。</p>
+<p>绝对路径和相对路径：</p>
+<ul>
+<li>​ 绝对路径：从根目录为起点到某一个目录的路径。</li>
+</ul>
+<ul>
+<li>​ 相对路径：一个目录为起点到另外一个的目录的路径。</li>
+</ul>
+<p>例如：</p>
+<p>​                    ┍ A文件夹</p>
 <p>​          C -|</p>
-<p>​             ┕ B文件夹</p>
-<p>绝对路径： C:\A文件夹</p>
-<p>相对路径（如果你在A文件夹时）： ..\B文件夹  （‘..\’向上一级意思）</p>
+<p>​                   ┕ B文件夹</p>
+<ul>
+<li>绝对路径： C:\A文件夹</li>
+</ul>
+<ul>
+<li>相对路径（如果你在A文件夹时）： ..\B文件夹  （‘..\’向上一级意思）</li>
+</ul>
 <h3 id="_3"><strong>注册表</strong></h3>
-<p>在说注册表之前先来讲一讲什么是INI文件</p>
-<p>INI文件是<code>Initialization file</code>的缩写，即为初始化文件，是Windows系统配置文件所采用的存储格式，统管Windows的各项配置。就是说你一个程序的需要的一些初始化参数都存放在这个文件里，程序在运行时会自动调用文件里的参数来完成初始化。</p>
+<p>INI文件:</p>
+<p>在说注册表之前先来讲一讲什么是INI文件，INI文件是<code>Initialization file</code>的缩写，即为初始化文件，是Windows系统配置文件所采用的存储格式，统管Windows的各项配置。就是说你一个程序的需要的一些初始化参数都存放在这个文件里，程序在运行时会自动调用文件里的参数来完成初始化。</p>
 <p>为什么要用INI文件？如果我们的程序没有任何配置文件时，这样的程序对外是全封闭的，一旦程序需要修改一些参数必须要修改程序代码本身并重新编译，这样很不好，所以要用INI文件，让程序出厂后还能根据需要进行必要的配置。</p>
-<p>但是这样的话每一个程序都会有一个对应的INI文件，程序一多就不方便管理，所以注册表就应运而生，用于存放各个程序的初始化参数。</p>
-<p><strong>因此注册表就是一个层次化的数据库，用于存储系统和应用程序的设置信息。</strong></p>
-<p>注册表的结构</p>
+<p>但是这样的话每一个程序都会有一个对应的INI文件，程序一多就不方便管理，所以注册表就应运而生，用于存放各个程序的初始化参数。<strong>因此注册表就是一个层次化的数据库，用于存储系统和应用程序的设置信息。</strong></p>
+<p>注册表的结构：</p>
 <p>注册表中，所有的数据都是通过一种树状结构以键和子键的方式组织起来的。每个键包含一组特定的信息，每个键的键名都是和它所包含的信息相关联的。</p>
 <p>键值由三部分组成： 名称、类型、数据。</p>
 <p>键值类型由常用的6种组成：</p>
 <ul>
-<li>
-<p>字符串值（REG_SZ）</p>
-</li>
-<li>
-<p>二进制值（REG_BINARY）</p>
-</li>
+<li>字符串值（REG_SZ）</li>
+</ul>
+<ul>
+<li>二进制值（REG_BINARY）</li>
 <li>32位值（4个字节）（REG_DWORD）</li>
 <li>64位值（5个字节）（REG_QWORD）</li>
 <li>多字符串值（REG_MULTI_SZ）</li>
@@ -1532,42 +1559,40 @@
 <p>常见运行库：</p>
 <ul>
 <li>Visual Basic Virtual Machine (5.1)</li>
-<li>
-<p>Visual Basic Virtual Machine (6.0)</p>
-</li>
-<li>
-<p>Microsoft C Runtime Library 2002</p>
-</li>
-<li>
-<p>Microsoft C Runtime Library 2003</p>
-</li>
-<li>
-<p>Microsoft Visual C++2005 SP1</p>
-</li>
-<li>
-<p>Microsoft Visual C++2008 SP1</p>
-</li>
-<li>
-<p>Microsoft Visual C++2010 SP1</p>
-</li>
-<li>
-<p>Microsoft Visual C++2012 UP4</p>
-</li>
-<li>
-<p>Microsoft Visual C++2013</p>
-</li>
-<li>
-<p>Microsoft Visual C++2019</p>
-</li>
-<li>
-<p>Mcr0 soft Visual C+2015-2022</p>
-</li>
-<li>
-<p>Microsoft Universal C Runtime</p>
-</li>
-<li>
-<p>Microsoft Visual Studio 2010 Tools For Office Runtime</p>
-</li>
+<li>Visual Basic Virtual Machine (6.0)</li>
+</ul>
+<ul>
+<li>Microsoft C Runtime Library 2002</li>
+</ul>
+<ul>
+<li>Microsoft C Runtime Library 2003</li>
+</ul>
+<ul>
+<li>Microsoft Visual C++2005 SP1</li>
+</ul>
+<ul>
+<li>Microsoft Visual C++2008 SP1</li>
+</ul>
+<ul>
+<li>Microsoft Visual C++2010 SP1</li>
+</ul>
+<ul>
+<li>Microsoft Visual C++2012 UP4</li>
+</ul>
+<ul>
+<li>Microsoft Visual C++2013</li>
+</ul>
+<ul>
+<li>Microsoft Visual C++2019</li>
+</ul>
+<ul>
+<li>Mcr0 soft Visual C+2015-2022</li>
+</ul>
+<ul>
+<li>Microsoft Universal C Runtime</li>
+</ul>
+<ul>
+<li>Microsoft Visual Studio 2010 Tools For Office Runtime</li>
 </ul>
 <p>如果打开程序时提醒你“缺少xxx.dll文件”就是缺少对应的运行库上网自行下载即可。</p>
 <p>运行库一般是DLL文件，  <strong>DLL(Dynamic Link Library)文件为动态链接库文件，又称“应用程序拓展”，是软件文件类型。</strong></p>
@@ -1612,11 +1637,9 @@ Windows.old文件夹是Windows中保存上一个Windows安装的所有文件的�
   SpaceSniffer</p>
 <h3 id="_8"><strong>重置系统和重做系统</strong></h3>
 <p><strong>（1）重置系统：</strong>
-            电脑文件太乱了，你想恢复出厂设置就可以重置系统，前提是你的电脑还可以正常开机。
-在设置系统恢复里设置，重置系统时只会对系统盘重置，可以选择保留个人文件（就是用户文件夹里的东西），还可以选在云下载（从官网上下载最新的系统）或者本地下载（还是下载当前版本），后面的设置如果选择删除所有驱动器那么你的电脑就会被彻底净化（所有盘都被清空）。</p>
+            电脑文件太乱了，你想恢复出厂设置就可以重置系统，前提是你的电脑还可以正常开机。在设置系统恢复里设置，重置系统时只会对系统盘重置，可以选择保留个人文件（就是用户文件夹里的东西），还可以选在云下载（从官网上下载最新的系统）或者本地下载（还是下载当前版本），后面的设置如果选择删除所有驱动器那么你的电脑就会被彻底净化（所有盘都被清空）。</p>
 <p><strong>（2）重做系统：</strong>
-            电脑蓝屏了，开不了机。
-            这就是用U盘重装系统，参考重装系统的做法就行了，开机时进入BIOS（BIOS 是计算机启动时加载的第一个软件，BIOS 的设置直接关系到电脑是否可以正常启动，并影响到之后的使用效率。Windows 操作系统，也是在 BIOS 的引导下进行工作的。） 切换U盘启动。</p>
+            电脑蓝屏了，开不了机。这时就需要用U盘重装系统，在U盘中烧录系统，开机时进入BIOS（BIOS 是计算机启动时加载的第一个软件，BIOS 的设置直接关系到电脑是否可以正常启动，并影响到之后的使用效率。Windows 操作系统，也是在 BIOS 的引导下进行工作的。） 切换U盘启动。</p>
 
 
 

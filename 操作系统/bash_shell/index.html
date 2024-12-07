@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -1040,7 +1061,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -1061,7 +1082,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -1082,7 +1103,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -1103,7 +1124,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1124,7 +1145,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1460,41 +1481,39 @@
 <p><a href="https://www.quanxiaoha.com/linux-command/linux-cron.html">Linux 定时任务（超详细） - 犬小哈教程</a></p>
 <p>vscode插件：</p>
 <ul>
-<li>
-<p>shellman</p>
-</li>
-<li>
-<p>shellcheck</p>
-</li>
+<li>shellman</li>
+</ul>
+<ul>
+<li>shellcheck</li>
 </ul>
 <h3 id="bash">bash基础：</h3>
 <h4 id="_1">基础概念：</h4>
 <p>bash脚本是一个命令行组成的文本文件，后缀为.sh，第一行固定为：<code>#!/bin/bash</code> ，这一行通常被称为<code>shebang</code>的标记（也称为哈希邦行），用于为脚本指定解释器，基本格式为<code>#!&lt;解释器路径&gt;</code>。</p>
 <p><strong>一些命令</strong>：</p>
-<pre><code class="language-shell">uname -a    #产看有关本机的设置
-date        #查看日期   
-which       #查找命令文件所在位置
-read        #再终端中读取一行
-free -h     #显示内存空间
-pwd         #显示当前终端所在目录位置
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uname<span class="w"> </span>-a<span class="w">    </span><span class="c1">#产看有关本机的设置</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>date<span class="w">        </span><span class="c1">#查看日期   </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>which<span class="w">       </span><span class="c1">#查找命令文件所在位置</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">read</span><span class="w">        </span><span class="c1">#再终端中读取一行</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>free<span class="w"> </span>-h<span class="w">     </span><span class="c1">#显示内存空间</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">pwd</span><span class="w">         </span><span class="c1">#显示当前终端所在目录位置</span>
+</code></pre></div>
 <p><strong>变量的用法：</strong></p>
-<pre><code class="language-shell">$var = value                #通过=号进行赋值
-$word = &quot;happy new year&quot;    #有空格用双引号或者单引号引起来
-$echo $var
-$echo '$var is 5'           #$var is 5 单引号不会显示变量的值
-$echo &quot;$var is 5&quot;           #value is 5 双引号会将变量替换为它的值
-$echo ${var}able            #${}将变量和文本区分防止混淆
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">$var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>value<span class="w">                </span><span class="c1">#通过=号进行赋值</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">$word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;happy new year&quot;</span><span class="w">    </span><span class="c1">#有空格用双引号或者单引号引起来</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">$echo</span><span class="w"> </span><span class="nv">$var</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nv">$echo</span><span class="w"> </span><span class="s1">&#39;$var is 5&#39;</span><span class="w">           </span><span class="c1">#$var is 5 单引号不会显示变量的值</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nv">$echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2"> is 5&quot;</span><span class="w">           </span><span class="c1">#value is 5 双引号会将变量替换为它的值</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nv">$echo</span><span class="w"> </span><span class="si">${</span><span class="nv">var</span><span class="si">}</span>able<span class="w">            </span><span class="c1">#${}将变量和文本区分防止混淆</span>
+</code></pre></div>
 <p>通过$(())语法来进行数值运算。在双括号中你可以放入整数的加减乘除表达式。Bash会对其中的内容进行数值运算，否则bash只会把表达式当作字符串。</p>
-<pre><code class="language-shell">$echo $((2 + (5*2)))    #12
-$echo 2+(5*2)           #2+(5*2)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">$echo</span><span class="w"> </span><span class="k">$((</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="m">5</span><span class="o">*</span><span class="m">2</span><span class="k">))</span><span class="o">)</span><span class="w">    </span><span class="c1">#12</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">$echo</span><span class="w"> </span><span class="m">2</span>+<span class="o">(</span><span class="m">5</span>*2<span class="o">)</span><span class="w">           </span><span class="c1">#2+(5*2)</span>
+</code></pre></div>
 <p>C程序主函数都有一个返回值，运行了程序后，可以通过$?变量来获知返回码。</p>
-<pre><code class="language-shell">$gcc foo.c
-$./a.out
-$echo $?
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">$gcc</span><span class="w"> </span>foo.c
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$./a.out
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nv">$echo</span><span class="w"> </span><span class="nv">$?</span>
+</code></pre></div>
 <p><strong>脚本的运行方式：</strong>    </p>
 <ul>
 <li><code>sh run_all.sh</code></li>
@@ -1512,153 +1531,148 @@ $echo $?
 <p>bash脚本通过<code>exit &lt;num&gt;</code>来提供返回值，同时脚本执行到这个命令时就会结束，脚本是否有返回值是可选的，没有返回值也能执行，但是如果想知道脚本在什么部分执行结束，就可以给不同的结束情况设置不同的返回值，然后在结束时访问$?来查看脚本结束的状态。</p>
 <h4 id="_2"><strong>脚本函数：</strong></h4>
 <p>脚本中也可以编写函数，格式如下：</p>
-<pre><code class="language-shell">function 函数名()
-{
-    命令1
-    命令2
-    命令3
-    .
-    .
-} #函数声明，关键字function也可以不加
-
-函数名 参数1 参数2 ... #函数调用，参数再函数内的调用也是使用$1,$2..变量
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">function</span><span class="w"> </span>函数名<span class="o">()</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>命令1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>命令2
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span>命令3
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span>.
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span>.
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="o">}</span><span class="w"> </span><span class="c1">#函数声明，关键字function也可以不加</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>函数名<span class="w"> </span>参数1<span class="w"> </span>参数2<span class="w"> </span>...<span class="w"> </span><span class="c1">#函数调用，参数再函数内的调用也是使用$1,$2..变量</span>
+</code></pre></div>
 <p>一个脚本中声明的函数也可以通过<code>source</code>命令被其它函数调用</p>
-<pre><code class="language-shell">#脚本一: cal.sh
-#!/bin/bash
-function sum()
-{
-    echo $(($1+$2))
-}
-echo &quot;计算完成&quot;
-
-#脚本二: main.sh
-#!/bin/bash
-source cal.sh #通过此命令可以调用其他脚本中定义的函数
-sum 1 2
-exti 0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#脚本一: cal.sh</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">#!/bin/bash</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">function</span><span class="w"> </span>sum<span class="o">()</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$((</span><span class="nv">$1</span><span class="o">+</span><span class="nv">$2</span><span class="k">))</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="o">}</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;计算完成&quot;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1">#脚本二: main.sh</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">#!/bin/bash</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nb">source</span><span class="w"> </span>cal.sh<span class="w"> </span><span class="c1">#通过此命令可以调用其他脚本中定义的函数</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>sum<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>exti<span class="w"> </span><span class="m">0</span>
+</code></pre></div>
 <h4 id="_3"><strong>逻辑判断:</strong></h4>
 <p>bash脚本中使用<code>test</code>命令来进行逻辑判断,用法如下:</p>
-<pre><code class="language-shell">test 逻辑表达式;echo $?
-#如果逻辑为假返回值为1,逻辑为真返回0.
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">test</span><span class="w"> </span>逻辑表达式<span class="p">;</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">#如果逻辑为假返回值为1,逻辑为真返回0.</span>
+</code></pre></div>
 <p>常见用法:</p>
-<pre><code class="language-shell">test 3 -gt 2; echo $?       #大于
-test 3 -lt 2; echo $?       #小于
-test 3 -eq 3; echo $?       #等于
-test 3 -ne 1; echo $?       #不等于
-test 5 -ge 2; echo $?       #大于等于
-test 3 -le 1; echo $?       #小于等于
-
-#检查字符串是否相等
-test abc = abx; echo $? 
-test abc != abx; echo $?
-
-#Bash还可以对文件的状态进行逻辑判断：
-
-test –e a.out; echo $?      #检查一个文件是否存在
-test –f file.txt; echo $?   #检查一个文件是否存在，而且是普通文件
-test –d myfiles; echo $?    #检查一个文件是否存在，而且是目录文件： 
-test –L a.out; echo $?      #检查一个文件是否存在，而且是软连接
-test –r file.txt; echo $?   #检查一个文件是否可读
-test –w file.txt; echo $?   #检查一个文件是否可写
-test –x file.txt; echo $?   #检查一个文件是否可执行 
-
-#逻辑符
-! expression                #逻辑非
-expression1 –a expression2  #逻辑与
-expression1 –o expression2  #逻辑或
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">test</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">       </span><span class="c1">#大于</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">test</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">       </span><span class="c1">#小于</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nb">test</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">       </span><span class="c1">#等于</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">test</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">       </span><span class="c1">#不等于</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">test</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>-ge<span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">       </span><span class="c1">#大于等于</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nb">test</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>-le<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">       </span><span class="c1">#小于等于</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1">#检查字符串是否相等</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="nb">test</span><span class="w"> </span><span class="nv">abc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>abx<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="nb">test</span><span class="w"> </span>abc<span class="w"> </span>!<span class="o">=</span><span class="w"> </span>abx<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="c1">#Bash还可以对文件的状态进行逻辑判断：</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="nb">test</span><span class="w"> </span>–e<span class="w"> </span>a.out<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">      </span><span class="c1">#检查一个文件是否存在</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="nb">test</span><span class="w"> </span>–f<span class="w"> </span>file.txt<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">   </span><span class="c1">#检查一个文件是否存在，而且是普通文件</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="nb">test</span><span class="w"> </span>–d<span class="w"> </span>myfiles<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">    </span><span class="c1">#检查一个文件是否存在，而且是目录文件： </span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nb">test</span><span class="w"> </span>–L<span class="w"> </span>a.out<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">      </span><span class="c1">#检查一个文件是否存在，而且是软连接</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="nb">test</span><span class="w"> </span>–r<span class="w"> </span>file.txt<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">   </span><span class="c1">#检查一个文件是否可读</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="nb">test</span><span class="w"> </span>–w<span class="w"> </span>file.txt<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">   </span><span class="c1">#检查一个文件是否可写</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="nb">test</span><span class="w"> </span>–x<span class="w"> </span>file.txt<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">   </span><span class="c1">#检查一个文件是否可执行 </span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="c1">#逻辑符</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>!<span class="w"> </span>expression<span class="w">                </span><span class="c1">#逻辑非</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>expression1<span class="w"> </span>–a<span class="w"> </span>expression2<span class="w">  </span><span class="c1">#逻辑与</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>expression1<span class="w"> </span>–o<span class="w"> </span>expression2<span class="w">  </span><span class="c1">#逻辑或</span>
+</code></pre></div>
 <h4 id="_4"><strong>选择结构:</strong></h4>
 <p>选择结构和C语言一样一般由if语句和case语句两种形式:</p>
 <p>if结构:</p>
-<pre><code class="language-shell">if[逻辑表达式]
-then
-    命令1
-    命令2
-elif[逻辑表达式]
-then
-    命令3
-    命令4
-else
-    命令5
-    命令6
-fi
-#逻辑表达式后面可以选择加;也可以不加
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span><span class="o">[</span>逻辑表达式<span class="o">]</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">then</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>命令1
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>命令2
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">elif</span><span class="o">[</span>逻辑表达式<span class="o">]</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">then</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span>命令3
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span>命令4
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">else</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span>命令5
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span>命令6
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="k">fi</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1">#逻辑表达式后面可以选择加;也可以不加</span>
+</code></pre></div>
 <p>case结构:</p>
-<pre><code class="language-shell">case $变量名 in
-文本1)
-命令....
-;;
-文本2)
-命令....
-;;
-*)
-exit 0
-;;
-esac
-
-#文本中还可以包含通配符
-* 任意文本 *) Xyz, 123, …
-? 任意一个字符 a?c) abc, axc, …
-[] 范围内一个字符 [1-5][b-d]) 2b, 3d, …
-上述例子中的最后一个文本就是通配符*，如果没有任何满足的文本
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">case</span><span class="w"> </span>$变量名<span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>文本1<span class="o">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>命令....
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">;;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>文本2<span class="o">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>命令....
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">;;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>*<span class="o">)</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">;;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="k">esac</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1">#文本中还可以包含通配符</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>*<span class="w"> </span>任意文本<span class="w"> </span>*<span class="o">)</span><span class="w"> </span>Xyz,<span class="w"> </span><span class="m">123</span>,<span class="w"> </span>…
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>?<span class="w"> </span>任意一个字符<span class="w"> </span>a?c<span class="o">)</span><span class="w"> </span>abc,<span class="w"> </span>axc,<span class="w"> </span>…
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="o">[]</span><span class="w"> </span>范围内一个字符<span class="w"> </span><span class="o">[</span><span class="m">1</span>-5<span class="o">][</span>b-d<span class="o">])</span><span class="w"> </span>2b,<span class="w"> </span>3d,<span class="w"> </span>…
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>上述例子中的最后一个文本就是通配符*，如果没有任何满足的文本
+</code></pre></div>
 <h4 id="_5"><strong>循环结构：</strong></h4>
 <p>可以使用<code>while</code>,<code>for</code>和<code>do..while</code>语句</p>
 <p>while语句：</p>
-<pre><code class="language-shell">while[逻辑表达式]    #当表达式为真的时候循环执行do和done之间的内容
-do
-    命令
-done
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">while</span><span class="o">[</span>逻辑表达式<span class="o">]</span><span class="w">    </span><span class="c1">#当表达式为真的时候循环执行do和done之间的内容</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">do</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span>命令
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">done</span>
+</code></pre></div>
 <p>for循环：</p>
-<pre><code class="language-shell">for 变量名 in 变量值1 变量值2 变量值3....
-do
-    命令
-done
-#变量会依次取值1，值2....每取一次值就执行一遍循环直到取尽所有值循环结束
-
-#for循环常搭配seq命令使用
-
-seq 1 2 10
-#从1开始以步长为2输出数字直到10
-
-eg.
-for number in `seq 1 1 100`
-do
-  total=$(( $total + $number ))
-done
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">for</span><span class="w"> </span>变量名<span class="w"> </span><span class="k">in</span><span class="w"> </span>变量值1<span class="w"> </span>变量值2<span class="w"> </span>变量值3....
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">do</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>命令
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">done</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1">#变量会依次取值1，值2....每取一次值就执行一遍循环直到取尽所有值循环结束</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1">#for循环常搭配seq命令使用</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>seq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1">#从1开始以步长为2输出数字直到10</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>eg.
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="k">for</span><span class="w"> </span>number<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">100</span><span class="sb">`</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="k">do</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">  </span><span class="nv">total</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span><span class="nv">$total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$number</span><span class="w"> </span><span class="k">))</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="k">done</span>
+</code></pre></div>
 <p>do while语句：</p>
-<pre><code class="language-shell">while :
-do
-  if [ $number -gt 100 ]
-  then
-    break
-  fi
-
-  total=$(( $total + $number ))
-  number=$(($number + 1))
-done
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">while</span><span class="w"> </span>:
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">do</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$number</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="k">then</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="k">break</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="k">fi</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="nv">total</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span><span class="nv">$total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$number</span><span class="w"> </span><span class="k">))</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="nv">number</span><span class="o">=</span><span class="k">$((</span><span class="nv">$number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">done</span>
+</code></pre></div>
 <h4 id="cron"><strong>cron任务：</strong></h4>
 <p>cron是Linux平台下一个用于定时执行任务的服务，使用crontab来管理任务，有一个crontab文件记录任务。</p>
-<pre><code class="language-shell">crontab -l  #查看当前用户的定时任务
-crontab -e  #打开一个文件，编辑定时任务，每行表示一个任务
-#格式： 分钟 小时 日期 月份 星期 命令或者脚本
-eg.
-0 3 * * * /path/to/your/script.sh
-#表示每天三点执行脚本的定时任务
-crontab -r  #删除当前用户所有定时任务
-
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>crontab<span class="w"> </span>-l<span class="w">  </span><span class="c1">#查看当前用户的定时任务</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>crontab<span class="w"> </span>-e<span class="w">  </span><span class="c1">#打开一个文件，编辑定时任务，每行表示一个任务</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1">#格式： 分钟 小时 日期 月份 星期 命令或者脚本</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>eg.
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/path/to/your/script.sh
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1">#表示每天三点执行脚本的定时任务</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>crontab<span class="w"> </span>-r<span class="w">  </span><span class="c1">#删除当前用户所有定时任务</span>
+</code></pre></div>
 <p><strong>定时任务时间格式说明</strong></p>
 <ul>
 <li><code>*</code>: 表示所有可能的值。例如，<code>* * * * *</code> 表示每分钟都运行一次。</li>

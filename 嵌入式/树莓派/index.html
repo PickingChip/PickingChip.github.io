@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -1142,7 +1163,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -1163,7 +1184,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -1184,7 +1205,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -1205,7 +1226,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1226,7 +1247,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1689,8 +1710,8 @@
 <p>然后accept它的警告后依次输入主机名（烧录时期的名字）和密码即可。</p>
 <h4 id="power-shell">Power shell连接:</h4>
 <p>打开power shell输入：</p>
-<pre><code class="language-powershell">ssh 主机名@ip
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ssh</span> <span class="n">主机名</span><span class="nv">@ip</span>
+</code></pre></div>
 <p>接着输入密码即可，如下图即可在powershell中使用树莓派终端</p>
 <p><img alt="powershell连接" src="../Picture/powershell%E8%BF%9E%E6%8E%A5.PNG" /></p>
 <h4 id="vnc">Vnc远程桌面连接：</h4>
@@ -1706,20 +1727,20 @@
 <p>Linux系统的下载工具<code>apt</code>默认的下载地址是国外的服务器这会导致下载速度非常慢，因此需要更换国内的镜像源。</p>
 <p>在<code>/etc/apt/</code>目录下打开source.list文件添加需要的镜像网站。·</p>
 <p>armch64架构设备更换清华源请在上述文件添加以下内容：</p>
-<pre><code class="language-shell"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-
-# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
-deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-# deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>deb<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/debian/<span class="w"> </span>bookworm<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free<span class="w"> </span>non-free-firmware
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>deb<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/debian/<span class="w"> </span>bookworm-updates<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free<span class="w"> </span>non-free-firmware
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>deb<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/debian/<span class="w"> </span>bookworm-backports<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free<span class="w"> </span>non-free-firmware
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>deb<span class="w"> </span>https://security.debian.org/debian-security<span class="w"> </span>bookworm-security<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free<span class="w"> </span>non-free-firmware
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+</code></pre></div>
 <p>参考网站：<a href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/">raspbian | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></p>
 <h4 id="csiusb">CSI摄像头和USB摄像头：</h4>
 <p><strong>CSI摄像头：</strong></p>
@@ -1728,59 +1749,58 @@ deb https://security.debian.org/debian-security bookworm-security main contrib n
 <p>在23年以后的系统中这一选项被移除，需要通过安装libcamera库来调用摄像头。</p>
 <p>libcamera能够支持的相机：<strong><em>OV5647 ，IMX219 ，IMX477 ，IMX708 ，IMX290, IMX327, OV9281, IMX378</em></strong></p>
 <p>安装<code>libcamera</code>：</p>
-<pre><code class="language-shell">sudo apt install libcamera-apps
-sudo apt install libcamera-tools
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libcamera-apps
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libcamera-tools
+</code></pre></div>
 <p>调用下面的命令来进行测试</p>
-<pre><code class="language-shell">libcamera-hello #从相机获取预览图象
-libcamera-still #视频捕获
-libcamera-jpeg -o test.jpg # 获取一张全分辨率的JPG图片
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>libcamera-hello<span class="w"> </span><span class="c1">#从相机获取预览图象</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>libcamera-still<span class="w"> </span><span class="c1">#视频捕获</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>libcamera-jpeg<span class="w"> </span>-o<span class="w"> </span>test.jpg<span class="w"> </span><span class="c1"># 获取一张全分辨率的JPG图片</span>
+</code></pre></div>
 <p>libcamera详细使用方法：<a href="https://www.cnblogs.com/uestc-mm/p/17442508.html">基于Raspberry 的 libcamera 使用 - 小淼博客 - 博客园</a></p>
 <p><strong>USB摄像头</strong>：</p>
 <p>检查摄像头是否连接：</p>
-<pre><code class="language-shell">ls -la /dev/vid*
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ls<span class="w"> </span>-la<span class="w"> </span>/dev/vid*
+</code></pre></div>
 <p>需要安装相关控制库:</p>
 <p>fswebcam是一个调用usb摄像头的控制库</p>
-<pre><code class="language-shell">sudo apt install fswebam    
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>fswebam<span class="w">    </span>
+</code></pre></div>
 <p>一般用法：</p>
-<pre><code class="language-shell">fswebcam -d 摄像头 -s延迟几秒拍摄 -r 分辨率 -q 文件路径
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>fswebcam<span class="w"> </span>-d<span class="w"> </span>摄像头<span class="w"> </span>-s延迟几秒拍摄<span class="w"> </span>-r<span class="w"> </span>分辨率<span class="w"> </span>-q<span class="w"> </span>文件路径
+</code></pre></div>
 <p>但是实测下来拍摄得到的照片很暗，可以调用配置文件来设置拍摄</p>
-<pre><code class="language-shell">fswebcam -c &lt;配置文件路径&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>fswebcam<span class="w"> </span>-c<span class="w"> </span>&lt;配置文件路径&gt;
+</code></pre></div>
 <p>需要自己编写配置文件</p>
-<pre><code class="language-shell">#配置文件fswebcam.conf
-device /dev/video0            # 摄像头设备
-resolution 1280x720           # 分辨率
-
-# 输出路径
-save /path/to/your/output.jpg # 将照片保存到指定路径
-
---no-banner                   #照片不显示标记
-delay 2                       #延时两秒
-skip 5                        #跳过开始的5帧防止摄像头不稳定
-frame 3                       #连续拍摄3帧选取质量最好的一帧
-# 调整亮度
-set brightness=80             # 亮度调节（数值在 0-100 之间，根据设备支持情况可能不同）
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">#配置文件fswebcam.conf</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>device<span class="w"> </span>/dev/video0<span class="w">            </span><span class="c1"># 摄像头设备</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>resolution<span class="w"> </span>1280x720<span class="w">           </span><span class="c1"># 分辨率</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># 输出路径</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>save<span class="w"> </span>/path/to/your/output.jpg<span class="w"> </span><span class="c1"># 将照片保存到指定路径</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>--no-banner<span class="w">                   </span><span class="c1">#照片不显示标记</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>delay<span class="w"> </span><span class="m">2</span><span class="w">                       </span><span class="c1">#延时两秒</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>skip<span class="w"> </span><span class="m">5</span><span class="w">                        </span><span class="c1">#跳过开始的5帧防止摄像头不稳定</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>frame<span class="w"> </span><span class="m">3</span><span class="w">                       </span><span class="c1">#连续拍摄3帧选取质量最好的一帧</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c1"># 调整亮度</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="nb">set</span><span class="w"> </span><span class="nv">brightness</span><span class="o">=</span><span class="m">80</span><span class="w">             </span><span class="c1"># 亮度调节（数值在 0-100 之间，根据设备支持情况可能不同）</span>
+</code></pre></div>
 <p>详细可以参阅：<a href="https://shumeipai.nxez.com/2020/08/23/raspberry-pi-fswebcam.html">树莓派上用 fswebcam + USB 摄像头拍摄 | 树莓派实验室</a></p>
 <p>guvcview是一个摄像头调试工具</p>
-<pre><code class="language-shell">sudo apt install guvcview
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>guvcview
+</code></pre></div>
 <p>设备插上摄像头之后执行下面命令就会运行程序的GUI调试界面</p>
-<pre><code>guvcview &amp;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>guvcview &amp;
+</code></pre></div>
 <h4 id="minicom">minicom:</h4>
 <p>这是一个Linux环境下的串口工具。</p>
-<pre><code class="language-shell">sudo apt install minicom
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>minicom
+</code></pre></div>
 <p>安装完成后执行下面命令打开选项栏进行基础配置</p>
-<pre><code class="language-shell">minicom -s
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>minicom<span class="w"> </span>-s
+</code></pre></div>
 <p><img alt="minicom选项配置1" src="../Picture/minicom%E9%80%89%E9%A1%B9%E9%85%8D%E7%BD%AE1.png" /></p>
 <p>选择第三个选项接口配置，然后按A添加要交流的串口挂载的路径（下图所示位置）</p>
 <p><img alt="minicom操作2" src="../Picture/minicom%E6%93%8D%E4%BD%9C2.png" /></p>
@@ -1796,71 +1816,71 @@ set brightness=80             # 亮度调节（数值在 0-100 之间，根据�
 <li>crtl+A-&gt;o     打开配置页面</li>
 </ul>
 <p>可以使用如下指令快速打开串口：</p>
-<pre><code class="language-shell">minicom -D /dev/ttyUSB0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>minicom<span class="w"> </span>-D<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
 <h4 id="sim7600x-4g">SIM7600X 4G模块配置：</h4>
 <p>第一步，将一张SIM卡插入模块背部的卡槽然后插入树莓派</p>
 <p>第二步，确定挂载的位置</p>
-<pre><code class="language-shell">ls /dev/ttyUSB*
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ls<span class="w"> </span>/dev/ttyUSB*
+</code></pre></div>
 <p>第三步，通过minicom发送指令初始化模块</p>
-<pre><code class="language-shell">sudo minicom -D /dev/ttyUSB0    #填自己设备挂载的位置，一般为ttyUSB0
-#使用minicom发送下面指令。
-AT+CUSBPIDSWITCH=9011,1,1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>minicom<span class="w"> </span>-D<span class="w"> </span>/dev/ttyUSB0<span class="w">    </span><span class="c1">#填自己设备挂载的位置，一般为ttyUSB0</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1">#使用minicom发送下面指令。</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>AT+CUSBPIDSWITCH<span class="o">=</span><span class="m">9011</span>,1,1
+</code></pre></div>
 <p>第四步，查询网卡,看所给信息中有没有usb0的网卡如果有表明激活成功。</p>
-<pre><code class="language-shell">ifconnfig -a
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ifconnfig<span class="w"> </span>-a
+</code></pre></div>
 <p>第五步，获取ip并将上网方式切换为无线网卡上网（插入网卡时如果已经联网那么不执行该命令树莓派不会使用网卡上网）</p>
-<pre><code class="language-shell">sudo dhclient -v usb0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>dhclient<span class="w"> </span>-v<span class="w"> </span>usb0
+</code></pre></div>
 <p>第六步，设置开机自动连接网卡。</p>
-<pre><code class="language-shell">sudo vim /etc/rc.local #打开开机配置脚本在倒数第二行添加下面内容
-
-sleep 18s &amp;&amp; sudo dhsclient -v usb0#开机会自动显示网卡ip
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/rc.local<span class="w"> </span><span class="c1">#打开开机配置脚本在倒数第二行添加下面内容</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>sleep<span class="w"> </span>18s<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>dhsclient<span class="w"> </span>-v<span class="w"> </span>usb0#开机会自动显示网卡ip
+</code></pre></div>
 <h4 id="conda">conda环境配置:</h4>
 <p>树莓派4B处理器架构为aarch64架构，能够使用aarch64版本的miniconda，但是<strong>4B不兼容miniconda3 4.10以上的版本</strong>。请先使用<code>uname -a</code>命令查看本机处理器架构。</p>
 <p>1.下载安装脚本：</p>
-<pre><code class="language-shell">wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.9.2-Linux-aarch64.sh #会将安装脚本下载在当前终端所在位置
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>wget<span class="w"> </span>https://repo.anaconda.com/miniconda/Miniconda3-py37_4.9.2-Linux-aarch64.sh<span class="w"> </span><span class="c1">#会将安装脚本下载在当前终端所在位置</span>
+</code></pre></div>
 <p>ps.这个版本适合<em>python3.7</em>，架构<em>aarch64</em> 的树莓派，可以在这个网站寻找想要的版本<a href="https://repo.anaconda.com/miniconda/">Index of /</a></p>
 <p>2.执行安装脚本</p>
-<pre><code class="language-shell">bash Miniconda3-py37_4.9.2-Linux-aarch64.sh
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>bash<span class="w"> </span>Miniconda3-py37_4.9.2-Linux-aarch64.sh
+</code></pre></div>
 <p>这条命令前加sudo会安装给root用户，如果不执行sudo则安装给当前用户，建议不用sudo</p>
 <p>3.根据提示安装完成后，添加conda的执行路径</p>
-<pre><code class="language-shell">vim ~/.bashrc   #打开这个文件在最后一行添加下面内容
-
-export PATH=&quot;/home/‘用户名’/miniconda3/bin:$PATH&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>vim<span class="w"> </span>~/.bashrc<span class="w">   </span><span class="c1">#打开这个文件在最后一行添加下面内容</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/‘用户名’/miniconda3/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</code></pre></div>
 <p>如果不能正常使用可能未初始化：</p>
-<pre><code class="language-shell">conda init bash #初始化 Conda 环境
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>conda<span class="w"> </span>init<span class="w"> </span>bash<span class="w"> </span><span class="c1">#初始化 Conda 环境</span>
+</code></pre></div>
 <p><strong>conda使用方法：</strong></p>
-<pre><code class="language-shell">conda create -n 虚拟环境名称 python=版本号   #创建虚拟环境
-conda activate 虚拟环境名称   #进入虚拟环境
-conda deactivate 退出当前虚拟环境   #推出虚拟环境
-conda remove -n 虚拟环境名称 --all    #删除虚拟环境
-conda info --env    #查看本地有哪些虚拟环境
-conda config --show channels    #conda显示源
-conda config --remove channels 源的网址 #conda删除源
-conda list #输出conda已经安装的包
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>虚拟环境名称<span class="w"> </span><span class="nv">python</span><span class="o">=</span>版本号<span class="w">   </span><span class="c1">#创建虚拟环境</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>虚拟环境名称<span class="w">   </span><span class="c1">#进入虚拟环境</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>conda<span class="w"> </span>deactivate<span class="w"> </span>退出当前虚拟环境<span class="w">   </span><span class="c1">#推出虚拟环境</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>虚拟环境名称<span class="w"> </span>--all<span class="w">    </span><span class="c1">#删除虚拟环境</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>conda<span class="w"> </span>info<span class="w"> </span>--env<span class="w">    </span><span class="c1">#查看本地有哪些虚拟环境</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>conda<span class="w"> </span>config<span class="w"> </span>--show<span class="w"> </span>channels<span class="w">    </span><span class="c1">#conda显示源</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>conda<span class="w"> </span>config<span class="w"> </span>--remove<span class="w"> </span>channels<span class="w"> </span>源的网址<span class="w"> </span><span class="c1">#conda删除源</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>conda<span class="w"> </span>list<span class="w"> </span><span class="c1">#输出conda已经安装的包</span>
+</code></pre></div>
 <h4 id="pip">pip使用方法：</h4>
-<pre><code class="language-shell">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-#pip更换清华源
-pip config list     #pip显示所有源
-pip config unset global.indexl-url  #pip删除源 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="c1">#pip更换清华源</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>pip<span class="w"> </span>config<span class="w"> </span>list<span class="w">     </span><span class="c1">#pip显示所有源</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>global.indexl-url<span class="w">  </span><span class="c1">#pip删除源 </span>
+</code></pre></div>
 <p>创建python虚拟环境</p>
-<pre><code class="language-shell">python -m venv venvdemo
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venvdemo
+</code></pre></div>
 <h4 id="_6">文件系统：</h4>
 <p>FAT32文件系统的U盘无法拷贝4GB以上的文件解决方法：</p>
 <p>将通过CMD终端执行下面命令将文件系统改为ntfs格式</p>
-<pre><code class="language-cmd">convert F: /fs:ntfs 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>convert F: /fs:ntfs 
+</code></pre></div>
 <h3 id="_7">引脚拓展：</h3>
 <p>树莓派4B上有40个IO引脚：</p>
 <p><img alt="树莓派引脚定义" src="../Picture/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89.png" /></p>

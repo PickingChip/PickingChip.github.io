@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -1006,7 +1027,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -1027,7 +1048,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -1048,7 +1069,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -1069,7 +1090,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1090,7 +1111,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1384,68 +1405,67 @@
 
 <h3 id="makecmake">Make&amp;Cmake</h3>
 <h4 id="_1">简介：</h4>
-<p>有价值的程序通常是由许多源文件，头文件组成的大工程，（~~单个文件编写的程序大多都没有太大价值~~），当你编译这样的大工程时，如何使用编译器按照依赖关系依次编译源文件并链接就成了一个让人头疼的问题。这时候人们想到能不能有一个程序代替人去指挥编译器完成项目的编译，于是便有了<code>make</code>，人们只需要将需要编译的程序的依赖写到<code>makefile</code>这个文本文件当中（当然这是要遵循特定语法的），<code>make</code>便会根据这个文件去指挥编译生成可执行文件。</p>
+<p>有价值的程序通常是由许多源文件，头文件组成的大工程，（<del>单个文件编写的程序大多都没有太大价值</del>），当你编译这样的大工程时，如何使用编译器按照依赖关系依次编译源文件并链接就成了一个让人头疼的问题。这时候人们想到能不能有一个程序代替人去指挥编译器完成项目的编译，于是便有了<code>make</code>，人们只需要将需要编译的程序的依赖写到<code>makefile</code>这个文本文件当中（当然这是要遵循特定语法的），<code>make</code>便会根据这个文件去指挥编译生成可执行文件。</p>
 <p><img alt="make工作流程" src="../Picture/make%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" /></p>
-<p>然而对于大项目来说手动去编写<code>makefile</code>依旧是个麻烦的事情，同时对于相同的源文件在不同的平台上编译需要调用不同的编译器，如果每一次更改平台都需要重新编写<code>makefile</code>那实在是令人头疼。于是人们编写了<code>Cmake</code>程序根据不同平台生成<code>makefile</code>以供<code>make</code>调用（~~没错偷懒是人类进步的阶梯~~），当然<code>Cmake</code>生成<code>makefile</code>需要根据<code>makelist.txt</code>这个文本文件，但是这个文本文件又需要人去手动编写。是不是感觉有点套娃的意味？但是这样做并不是毫无意义，<code>makelist.txt</code>只需要编写一次就可以在不同的平台上使用，同时它使用了更高级的语法使得依赖关系的编写更加简洁有利于维护。</p>
+<p>然而对于大项目来说手动去编写<code>makefile</code>依旧是个麻烦的事情，同时对于相同的源文件在不同的平台上编译需要调用不同的编译器，如果每一次更改平台都需要重新编写<code>makefile</code>那实在是令人头疼。于是人们编写了<code>Cmake</code>程序根据不同平台生成<code>makefile</code>以供<code>make</code>调用（<del>没错偷懒是人类进步的阶梯</del>），当然<code>Cmake</code>生成<code>makefile</code>需要根据<code>makelist.txt</code>这个文本文件，但是这个文本文件又需要人去手动编写。是不是感觉有点套娃的意味？但是这样做并不是毫无意义，<code>makelist.txt</code>只需要编写一次就可以在不同的平台上使用，同时它使用了更高级的语法使得依赖关系的编写更加简洁有利于维护。</p>
 <p><img alt="Cmake工作流程" src="../Picture/Cmake%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" /></p>
 <p>ps.msbuild和xcodemake分别是Windows和Mac平台上的构建系统</p>
 <p>参考博客：</p>
 <p><a href="https://zhen.blog/2023/09/12/2023-09-12-C与CPP常见编译工具链与构建系统简介/">zhen's blog</a></p>
 <h4 id="make">make基础使用：</h4>
 <p>makefile文件是由一条一条规则组成的，make根据规则去调度编译器，规则的基本格式如下：</p>
-<pre><code class="language-makefile">&lt;target&gt; : &lt;prerequisites&gt; 
-[tab]  &lt;commands&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">&lt;target&gt; </span><span class="o">:</span><span class="w"> </span>&lt;<span class="n">prerequisites</span>&gt; 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">[tab]</span><span class="w">  </span><span class="err">&lt;commands&gt;</span>
+</code></pre></div>
 <p>规则由三部分组成，<strong>目标，前提条件，命令</strong>，而规则的作用就是如果目标文件比依赖文件（前提条件是由一系列文件组成的）更旧（这个旧是指生成文件时产生的时间戳更早）或者目标文件不存在时就执行命令。同时make并不是按照规则编写的顺序来执行规则的，它在开始执行前会检查依赖文件是否有其他依赖依次追溯到源头再执行规则，也就是说如果make在检查前提条件时会检查其中依赖文件的前提条件，在保证所有依赖文件的规则都执行过后才会回来执行目标文件的命令。</p>
 <p>例子：</p>
-<pre><code class="language-makefile">#规则格式：
-#目标： 依赖1 依赖2
-#   命令
-CC = gcc #可以使用变量来替换命令中的字符，下面命令中的gcc都被CC替换
-
-all: my_program  
-my_program: main.o utils.o  
-    $(CC) -o my_program main.o utils.o  
-main.o: main.c  
-    $(CC) -c main.c  
-utils.o: utils.c utils.h  
-    $(CC) -c utils.c  
-clean:          
-    rm -f my_program *.o
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">#规则格式：</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c">#目标： 依赖1 依赖2</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c">#   命令</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nv">CC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>gcc<span class="w"> </span><span class="c1">#可以使用变量来替换命令中的字符，下面命令中的gcc都被CC替换</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nf">all</span><span class="o">:</span><span class="w"> </span><span class="n">my_program</span>  
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nf">my_program</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>.<span class="n">o</span> <span class="n">utils</span>.<span class="n">o</span>  
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span>my_program<span class="w"> </span>main.o<span class="w"> </span>utils.o<span class="w">  </span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nf">main.o</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>.<span class="n">c</span>  
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>main.c<span class="w">  </span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nf">utils.o</span><span class="o">:</span><span class="w"> </span><span class="n">utils</span>.<span class="n">c</span> <span class="n">utils</span>.<span class="n">h</span>  
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>utils.c<span class="w">  </span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nf">clean</span><span class="o">:</span><span class="w">          </span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span>my_program<span class="w"> </span>*.o
+</code></pre></div>
 <p>在规则中<strong>目标是必须的而依赖和命令并不是（两者存在一个即可）</strong>，例如上例中的<code>clean</code>就是没有没有依赖同时也不是个文件，它仅仅是一个操作的名字属于“伪目标”是用来删除对象文件的。（如果目录中有一个叫clean的文件则make就不会执行命令，因为它认为clean“文件”已经存在就不必要执行命令，这时可以使用<code>.PHONY: clean</code>来声明clean是个伪命令）</p>
 <p>详细可参考：<a href="https://www.ruanyifeng.com/blog/2015/02/make.html">Make 命令教程 </a></p>
 <h4 id="cmake">Cmake基础使用：</h4>
 <p>对于下面这样的项目：</p>
-<pre><code class="language-css">MyProject/  
-│  
-├── CMakeLists.txt  
-├── src/  
-│   ├── main.cpp  
-│   └── mylib.cpp  
-├── include/  
-│   └── mylib.h
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">MyProject</span><span class="o">/</span><span class="w">  </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">│</span><span class="w">  </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="err">├──</span><span class="w"> </span><span class="nt">CMakeLists</span><span class="p">.</span><span class="nc">txt</span><span class="w">  </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="err">├──</span><span class="w"> </span><span class="nt">src</span><span class="o">/</span><span class="w">  </span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nt">main</span><span class="p">.</span><span class="nc">cpp</span><span class="w">  </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nt">mylib</span><span class="p">.</span><span class="nc">cpp</span><span class="w">  </span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="err">├──</span><span class="w"> </span><span class="nt">include</span><span class="o">/</span><span class="w">  </span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nt">mylib</span><span class="p">.</span><span class="nc">h</span>
+</code></pre></div>
 <p>首先你需要在源文件所在位置编写<code>CMakeLists.txt</code></p>
-<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.10)   # 设置项目名称和版本   
-project(MyProject VERSION 1.0)   # 指定 C++ 标准   
-
-set(CMAKE_CXX_STANDARD 14)   set(CMAKE_CXX_STANDARD_REQUIRED True)   # 添加 include 目录，set()还可以用来设置变量  
-
-include_directories(include)   # 添加库   
-
-add_library(mylib src/mylib.cpp)   # 添加可执行文件   
-add_executable(MyExecutable src/main.cpp)   # 链接库到可执行文件   
-
-target_link_libraries(MyExecutable PRIVATE mylib)  
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span><span class="w">   </span><span class="c"># 设置项目名称和版本   </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">project</span><span class="p">(</span><span class="s">MyProject</span><span class="w"> </span><span class="s">VERSION</span><span class="w"> </span><span class="s">1.0</span><span class="p">)</span><span class="w">   </span><span class="c"># 指定 C++ 标准   </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span><span class="w"> </span><span class="s">14</span><span class="p">)</span><span class="w">   </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span><span class="w"> </span><span class="s">True</span><span class="p">)</span><span class="w">   </span><span class="c"># 添加 include 目录，set()还可以用来设置变量  </span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span><span class="p">)</span><span class="w">   </span><span class="c"># 添加库   </span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nb">add_library</span><span class="p">(</span><span class="s">mylib</span><span class="w"> </span><span class="s">src/mylib.cpp</span><span class="p">)</span><span class="w">   </span><span class="c"># 添加可执行文件   </span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">MyExecutable</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="p">)</span><span class="w">   </span><span class="c"># 链接库到可执行文件   </span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">MyExecutable</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">mylib</span><span class="p">)</span><span class="w">  </span>
+</code></pre></div>
 <p>然后在源文件目录下创建<code>build</code>目录执行下面命令：</p>
-<pre><code class="language-shell">cmake -G&quot;MinGW Makefiles&quot; .. #-G这里用于指定编译器如果不指定就会使用平台默认的编译器
-
-cmake --build . #使用这个命令或者下面的命令来构建可执行程序
-make
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cmake<span class="w"> </span>-G<span class="s2">&quot;MinGW Makefiles&quot;</span><span class="w"> </span>..<span class="w"> </span><span class="c1">#-G这里用于指定编译器如果不指定就会使用平台默认的编译器</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span><span class="c1">#使用这个命令或者下面的命令来构建可执行程序</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>make
+</code></pre></div>
 <p>其他案例：<a href="https://zhuanlan.zhihu.com/p/500002865">一个CMake 案例</a></p>
 <p>详细教程：<a href="https://subingwen.cn/cmake/CMake-primer">Cmake教程</a></p>
 

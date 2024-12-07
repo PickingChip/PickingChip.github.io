@@ -332,7 +332,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -395,7 +395,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -480,6 +480,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -922,7 +943,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -943,7 +964,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -964,7 +985,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -985,7 +1006,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1006,7 +1027,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1492,12 +1513,10 @@
 <p>Qt程序主要有以下三个部分组成：</p>
 <ul>
 <li><code>main</code>文件：</li>
-<li>
-<p><code>.ui</code>文件：QtCreater中可以在<code>.ui</code>文件中进行GUI界面进行页面设计·</p>
-</li>
-<li>
-<p><code>.h文件</code>：</p>
-</li>
+<li><code>.ui</code>文件：QtCreater中可以在<code>.ui</code>文件中进行GUI界面进行页面设计·</li>
+</ul>
+<ul>
+<li><code>.h文件</code>：</li>
 </ul>
 <h3 id="_1"><strong>信号和槽：</strong></h3>
 <p>信号（signals ）：对图形界面进行操作时希望它能得到对应操作的反馈，这就需要为对应操作声明信号。</p>
@@ -1508,79 +1527,78 @@
 <h3 id="_3"><strong>软件打包：</strong></h3>
 <p>因为Qt编写的程序有许多依赖的动态库，单个的可执行程序无法直接执行，因此就需要将需所需要的库打包好一并发送才能运行。</p>
 <p>release构建可执行程序，创建一个文件夹将可执行程序解压到该文件夹下，然后在终端中使用以下命令加载所需要的环境：</p>
-<pre><code class="language-shell">windeployqt &lt;文件夹目录&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>windeployqt<span class="w"> </span>&lt;文件夹目录&gt;
+</code></pre></div>
 <p>ps.如果程序执行需要相应的文件，如图片可以在文件编写时采用相对路径，并将文件复制到错创建的文件夹下。</p>
 <h3 id="_4"><strong>一些示例：</strong></h3>
 <p>短整型转换成字符串</p>
-<pre><code class="language-c++">QString::number(num);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">QString</span><span class="o">::</span><span class="n">number</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+</code></pre></div>
 <h4 id="qt_2">QT定时器：</h4>
 <p>Qobject: </p>
 <p>Qtimer:</p>
 <h4 id="_5">文件操作：</h4>
 <p>文件的打开</p>
-<pre><code class="language-c++">//需要#include &lt;QFileDialog&gt;
-
-QString fileName = QFileDialog::getOpenFileName(this, &quot;选择一个文件&quot;,QCoreApplication::applicationFilePath()/*获取当前路径*/,&quot;*.cpp&quot;);
-if(fileName.isEmpty())
-{
-    QMessageBox::warning(this, &quot;警告&quot;, &quot;请选择一个文件&quot;);
-}
-else
-{
-    QFile file(fileName);//创建一个文件对象
-    file.open(QIODevice::ReadOnly);//打开方式
-    QByteArray ba = file.readAll();//读取文件内容
-    ui-&gt;textEdit-&gt;setText(QString(ba));//放入文本框
-    file.close();
-}
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">//需要#include &lt;QFileDialog&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">QString</span><span class="w"> </span><span class="n">fileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QFileDialog</span><span class="o">::</span><span class="n">getOpenFileName</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;选择一个文件&quot;</span><span class="p">,</span><span class="n">QCoreApplication</span><span class="o">::</span><span class="n">applicationFilePath</span><span class="p">()</span><span class="cm">/*获取当前路径*/</span><span class="p">,</span><span class="s">&quot;*.cpp&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">if</span><span class="p">(</span><span class="n">fileName</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">QMessageBox</span><span class="o">::</span><span class="n">warning</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;警告&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;请选择一个文件&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">else</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">QFile</span><span class="w"> </span><span class="nf">file</span><span class="p">(</span><span class="n">fileName</span><span class="p">);</span><span class="c1">//创建一个文件对象</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QIODevice</span><span class="o">::</span><span class="n">ReadOnly</span><span class="p">);</span><span class="c1">//打开方式</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">QByteArray</span><span class="w"> </span><span class="n">ba</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">readAll</span><span class="p">();</span><span class="c1">//读取文件内容</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">ui</span><span class="o">-&gt;</span><span class="n">textEdit</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span><span class="n">QString</span><span class="p">(</span><span class="n">ba</span><span class="p">));</span><span class="c1">//放入文本框</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
+</code></pre></div>
 <p>文件的保存：</p>
-<pre><code class="language-c++">//需要#include &lt;QFileDialog&gt;
-QString fileName = QFileDialog::getOpenFileName(this, &quot;选择一个文件&quot;,QCoreApplication::applicationFilePath()/*获取当前路径*/);
-if(fileName.isEmpty())
-{
-    QMessageBox::warning(this,&quot;警告&quot;,&quot;请选择一个文件夹&quot;);
-}
-else
-{
-    QFile file(fileName);//创建一个文件对象
-    file.open(QIODevice::WriteOnly);//打开方式
-    QByteArray ba;
-    ba.append(ui-&gt;textEdit-&gt;toPlainText());
-    file.write(ba);
-    file.close();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">//需要#include &lt;QFileDialog&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">QString</span><span class="w"> </span><span class="n">fileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QFileDialog</span><span class="o">::</span><span class="n">getOpenFileName</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;选择一个文件&quot;</span><span class="p">,</span><span class="n">QCoreApplication</span><span class="o">::</span><span class="n">applicationFilePath</span><span class="p">()</span><span class="cm">/*获取当前路径*/</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">if</span><span class="p">(</span><span class="n">fileName</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">QMessageBox</span><span class="o">::</span><span class="n">warning</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="s">&quot;警告&quot;</span><span class="p">,</span><span class="s">&quot;请选择一个文件夹&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">else</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">QFile</span><span class="w"> </span><span class="nf">file</span><span class="p">(</span><span class="n">fileName</span><span class="p">);</span><span class="c1">//创建一个文件对象</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QIODevice</span><span class="o">::</span><span class="n">WriteOnly</span><span class="p">);</span><span class="c1">//打开方式</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">QByteArray</span><span class="w"> </span><span class="n">ba</span><span class="p">;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">ba</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ui</span><span class="o">-&gt;</span><span class="n">textEdit</span><span class="o">-&gt;</span><span class="n">toPlainText</span><span class="p">());</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">ba</span><span class="p">);</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">}</span>
+</code></pre></div>
 <h4 id="qt_3">QT事件：</h4>
 <p>QT中的事件的类型有很多，例如键盘上按下的按钮，鼠标的点击都属于一个事件，这些事件都继承于<code>QEvent</code>这个抽象的类。 当你需要检测某一个事件的时候你需要重写对应事件的虚函数。</p>
 <p>鼠标点击事件：</p>
-<pre><code class="language-c++">//#include &lt;QMouseEvent&gt;
-
-void MainWindow::mousePressEvent(QMouseEvent *m)
-{
-    QPoint pt = m-&gt;pos();
-    qDebug() &lt;&lt; pt;
-    if (m-&gt;button() == Qt::LeftButton)
-    {
-        qDebug() &lt;&lt; &quot;左键被按下&quot;;//当时事件发生时在控制台输出信息
-    }
-    eelse if (m-&gt;button() == Qt::RightButton)
-    {
-        qDebug() &lt;&lt; &quot;右键被按下&quot;;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">//#include &lt;QMouseEvent&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MainWindow::mousePressEvent</span><span class="p">(</span><span class="n">QMouseEvent</span><span class="w"> </span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">QPoint</span><span class="w"> </span><span class="n">pt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="o">-&gt;</span><span class="n">pos</span><span class="p">();</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">qDebug</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pt</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">-&gt;</span><span class="n">button</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Qt</span><span class="o">::</span><span class="n">LeftButton</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="n">qDebug</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;左键被按下&quot;</span><span class="p">;</span><span class="c1">//当时事件发生时在控制台输出信息</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">eelse</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">-&gt;</span><span class="n">button</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Qt</span><span class="o">::</span><span class="n">RightButton</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="n">qDebug</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;右键被按下&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span>
+</code></pre></div>
 <h3 id="_6">连接服务器：</h3>
 <p>需要在工程文件添加<code>network</code>,使用qmake构建工程才会有。</p>
 <p>网络连接需要创建套接字（socket）对象才能进行。</p>
-<pre><code class="language-c++">QT      += core gui network
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">QT</span><span class="w">      </span><span class="o">+=</span><span class="w"> </span><span class="n">core</span><span class="w"> </span><span class="n">gui</span><span class="w"> </span><span class="n">network</span>
+</code></pre></div>
 <p>需要输入服务器ip和端口号：</p>
-<pre><code class="language-c++">//#include &lt;QTcpSocktet&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">//#include &lt;QTcpSocktet&gt;</span>
+</code></pre></div>
 
 
 

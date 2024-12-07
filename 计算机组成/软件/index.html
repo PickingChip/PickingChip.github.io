@@ -26,7 +26,7 @@
     
     
       
-        <title>重要的软件部分 - Chips</title>
+        <title>4.重要的软件部分 - Chips</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              重要的软件部分
+              4.重要的软件部分
             
           </span>
         </div>
@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -926,7 +947,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -947,7 +968,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -968,7 +989,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -996,7 +1017,7 @@
           
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1007,7 +1028,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1106,7 +1127,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1414,7 +1435,7 @@
   
 
 
-  <h1>重要的软件部分</h1>
+  <h1>4.重要的软件部分</h1>
 
 <h4 id="_1">第四章：软件</h4>
 <h5 id="1">1.汇编过程中符号的替换</h5>
@@ -1428,11 +1449,11 @@
 <p>断点使得调试更加灵活可以让程序能够在用户想要的地方“停下”，它通过一条称为陷阱或者软件中断的特殊指令来实现，当你在i指令前设置断点时，调试器会将<code>i</code>指令保存到一个临时的位置，并用一条中断指令替换它，当程序执行到断点的位置时就会触发中断，直到用户给出指令继续执行程序。当程序继续执行时，调试器还需要执行几个任务，首先它将<code>i</code>指令放回原位这时<code>i</code>指令将成为下一步第一条要执行的程序，然后调试器会在<code>i+1</code>指令处打上一个临时断点，这样程序在执行完毕<code>i</code>指令时就会再次进入中断当中，此时调试器会恢复<code>i+1</code>指令并恢复<code>i</code>指令处的断点，接着执行剩下的程序。</p>
 <h5 id="4c">4.汇编语言与C语言交互</h5>
 <p>编译器不能根据高级语言的一个语句生成访问处理器控制寄存器的汇编指令，因此如果想用C语言程序实现访问控制寄存器的功能就需要将汇编语言嵌套在C语言中。我们可以通过一个特殊的指示符来告知编译器实现这个功能。</p>
-<pre><code class="language-c">asm(&quot;MoveControl PS,R2&quot;);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">asm</span><span class="p">(</span><span class="s">&quot;MoveControl PS,R2&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p>还有一个问题就是编译器会将所有的C函数以<code>RETURN_FROM_SUBROUTINE</code>指令结尾（这是一个子程序调用的返回指令），但是由于中断服务函数的特殊性（它使用不同的堆栈，同时返回时需要恢复各个寄存器之前的状态），它需要以<code>RETURN_FROM_INTERRUPT</code>专门的指令结尾，因此用C语言编写中断服务函数的时候需要在函数的最后加上下面的代码：</p>
-<pre><code class="language-c">asm(&quot;Return-from-interrupt&quot;);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">asm</span><span class="p">(</span><span class="s">&quot;Return-from-interrupt&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p>这样一来中断服务函数在执行到这条指令时，处理器就会返回到之前的状态（通过这种方法修改的中断服务函数在编译后最后一条指令依旧是<code>Return-from-subroutine</code>但是当执行过到数第二条指令<code>Return-from-interrupt</code>后函数就不会继续执行了）</p>
 <p>还有一种中方法是在终端服务函数前添加关键字<code>interrupt</code>来告诉编译器这是一个中断服务函数需要以<code>Return-from-interrupt</code>结尾，这样编译器就会自行替换，但是并非是所有编译器都支持这样的关键字。</p>
 <h5 id="5">5.引导程序</h5>

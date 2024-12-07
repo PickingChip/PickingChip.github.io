@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pickingchip.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F/Stm32/Stm32/">
       
       
-        <link rel="prev" href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/GitHub/">
+        <link rel="prev" href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/">
       
       
         <link rel="next" href="../%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">
@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -1048,7 +1069,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -1069,7 +1090,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -1090,7 +1111,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -1111,7 +1132,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1132,7 +1153,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1472,12 +1493,18 @@
 <p>GPIO是控制或者采集外部器件的信息的外设  （其实就是一堆和芯片相连的引脚，毕竟芯片靠电信号交流），你可以把它理解为芯片的嘴巴和耳朵（虽然他俩长在一块）是芯片用于和外部交流的窗口。</p>
 <p>f103有四组GPIO口（GPIOA~GPIOD）共51个IO口 （查表带有TF标志的兼容5V）</p>
 <p>GPIO 有八种工作模式，分别是：</p>
-<p>1、输入浮空（电平由外界决定，<strong>默认状态</strong>）                2、输入上拉（默认高电平）</p>
-<p>3、输入下拉（默认低电平）                                           4、模拟输入（不使用施密特触发器滤波保持输入波形）</p>
-<p>5、开漏输出（交替输出低电平和高阻态）                    6、推挽输出（交替输出高低电平）</p>
-<p>7、开漏式复用功能                                                           8、推挽式复用功能</p>
+<ol>
+<li>输入浮空（电平由外界决定，默认状态）              </li>
+<li>输入上拉（默认高电平）</li>
+<li>输入下拉（默认低电平）                                           </li>
+<li>模拟输入（不使用施密特触发器滤波保持输入波形）</li>
+<li>开漏输出（交替输出低电平和高阻态）                    </li>
+<li>推挽输出（交替输出高低电平）</li>
+<li>开漏式复用功能                                                           </li>
+<li>推挽式复用功能</li>
+</ol>
 <p>其实大致上来讲就分为输入模式，输出模式，复用模式（复用就是同一个引脚可以选择不同的功能，一个 IO 口可以是通用的 IO 口功能，还可以是其它外设的特殊功能引脚，当选择复用功能时，引脚的状态是由对应的外设控制，而不是输出数据寄存器。 ）每组GPIO有16个IO口（GPIOX1~16），三个寄存器（配置，数据，位置寄存器）。</p>
-<p>STM32的 io 有3种功能 ：一个是默认的， 一个是复用， 一个是重映射功能</p>
+<p>STM32的 io 有3类功能 ：一个是默认的， 一个是复用， 一个是重映射功能。</p>
 <h3 id="nvicexti">中断：NVIC和EXTI</h3>
 <p>在讲外设之前，先解释中断这个概念，我们应该知道在MCU处理同一时间只能处理一个任务，因此如果我们的单片机正在执行任务A时突然需要处理任务B，这就需要把任务A打断，去执行完任务B，然后再回来执行任务A，这个过程就是中断。</p>
 <h4 id="nvic-nested-vectored-interrupt-controller">NVIC (Nested vectored interrupt controller)</h4>
@@ -1505,14 +1532,14 @@
 </ol>
 <p>EXTI线1负责管控GPIOX1其它的以此类推，至于X到底是A还是B或者其他的由AFIO_EXTICR寄存器配置。</p>
 <p>每开启一个中断就要编写相应的中断服务函数，然后把想要实现的功能编写在中断回调函数之中，中断触发时内核会自己找到中断服务函数，中断服务函数会调用回调函数从而实现功能。F1的IO口的外部中断服务只有7个却对应了16个中断线：</p>
-<pre><code class="language-C">void EXTI0_IRQHandler();
-void EXTI1_IRQHandler();
-void EXTI2_IRQHandler();
-void EXTI3_IRQHandler();
-void EXTI4_IRQHandler();
-void EXTI9_5_IRQHandler();
-void EXTI15_10_IRQHandler();
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI0_IRQHandler</span><span class="p">();</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI1_IRQHandler</span><span class="p">();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI2_IRQHandler</span><span class="p">();</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI3_IRQHandler</span><span class="p">();</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI4_IRQHandler</span><span class="p">();</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI9_5_IRQHandler</span><span class="p">();</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI15_10_IRQHandler</span><span class="p">();</span>
+</code></pre></div>
 <h3 id="dmadirect-memory-access">DMA（Direct Memory Access）</h3>
 <p>DMA翻译过来就是直接存储器访问，作用就是在不同外设，存储器之间传递数据。不使用DMA，外设想要访问内存空间就需要经过CPU的调度，这就会占用CPU宝贵的时间，因此DMA存在的意义就是将CPU从传递数据的这种“体力活”中解放出来，使外设可以通过DMA直接访问内存空间。</p>
 <p>f1的有两个DMA控制器，DMA1有7个通道，DMA2有5个通道，每一个通道管理着不同外设，不同通道的请求根据优先级来执行，并且每一个通道同一时间只能处理一个外设的传输请求</p>

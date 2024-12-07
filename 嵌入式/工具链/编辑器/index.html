@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -1039,7 +1060,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -1060,7 +1081,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -1081,7 +1102,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -1102,7 +1123,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1123,7 +1144,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1449,188 +1470,171 @@
   <h1>编辑器</h1>
 
 <h3 id="vscode">VScode</h3>
-<p>非常强大的现代化编译器，通过配置工具链你可以完成很多方面的开发。</p>
+<p>非常强大的现代化编辑器，通过配置工具链你可以完成很多方面的开发。</p>
 <p>插件：</p>
 <p>在VScode上进行单片机开发：<a href="https://em-ide.com/zh-cn/docs/intro/">EIDE</a></p>
 <h3 id="vim">Vim</h3>
 <p>无需多言，编辑器之神。只需要通过键盘就能完成所有操作，同时轻量化的设计可以让它在许多资源受限的平台运行。</p>
 <h4 id="_1">获取：</h4>
 <p>Linux平台一般自带Vim，如果没有也可以通过包管理工具轻松获得。</p>
-<pre><code class="language-bash">sudo apt install vim  #Ubantu
-sudo yum install vim  #Centos
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vim<span class="w">  </span><span class="c1">#Ubantu</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>vim<span class="w">  </span><span class="c1">#Centos</span>
+</code></pre></div>
 <p>Windows平台下载：<a href="https://www.vim.org/download.php">下载 ： Vim Online</a></p>
 <h4 id="_2">使用方法：</h4>
 <p>vim编辑器有如下几个模式：</p>
 <ul>
-<li>
-<p>普通模式 用来浏览文本</p>
-</li>
-<li>
-<p>命令模式 用来输入命令进入其他模式或者保存退出</p>
-</li>
-<li>
-<p>插入模式 用来编辑文本</p>
-</li>
-<li>
-<p>预览模式 用来选中文本</p>
-</li>
+<li>普通模式 用来浏览文本</li>
+</ul>
+<ul>
+<li>命令模式 用来输入命令进入其他模式或者保存退出</li>
+</ul>
+<ul>
+<li>插入模式 用来编辑文本</li>
+</ul>
+<ul>
+<li>预览模式 用来选中文本</li>
 </ul>
 <h5 id="_3">命令模式下的常用命令</h5>
 <p><strong>光标移动：</strong></p>
 <ul>
-<li>
-<p>H向左   </p>
-</li>
-<li>
-<p>J向下</p>
-</li>
-<li>
-<p>K向上</p>
-</li>
-<li>
-<p>L向右</p>
-</li>
+<li>H向左   </li>
+</ul>
+<ul>
+<li>J向下</li>
+</ul>
+<ul>
+<li>K向上</li>
+</ul>
+<ul>
+<li>L向右</li>
 </ul>
 <p><strong>其他操作：</strong></p>
 <ul>
-<li>
-<p>shift+g 光标移至到文件最后</p>
-</li>
-<li>
-<p>gg 光标移至文件最前</p>
-</li>
-<li>
-<p>w写入</p>
-</li>
-<li>
-<p>i 光标位置前的字母位置插入</p>
-</li>
-<li>
-<p>a 光标位置后的字母插入</p>
-</li>
-<li>
-<p>o 直接进入下一行</p>
-</li>
-<li>
-<p>x删除光标所在位置的字母</p>
-</li>
-<li>
-<p>dd删除光标所在行</p>
-</li>
+<li>shift+g 光标移至到文件最后</li>
+</ul>
+<ul>
+<li>gg 光标移至文件最前</li>
+</ul>
+<ul>
+<li>w写入</li>
+</ul>
+<ul>
+<li>i 光标位置前的字母位置插入</li>
+</ul>
+<ul>
+<li>a 光标位置后的字母插入</li>
+</ul>
+<ul>
+<li>o 直接进入下一行</li>
+</ul>
+<ul>
+<li>x删除光标所在位置的字母</li>
+</ul>
+<ul>
+<li>dd删除光标所在行</li>
 <li>dw 删除光标所在单词</li>
 <li>u撤销命令</li>
 </ul>
 <p><strong>ps.vim中删除相当于剪切被删除的内容被暂存在缓存区中可以通过P命令粘贴</strong></p>
 <p><strong>翻页</strong></p>
 <ul>
-<li>
-<p>ctrl B 上翻页</p>
-</li>
-<li>
-<p>ctrl F 下翻页</p>
-</li>
-<li>
-<p>ctrl E 滚动形式下翻</p>
-</li>
-<li>
-<p>ctrl Y 滚动向上翻</p>
-</li>
+<li>ctrl B 上翻页</li>
+</ul>
+<ul>
+<li>ctrl F 下翻页</li>
+</ul>
+<ul>
+<li>ctrl E 滚动形式下翻</li>
+</ul>
+<ul>
+<li>ctrl Y 滚动向上翻</li>
 </ul>
 <p><strong>字母跳跃</strong></p>
 <ul>
-<li>
-<p>b跳跃到当前光标所在单词的首字母</p>
-</li>
-<li>
-<p>e跳跃到当前光标所在单词的最后一个字母</p>
-</li>
-<li>
-<p>w跳跃到下一个单词的首字母然后再跳跃到这个单词的最后</p>
-</li>
+<li>b跳跃到当前光标所在单词的首字母</li>
+</ul>
+<ul>
+<li>e跳跃到当前光标所在单词的最后一个字母</li>
+</ul>
+<ul>
+<li>w跳跃到下一个单词的首字母然后再跳跃到这个单词的最后</li>
 </ul>
 <p>ps.上面三个字母跳跃的命令都可以搭配shift使用实现大幅度的跳跃</p>
 <p><strong>行段跳越</strong></p>
 <ul>
-<li>
-<p>shift + 6 跳跃到本行的开头（0也是）</p>
-</li>
-<li>
-<p>shfit + 4 跳跃到本行的结尾</p>
-</li>
-<li>
-<p>按{或者}跳跃函数段落</p>
-</li>
+<li>shift + 6 跳跃到本行的开头（0也是）</li>
+</ul>
+<ul>
+<li>shfit + 4 跳跃到本行的结尾</li>
+</ul>
+<ul>
+<li>按{或者}跳跃函数段落</li>
 </ul>
 <p><strong>复制粘贴</strong></p>
 <ul>
-<li>
-<p>p粘贴</p>
-</li>
-<li>
-<p>yw 复制当前的单词</p>
-</li>
-<li>
-<p>y$从当前单词复制到末尾</p>
-</li>
-<li>
-<p>y+数字 表示从当前位置开始要复制的行数</p>
-</li>
+<li>p粘贴</li>
+</ul>
+<ul>
+<li>yw 复制当前的单词</li>
+</ul>
+<ul>
+<li>y$从当前单词复制到末尾</li>
+</ul>
+<ul>
+<li>y+数字 表示从当前位置开始要复制的行数</li>
 </ul>
 <h5 id="_4">可视化模式操作</h5>
 <ul>
-<li>
-<p>小v进入可视化模式进行文本选择</p>
-</li>
-<li>
-<p>V进入可视化模式按行选择</p>
-</li>
-<li>
-<p>ctrl v 矩阵化选择</p>
-</li>
-<li>
-<p>在可视化模式中o 跳转到选中区域的开始位置或者最后位置</p>
-</li>
-<li>
-<p>0补全角落</p>
-</li>
-<li>
-<p>vaw选中单词</p>
-</li>
-<li>
-<p>vab 选中小括号中的内容</p>
-</li>
-<li>
-<p>vaB 选中大括号中的内容</p>
-</li>
-<li>
-<p>va&lt;包含尖括号 删除</p>
-</li>
-<li>
-<p>v shift + &lt; &gt; 代码缩进</p>
-</li>
-<li>
-<p>v shift + ~ 字母大小写取反</p>
-</li>
-<li>
-<p>v+u 全部转化为小写</p>
-</li>
-<li>
-<p>v+U 全部转化为大写</p>
-</li>
+<li>小v进入可视化模式进行文本选择</li>
+</ul>
+<ul>
+<li>V进入可视化模式按行选择</li>
+</ul>
+<ul>
+<li>ctrl v 矩阵化选择</li>
+</ul>
+<ul>
+<li>在可视化模式中o 跳转到选中区域的开始位置或者最后位置</li>
+</ul>
+<ul>
+<li>0补全角落</li>
+</ul>
+<ul>
+<li>vaw选中单词</li>
+</ul>
+<ul>
+<li>vab 选中小括号中的内容</li>
+</ul>
+<ul>
+<li>vaB 选中大括号中的内容</li>
+</ul>
+<ul>
+<li>va&lt;包含尖括号 删除</li>
+</ul>
+<ul>
+<li>v shift + &lt; &gt; 代码缩进</li>
+</ul>
+<ul>
+<li>v shift + ~ 字母大小写取反</li>
+</ul>
+<ul>
+<li>v+u 全部转化为小写</li>
+</ul>
+<ul>
+<li>v+U 全部转化为大写</li>
 </ul>
 <h5 id="_5"><strong>查找和替换</strong></h5>
 <p>普通模式下输入 /+要查找的字符串 光标便会自动跳转到第一个匹配的字符，按n跳转到下一个匹配字符，N跳转上一个匹配字符</p>
 <ul>
-<li>
-<p>：s/要替换的字符/要替换成的字符/g 光标的所在行中的目标字符都被替换</p>
-</li>
-<li>
-<p>：%s/要替换的字符/要替换成的字符/g 整个文件的目标字符都被替换</p>
-</li>
-<li>
-<p>：起始行，终止行s/要替换的字符/g 选中行进行字符替换</p>
-</li>
+<li>：s/要替换的字符/要替换成的字符/g 光标的所在行中的目标字符都被替换</li>
+</ul>
+<ul>
+<li>：%s/要替换的字符/要替换成的字符/g 整个文件的目标字符都被替换</li>
+</ul>
+<ul>
+<li>：起始行，终止行s/要替换的字符/g 选中行进行字符替换</li>
 </ul>
 <p>g后面+c每次替换都询问是否要替换</p>
 

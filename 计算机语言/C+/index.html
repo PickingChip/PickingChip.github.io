@@ -334,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    个人电脑硬件简介
+    PC硬件简介
   </span>
   
 
@@ -397,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    编程世界里的尚方宝剑
+    编程世界里的尚方宝剑IDE
   </span>
   
 
@@ -482,6 +482,27 @@
   
   <span class="md-ellipsis">
     GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
   </span>
   
 
@@ -924,7 +945,7 @@
         
   
   <span class="md-ellipsis">
-    计算机基本结构
+    1.计算机基本结构
   </span>
   
 
@@ -945,7 +966,7 @@
         
   
   <span class="md-ellipsis">
-    指令集系统结构
+    2.指令集系统结构
   </span>
   
 
@@ -966,7 +987,7 @@
         
   
   <span class="md-ellipsis">
-    输入输出结构
+    3.输入输出结构
   </span>
   
 
@@ -987,7 +1008,7 @@
         
   
   <span class="md-ellipsis">
-    重要的软件部分
+    4.重要的软件部分
   </span>
   
 
@@ -1008,7 +1029,7 @@
         
   
   <span class="md-ellipsis">
-    存储器系统
+    5.存储器系统
   </span>
   
 
@@ -1185,7 +1206,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      内存空间：
+      内存空间
     </span>
   </a>
   
@@ -1203,7 +1224,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      结构体：
+      结构体
     </span>
   </a>
   
@@ -1342,7 +1363,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      内存空间：
+      内存空间
     </span>
   </a>
   
@@ -1360,7 +1381,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      结构体：
+      结构体
     </span>
   </a>
   
@@ -1407,14 +1428,14 @@
 <h3 id="whats-c">What's C+ ?</h3>
 <p>每一个掌握C语言的人都至少要学两遍C语言，C+这里记录就是一些C语言的进阶知识，是用来精进C语言水平以满足嵌入式开发要求。</p>
 <p><a href="https://deadline039.github.io/C">Deadline039的C语言总结</a></p>
-<h3 id="_1">内存空间：</h3>
+<h3 id="_1">内存空间</h3>
 <p>每一个程序在运行时都需要在内存中为它分配空间，当一个C语言代码运行时他需要的内存空间由以下部分组成：</p>
 <p><img alt="内存区域" src="../Picture/%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%86%85%E5%AD%98%E5%88%86%E5%B8%83.png" /></p>
 <p>观察下面两行代码：</p>
-<pre><code class="language-c">char *p1 = &quot;hello world&quot;;
-
-char p2[2] = &quot;hello world&quot;;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello world&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">p2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello world&quot;</span><span class="p">;</span>
+</code></pre></div>
 <p>两者的区别：</p>
 <p>1.p1作为字符类型的指针存放在栈区，"hello world"作为字符串常量存放在数据段，<strong>p1中仅存放"hello world"的地址</strong>。</p>
 <p>2.p2作为字符串数组，存放在栈区，"hello world"是存在数组中的值。</p>
@@ -1423,40 +1444,40 @@ char p2[2] = &quot;hello world&quot;;
 <p><img alt="C+sizeof" src="../Picture/C%2Bsizeof.png" /></p>
 <p>melloc，relloc，。。。</p>
 <p>scanf和fgets</p>
-<pre><code class="language-C">scanf(&quot;%[^\n]&quot;, String); // 读取直到换行符的所有字符
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%[^</span><span class="se">\n</span><span class="s">]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">);</span><span class="w"> </span><span class="c1">// 读取直到换行符的所有字符</span>
+</code></pre></div>
 <h3 id="_2">函数指针</h3>
 <p>函数指针相当重要，回调函数就是依托函数指针实现的（中断服务函数的实现机制），同时使用函数指针可以大大提高程序的灵活性，方便不同函数进行组合来应对不同的问题。</p>
-<h3 id="_3">结构体：</h3>
+<h3 id="_3">结构体</h3>
 <p>结构体本质上来说就是用户使用基本数据类型进行组合自定义的用于描述特定对象的数据类型。</p>
 <p>结构体变量作为局部变量赋进行声明的时候注意一定要赋初值，不然可能结构体变量的存储空间中可能存在内存中残留的数值（这在电机结构中可能会导致电机上电疯转）。</p>
 <p>结构体数据对齐</p>
 <p>众所周知结构体中的成员在内存中并不是紧挨着排列的，这就造成结构体所占内存大小并不是成员所占大小的和。可以通过下面的方法查看结构体的大小：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-#define OFFSET(st,member) ((int)&amp;((struct st*)0)-&gt;member) //这个宏定义用来查看结构成员相对于首地址的偏移量
-struct S1
-{
-    short a;
-    long b;//对齐参数：min(4,1)=1,sizeof(long)=4;
-};
-
-struct S2
-{
-    char c;//offset = 0;
-    struct S1 d;//offset = 1(对齐参数为 min(1,2)),sizeof(s1)=6;
-    double e;//offset = 8(对齐参数为 min(8,2))
-};
-
-int main()
-{
-    printf(&quot;sizeof(struct S1) = %d\n&quot;,sizeof(struct S1));//6
-    printf(&quot;sizeof(struct S2) = %d\n&quot;,sizeof(struct S2));//16
-    printf(&quot;Member's Offset of Struct S2:\n&quot;);
-    printf(&quot;&amp;s2.c=%d, &amp;s2.d=%d, &amp;s2.e=%d\n&quot;,
-    OFFSET(S2,c),OFFSET(S2,d),OFFSET(S2,e));
-    return 0;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#define OFFSET(st,member) ((int)&amp;((struct st*)0)-&gt;member) </span><span class="c1">//这个宏定义用来查看结构成员相对于首地址的偏移量</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc">S1</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kt">short</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="c1">//对齐参数：min(4,1)=1,sizeof(long)=4;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">};</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">struct</span><span class="w"> </span><span class="nc">S2</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="c1">//offset = 0;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">S1</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="c1">//offset = 1(对齐参数为 min(1,2)),sizeof(s1)=6;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="c1">//offset = 8(对齐参数为 min(8,2))</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">};</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">{</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;sizeof(struct S1) = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">S1</span><span class="p">));</span><span class="c1">//6</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;sizeof(struct S2) = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">S2</span><span class="p">));</span><span class="c1">//16</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Member&#39;s Offset of Struct S2:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;&amp;s2.c=%d, &amp;s2.d=%d, &amp;s2.e=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="n">OFFSET</span><span class="p">(</span><span class="n">S2</span><span class="p">,</span><span class="n">c</span><span class="p">),</span><span class="n">OFFSET</span><span class="p">(</span><span class="n">S2</span><span class="p">,</span><span class="n">d</span><span class="p">),</span><span class="n">OFFSET</span><span class="p">(</span><span class="n">S2</span><span class="p">,</span><span class="n">e</span><span class="p">));</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="p">}</span>
+</code></pre></div>
 <h3 id="io">I/O流</h3>
 <p>C语言中的文件操作都是以流的形式进行的，流是一个将数据抽象后的概念。</p>
 <h3 id="_4">宏定义：想成为宏仙人吗？</h3>
@@ -1469,62 +1490,61 @@ int main()
 <li>但是宏定义不支持递归展开，比如A宏包含B宏，B宏中又有A宏，那么这个宏之展开到B宏就不会继续展开</li>
 <li>宏定义的作用域：从声明的位置到文件结尾</li>
 </ul>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-#define A B
-#define B A
-int main()
-{ 
-    int A = 10;
-    printf(&quot;%d\n&quot;, A);
-    printf(&quot;%d\n&quot;, B); //会报B未定义的错误，所有宏只替换两次
-    return 0;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#define A B</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">#define B A</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">);</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">);</span><span class="w"> </span><span class="c1">//会报B未定义的错误，所有宏只替换两次</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
+</code></pre></div>
 <p><strong>带参数的宏定义</strong>：</p>
 <p>宏定义可以传参数，从某种程度上可以实现简单的函数的功能，但是本质上来讲都是文本的替换。</p>
-<pre><code class="language-c">#define MAX(a,b) (a &gt; b ? a : b) 
-
-int m = 0, n = 0;
-scanf(&quot;%d%d&quot;,&amp;m,&amp;n);
-printf(&quot;MAX NUM IS:%d\n&quot;,MAX(m,n));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define MAX(a,b) (a &gt; b ? a : b) </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">m</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;MAX NUM IS:%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">MAX</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">));</span>
+</code></pre></div>
 <p>但是与函数相比带参数的宏定义并不会对传入参数的类型进行检查</p>
 <p><strong>标识符和字符串：</strong></p>
 <p>标识符是变量，函数名的名称，字符串是由字符组成的序列，以'\0'结尾通常使用双引号包裹。</p>
-<pre><code class="language-c++">#define TEXT helloworld 
-printf(&quot;%s&quot;,TEXT);//这是错误的TEXT即使被替换，helloworld在这里依旧是作为标识符存在的
-
-/*改法一*/
-#define TEXT &quot;helloworld&quot;
-/*改法二*/
-#define TEXT helloworld 
-
-char *TEXT = &quot;helloworld&quot;
-printf(&quot;%s\n&quot;, TEXT);           
-printf(&quot;%s\n&quot;, helloworld);     //这两个都会输出helloworld，相当于变量名给赋值了
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#define TEXT helloworld </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="n">TEXT</span><span class="p">);</span><span class="c1">//这是错误的TEXT即使被替换，helloworld在这里依旧是作为标识符存在的</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cm">/*改法一*/</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="cp">#define TEXT &quot;helloworld&quot;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="cm">/*改法二*/</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="cp">#define TEXT helloworld </span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;helloworld&quot;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">);</span><span class="w">           </span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">helloworld</span><span class="p">);</span><span class="w">     </span><span class="c1">//这两个都会输出helloworld，相当于变量名给赋值了</span>
+</code></pre></div>
 <p>从以上案例可以看出，在宏后面如果跟的是字符或者字符和数字的组合，就会被认作标识符，但是如果跟的全为数字就会被认为是<code>int</code>或者<code>double</code>类型的字面量。</p>
 <p><strong>#和##</strong></p>
 <p>1.<code>#</code>是字符串化运算符，能够将后面跟的参数转换为字符串</p>
-<pre><code class="language-c">#define XNAME(n) &quot;x&quot;#n
-
-// 输出 x4
-printf(&quot;%s\n&quot;, XNAME(4));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">#define XNAME(n) &quot;x&quot;#n</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">// 输出 x4</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">XNAME</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>
+</code></pre></div>
 <p>2.<code>##</code>是记号粘贴运算符，将参数和标识符粘连在一起组成新的标识符</p>
 <p>观察下面代码</p>
-<pre><code class="language-c">#define A(n) An
-
-int A(1) = 10;
-printf(&quot;%s\n&quot;,A(1));//没问题，宏替换后作为标识量被声明
-printf(&quot;%s\n&quot;,A1);//错误的，传进宏的参数并没有起作用，A(1)依旧替换为An
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">#define A(n) An</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">A</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span><span class="c1">//没问题，宏替换后作为标识量被声明</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">A1</span><span class="p">);</span><span class="c1">//错误的，传进宏的参数并没有起作用，A(1)依旧替换为An</span>
+</code></pre></div>
 <p>如果我想要传进去的参数和它前面的字符组合形成标识符就需要用到<code>##</code></p>
-<pre><code class="language-c">#define A(n) A##n
-int A(1) = 10;
-printf(&quot;%s\n&quot;,A1);//没问题，因为A(1)被替换称为A1，作为已经声明
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cp">#define A(n) A##n</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">A</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">A1</span><span class="p">);</span><span class="c1">//没问题，因为A(1)被替换称为A1，作为已经声明</span>
+</code></pre></div>
 <p>如果<code>##</code>粘连的是一个宏，那么这个宏将不会被展开，解决方法是提前将宏展开在将其粘连。</p>
 
 
