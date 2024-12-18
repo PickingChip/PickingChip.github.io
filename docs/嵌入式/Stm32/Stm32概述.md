@@ -35,7 +35,7 @@ MPU
 PS.
 MPU和MCU的最主要的区别就是MPU的性能更强具有MMU（内存管理单元）能够运行Linux操作系统，而MCU则只能运行FreeRTOS这类操作系统，相较之下MPU的性能更强同时功耗更大，而MCU的性能稍显逊色但功耗更低，实时性更强。
 
-文档下载：[STMCU中文官网](https://www.stmcu.com.cn/design_resource/)
+文档下载：[STMCU中文官网](https://www.stmcu.com.cn/design_resource/) [STM32相关PDF文档](https://www.st.com.cn/zh/microcontrollers-microprocessors/stm32f103/documentation.html#)
 
 ### 时钟系统
 
