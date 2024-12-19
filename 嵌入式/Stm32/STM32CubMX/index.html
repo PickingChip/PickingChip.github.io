@@ -12,21 +12,25 @@
         <meta name="author" content="PickingChip">
       
       
-        <link rel="canonical" href="https://pickingchip.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B7%A5%E5%85%B7%E9%93%BE/%E5%B7%A5%E5%85%B7%E9%93%BE/">
+        <link rel="canonical" href="https://pickingchip.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F/Stm32/STM32CubMX/">
       
       
+        <link rel="prev" href="../%E9%A1%B9%E7%9B%AE%E7%BB%84%E6%88%90/">
+      
+      
+        <link rel="next" href="../%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/">
       
       
       <link rel="icon" href="../../../images/catching_pokem.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
-        <title>工具链 - Chips</title>
+        <title>STM32CubMX - Chips</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -48,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,11 +77,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +96,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -109,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              工具链
+              STM32CubMX
             
           </span>
         </div>
@@ -125,7 +124,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="teal"  aria-label="切换至暗色模式"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="切换至暗色模式" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -135,7 +134,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="pink"  aria-label="切换至亮色模式"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -143,13 +142,13 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -158,15 +157,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -189,7 +188,7 @@
         <a href="https://github.com/PickingChip/PickingChip.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -234,7 +233,7 @@
       <a href="https://github.com/PickingChip/PickingChip.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -347,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2.Windows%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+      <a href="../../../基础知识/2.Windows操作简介.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Git/" class="md-nav__link">
+      <a href="../../../团队开发/Git.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/GitHub/" class="md-nav__link">
+      <a href="../../../团队开发/GitHub.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+      <a href="../../../团队开发/Markdown.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,17 +518,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -543,7 +544,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             嵌入式
@@ -554,17 +555,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -578,7 +581,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Stm32
@@ -592,11 +595,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Stm32/Stm32/" class="md-nav__link">
+      <a href="../Stm32%E6%A6%82%E8%BF%B0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stm32
+    Stm32概述
   </span>
   
 
@@ -613,7 +616,99 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Stm32/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" class="md-nav__link">
+      <a href="../%E9%A1%B9%E7%9B%AE%E7%BB%84%E6%88%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    项目组成
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    STM32CubMX
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    启动过程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%87%8D%E8%A6%81%E5%A4%96%E8%AE%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    重要外设
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%BC%96%E8%AF%91%E5%99%A8/" class="md-nav__link">
+      <a href="../../%E5%B7%A5%E5%85%B7%E9%93%BE/%E7%BC%96%E8%AF%91%E5%99%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E8%B0%83%E8%AF%95%E5%99%A8/" class="md-nav__link">
+      <a href="../../%E5%B7%A5%E5%85%B7%E9%93%BE/%E8%B0%83%E8%AF%95%E5%99%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+      <a href="../../%E5%B7%A5%E5%85%B7%E9%93%BE/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%BC%96%E8%BE%91%E5%99%A8/" class="md-nav__link">
+      <a href="../../%E5%B7%A5%E5%85%B7%E9%93%BE/%E7%BC%96%E8%BE%91%E5%99%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,6 +1326,90 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学类
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            数学类
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E7%B1%BB/MATLAB%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E7%B1%BB/MATLAB%E4%BB%BF%E7%9C%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab仿真
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1249,98 +1428,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      想成为记事本编程大师吗？
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="想成为记事本编程大师吗？">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      工具链是什么：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      C语言的编译过程：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      编译器
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="编译器">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pc" class="md-nav__link">
-    <span class="md-ellipsis">
-      PC编译器：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      嵌入式编译器：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#makecmake" class="md-nav__link">
-    <span class="md-ellipsis">
-      Make&amp;Cmake
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      调试器：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1357,160 +1444,38 @@
   
 
 
-  <h1>工具链</h1>
+  <h1>STM32CubMX</h1>
 
+<p>意法半导体公司推出的自动生成项目模板的软件。</p>
+<p><strong>Java 官网下载：</strong> <a href="https://www.java.com/zh_CN/download/windows-64bit.jsp">下载地址</a> </p>
+<p><strong>CubeMX 官网下载：</strong> <a href="https://www.st.com/stm32cubemx">下载地址</a></p>
+<p>请自行攻略下载教程。</p>
+<p>下载完成后如果创建新文件出现如下错误：</p>
+<p><img alt="CubeMX新建文件错误" src="../Picture/CubeMX%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E9%94%99%E8%AF%AF.png" /></p>
+<p>请使用手机热点连接电脑重试。</p>
+<p><strong>芯片支持包下载：</strong><a href="https://www.keil.arm.com/devices/?q=stm32G4&amp;vendor-search=">下载地址</a></p>
+<p>在使用CubMX构建工程模板之前需要先导入相应系列的固件库。</p>
+<p>固件库是什么，是干嘛的？</p>
 <blockquote>
-<h2 id="_1">想成为记事本编程大师吗？</h2>
+<p>这个库是一个固件包，它包含了一系列的例程、数据结构和宏，涵盖了STM32外设的功能，包括设备驱动程序的描述以及为每个外设配套的一组例子。该固件库允许在用户应用中使用任何设备，而不需要深入研究每个外设的规格。</p>
 </blockquote>
-<h3 id="_2">工具链是什么：</h3>
-<p>编写一个（C语言）程序不过光需要编写源文件，在编写完成之后还需要考虑，如何将文件转化成为计算机可以执行的二进制程序，这个过程需要经历预<strong>处理，编译，汇编，链接</strong>这四个过程才能得到可执行程序，这时就需要一套专门的程序来进行这个过程，而这一套过程所需要的全部程序就是我们这里讲工具链。也许在初学的时候你没有注意过需要这样的程序来为我们做这样的事（那是因为IDE为我们做好了大部分的事情），但是如果想要进一步深入就需要掌握工具链搭建的过程。</p>
-<h3 id="c">C语言的编译过程：</h3>
+<p>固件库包含的文件：</p>
 <ul>
-<li>预处理：将源文件中的宏展开，对条件编译部分进行处理，头文件插入源文件</li>
+<li>启动文件</li>
+<li>时钟配置文件</li>
+<li>内核文件</li>
+<li>片上外设相关文件</li>
+<li>头文件配置文件：</li>
+<li>存放中断服务函数的c文件：</li>
 </ul>
-<ul>
-<li>编译：将预处理过的源文件转换成为汇编文件</li>
-</ul>
-<ul>
-<li>汇编：将汇编文件转换成为由二进制组成的目标文件</li>
-</ul>
-<ul>
-<li>链接：将所有目标文件和库链接在一起生成可执行程序</li>
-</ul>
-<h3 id="_3">编译器</h3>
-<p>在上面所说的源文件转化的过程中，大部分任务是由编译器完成的，编译器是相当复杂的，常见的C语言编译器如下</p>
-<h4 id="pc">PC编译器：</h4>
-<ul>
-<li>
-<p>GCC：</p>
-<p>GCC(<strong>GNU Compiler Collection</strong>)是一个由GNU组织编写的开源的编译器，在最开始的时候它仅作为C语言编译器（所以它的原名是“GNU C Compiler”），后来逐渐支持多种语言（如C++、Go等）便改为现在的名字。它能支持多种操作系统，如Linux，Windows，Mac等。</p>
-<p>1.在Linux平台上获取GCC仅需要执行下面的命令：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential
-</code></pre></div>
-<p>2.在Windows平台上使用GCC需要下载MinGW（<em>Minimalist</em> GNU <em>for Windows</em>），然后将所下载文件夹中的<code>/bin</code>目录添加到环境变量当中，就可以在终端中使用gcc命令了。</p>
-<p>3.在Mac平台获取，没玩过我也不造啊。</p>
-</li>
-</ul>
-<ul>
-<li>
-<p>Clang：</p>
-<p>Clang编译器是由苹果公司开发的，最开始的时候苹果公司也是使用GCC的，据说是苹果想要实现一些C语言的特性但是GNU的人不给苹果添加，于是苹果公司便开始研发自家的编译器，这才有了Clang（<del>Only Apple can do</del>），但是Clang也是开源的。</p>
-<p>Clang编译器的前端是Clang，后端是LLVM（Low Level Virtual Machine）。这里解释一下编译器的前端和后端，可以理解为编译器的两个功能不同的组成部分。</p>
-<ul>
-<li>前端主要负责源码的语法检查，分析源文件生成抽象语法树，中间代码的生成（将抽象语法树转换为中间表示（IR），一种与机器无关的中间代码用于后端优化和目标代码的生成）</li>
-<li>后端主要负责优化，目标文件生成，链接生成可执行程序。</li>
-</ul>
-<p>Clang编译器在Github上开源：<a href="https://github.com/llvm/llvm-project/releases">Clang编译器获取</a>  </p>
-<p>如何配置：                              <a href="https://www.cnblogs.com/RioTian/p/17758813.html">在Windows下配置Clang编译器</a></p>
-</li>
-</ul>
-<ul>
-<li>
-<p>MSVC：</p>
-<p>MSVC(Microsoft Visual C++)是微软公司的C/C++开发工具，Windows原生环境不提供类似<strong>gcc</strong>，<strong>Clang</strong>的C/C++语言源程序编译运行工具链，它的编译器都是包含在集成开发环境里的（当然这不是开源的），可以通过下载Microsoft Visual Studio来获取。</p>
-<p>MSVC编译器工具链主要由cl.exe与link.exe构成。其中：</p>
-<ol>
-<li>
-<p>cl.exe用于控制在 Microsoft C/C++的编译器和链接器</p>
-</li>
-<li>
-<p>link.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以创建可执行 (.exe) 文件或动态链接库 (DLL)</p>
-</li>
-<li>用户只需要调用cl.exe，即可完成编译-链接全过程。</li>
-</ol>
-<p>如何使用：<a href="https://learn.microsoft.com/zh-cn/cpp/build/reference/compiler-command-line-syntax?view=msvc-170&amp;viewFallbackFrom=vs-2019">MSVC 编译器命令行语法 | Microsoft Learn</a></p>
-</li>
-</ul>
-<h4 id="_4">嵌入式编译器：</h4>
-<p>因为编译器是要将源码转换成为机器码的，由于不同的处理器使用不同的指令集，因此相同的源码对于不同的处理器转换成的机器码也不相同。主流的PC计算机都是X86的处理器架构，而嵌入式设备则是arm架构，因此嵌入式开发使用的编译器和和上面介绍的编译器不同，主要由下面三种：</p>
-<ul>
-<li>armcc（AC5）:基于GCC开发的arm平台编译器，并不开源</li>
-<li>armclang (AC6):基于Clang开发的arm平台编译器，并不开源</li>
-<li>Arm GNU 工具链：开源的arm开发工具链，不止支持arm开发。</li>
-</ul>
-<p>官网位置：<a href="https://developer.arm.com/Tools and Software/Arm Compiler for Embedded">用于嵌入式的 AC6编译器</a></p>
-<p>​               <a href="https://developer.arm.com/downloads/-/gnu-rm">GNU Arm 嵌入式工具链下载 </a></p>
-<p>GCC的使用方法：</p>
-<h3 id="makecmake">Make&amp;Cmake</h3>
-<p>简介：</p>
-<p><del>绝大多数写在单个文件的程序是没有价值的</del>,有价值的程序通常是由许多源文件组成的大工程，当你编译这样的大工程时，如何使用编译器按照依赖关系依次编译源文件并链接就成了一个让人头疼的问题。这时候人们想到能不能有一个程序代替人去指挥编译器完成项目的编译，于是便有了<code>make</code>，人们只需要将需要编译的程序的依赖写到<code>makefile</code>这个文本文件当中（当然这是要遵循特定语法的），<code>make</code>便会根据这个文件去指挥编译生成可执行文件。</p>
-<p>然而对于大项目来说手动去编写<code>makefile</code>依旧是个麻烦的事情，同时对于相同的源文件在不同的平台上编译需要调用不同的编译器，如果每一次更改平台都需要重新编写<code>makefile</code>那实在是令人头疼。于是人们编写了<code>Cmake</code>程序根据不同平台生成<code>makefile</code>以供<code>make</code>调用（<del>没错偷懒是人类进步的阶梯</del>），当然<code>Cmake</code>生成<code>makefile</code>需要根据<code>makelist.txt</code>这个文本文件，但是这个文本文件又需要人去手动编写。是不是感觉有点套娃的意味？但是这样做并不是毫无意义，<code>makelist.txt</code>只需要编写一次就可以在不同的平台上使用，同时它使用了更高级的语法使得依赖关系的编写更加简洁有利于维护。</p>
-<p>make语法：</p>
-<p>Cmake语法：</p>
-<h3 id="_5">调试器：</h3>
-<p>调试器是一个程序，可以在程序运行时查看变量的，内存位置，寄存器变化等信息。熟练使用调试器是软件开发的必备技能。</p>
-<p>GDB</p>
-<p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb.html/">GDB在线文档</a></p>
-<p>GNU symbolic debugger，一个符号式命令行调试器。所谓“符号式" (symbolic) ，意思是在执行程序时，可以使用在源代码中对变量和函数定义的名称，引用这些变量和函数。为了显示和翻译这些名称，调试器需要程序中变量类型和函数类型的相关信息，以及可执行文件中哪条命令对应到源文件中哪行代码的信息。这类信息以符号表（ symbol table ）的形式出现，当使用<code>- g</code> 选项进行编译和链接时，将生成符号表，符号表被包含在可执行文件中：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>gcc<span class="w"> </span>-g<span class="w"> </span>gdb—example.<span class="w"> </span>c
-</code></pre></div>
-<p>在由多个源文件组成的大型程序中，必须在编译每个模块时都使用<code>-g</code> 选项。</p>
-<p>在 shell 命令提示符中输人 gdb 命令就可以启动 GDB 。 GDB 支持许多命令行选项与参数：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">$gdb</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="o">[</span>executable_file<span class="w"> </span><span class="o">[</span>core_file<span class="w"> </span><span class="p">|</span><span class="w"> </span>process_id<span class="o">]]</span><span class="w"> </span>
-</code></pre></div>
-<p>命令解析：</p>
-<p>[options] :</p>
-<ul>
-<li>
-<p>-verslon 、-v:</p>
-<p>GDB 在控制台上输出它的版本和版权信息，然后退出，不会启动任何调试过程。</p>
-</li>
-</ul>
-<ul>
-<li>
-<p>--quiet 、-silent:</p>
-<p>GDB 启动一个交互式的调试过程，不显示版本和版权信息。</p>
-</li>
-</ul>
-<ul>
-<li>
-<p>--help 、 -h:</p>
-<p>GDB 显示它的命令行语法，它简要地描述所有的选项，然后退出，不会启动任何调试过程。</p>
-</li>
-</ul>
-<ul>
-<li>
-<p>-args:</p>
-<p>使用 --args 选项，启动一个调试会话，将命令行参数传人到被 GDB 加载用来的调试程序中。</p>
-<p>在下例中， myprog 是被调试程序：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>gdb<span class="w"> </span>--args<span class="w"> </span>myprog<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1">#这里的 -d和“$HOME”都是myprog的参数</span>
-</code></pre></div>
-<p>一 args 选项后面必须紧接着被调试程序。该命令由被调试程序名称以及它的参数组成，参数的次序与不采用 GDB 调试而是正常执行该程序时的次序一样。 --args 必须是 GDB最后出现的选项。</p>
-</li>
-</ul>
-<ul>
-<li>
-<p>-symbols filename 、 -S filename:</p>
-<p>如果调试符号表没有被包含在可执行文件中，可以使用-symbols 选项加载一个单独的符号表文件。 GDB 会从指定的文件中读取符号表信息。</p>
-</li>
-</ul>
-<ul>
-<li>
-<p>-exec fllename 、 -e  fllename:</p>
-<p>指定要被调试的可执行文件。</p>
-</li>
-</ul>
-<ul>
-<li>
-<p>-se fllename:</p>
-<p>所指定的文件是希望使用 GDB 测试的可执行文件，并包括了符号表。这个选项通常不是必须的，如果 GDB 命令行包含了一个文件名，并且该文件名并非任何选项的参数，那么 GDB 会将首个出现的文件名视为-se 选项的参数。</p>
-</li>
-</ul>
-<p>下面的命令将直接启动调试器，不显示启动信息：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>gdb<span class="w"> </span>-silent<span class="w"> </span><span class="c1">#该命令没有指定要调试的文件，可使用file命令指定可执行文件</span>
-</code></pre></div>
-<p>GDB的使用命令：</p>
-<ul>
-<li>l : list 列出程序源码，一般展示十行，将要执行的那一行在中间。</li>
-<li>b : break  加上行号，在该行下断点</li>
-<li>r : run  运行到断点</li>
-<li>n : next 单步调试，执行一整行代码</li>
-<li>s : step 如果这一条程序包含函数，则会运行进去，在函数内的第一条语句中断程序执行。</li>
-<li>p : print 加上变量名，会显示出变量的值（GDB 的 print 命令输出具有 $number=value的格式）</li>
-</ul>
-<p>STlink:</p>
-<p>Jlink:</p>
-<p>OpenOCD：</p>
+<p>详情可参考：<a href="https://www.cnblogs.com/yizhangyichi/p/16137716.html">初识固件库，固件库应该是什么样子</a></p>
+<p>而我们使用<code>keil</code>构建项目时需要导入芯片支持包，它的作用是什么和这里使用的固件库又有什么区别？</p>
+<p>芯片支持包的定义</p>
+<blockquote>
+<p>CMSIS-Pack defines a standardized way to deliver software components, device parameters and board support information and code. Adopted by leading semiconductor companies, embedded software and tools vendors across the Arm architecture, CMSIS-Packs increase productivity across the industry by encouraging code reuse and enabling proactive software component deployment with online updates and dependencies checking.</p>
+</blockquote>
+<p>stm32 的 system View Description (SVD) 文件是一个专用于 STM32 微控制器的元数据文件，它包含了该芯片的所有外设、寄存器结构、地址映射以及详细的特性描述。这个文件对于开发工具如 Keil MDK 、 stm32cubeMX 等至关重要，因为它帮助软件开发者获取硬件设备的信息，以便在编写驱动程序、配置GPIO口、了解中断向量表等内容时能够准确地理解和操作硬件。SVD 文件使得软件能够在初始化阶段自动识别并配置 STM32 的硬件资源，简化了代码编写过程，并有助于提高代码的移植性和调试效率。通过导入 SVD 文件，IDE可以自动生成对应的驱动模板，极大地加快了嵌入式系统的开发速度。</p>
+<p>简单来说固件库是搭建项目所必须的组成部分，而芯片支持包是给IDE看的“数据手册”包含了芯片的详细信息，使开发环境能够识别芯片。</p>
 
 
 
@@ -1557,10 +1522,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
