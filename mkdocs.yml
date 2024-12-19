@@ -57,11 +57,9 @@ nav:
       Qt: "./计算机语言/QT.md"
       # Python: "./计算机语言/Python.md"
 
-  # - 数学类:
-  #     数模:
-  #       第一讲:距离优略分析法: "./数学类/数模/第一讲:距离优略分析法.md"
-  #     Matlab语法: "./数学类/Matlab语法.md"
-  #     Matlab仿真: "./数学类/Matlab仿真.md"
+  - 数学类:
+      Matlab语法: "./数学类/MATLAB语法.md"
+      Matlab仿真: "./数学类/MATLAB仿真.md"
 
 theme:
   name: material
