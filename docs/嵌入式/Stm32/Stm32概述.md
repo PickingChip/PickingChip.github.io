@@ -37,6 +37,14 @@ MPU和MCU的最主要的区别就是MPU的性能更强具有MMU（内存管理�
 
 文档下载：[STMCU中文官网](https://www.stmcu.com.cn/design_resource/) [STM32相关PDF文档](https://www.st.com.cn/zh/microcontrollers-microprocessors/stm32f103/documentation.html#)
 
+### 芯片结构
+
+![系统架构](./Picture/系统架构.png)
+
+
+
+
+
 ### 时钟系统
 
 stm32单片机有四个时钟源：
