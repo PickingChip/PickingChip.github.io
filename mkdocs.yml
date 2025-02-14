@@ -18,7 +18,7 @@ nav:
   - 团队开发:
       Git: "./团队开发/Git.md"
       GitHub: "./团队开发/GitHub.md"
-      Markdown: "./团队开发/Markdown.md"
+      Markdown: "./团队开发/编写规范.md"
 
   - 嵌入式:
       Stm32:

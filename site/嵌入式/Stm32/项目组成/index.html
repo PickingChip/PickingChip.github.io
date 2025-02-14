@@ -456,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../团队开发/Git.md" class="md-nav__link">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../团队开发/GitHub.md" class="md-nav__link">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/GitHub/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../团队开发/Markdown.md" class="md-nav__link">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -678,10 +678,25 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="HAL库工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要文件解释：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       标准库工程
     </span>
@@ -1510,10 +1525,25 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="HAL库工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      重要文件解释：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       标准库工程
     </span>
@@ -1546,25 +1576,64 @@
 <h3 id="hal">HAL库工程</h3>
 <p>Hal库版本的工程需要以下部分组成：</p>
 <ul>
-<li>CMSIS：启动文件，头文件，时钟初始化文件。</li>
+<li>CMSIS：启动文件，内核头文件，时钟初始化文件。</li>
 <li>HalDriver：Hal库函数文件。（片上外设驱动函数）</li>
 <li>Middlewares：中间层函数。（GUI，操作系统）</li>
 <li>USER：用户文件等。</li>
 </ul>
-<p>重要文件解释：</p>
-<p>1.<code>stm32fxxx_hal_conf.h</code></p>
-<p>构建Hal库项目需要预先定义USE_HAL_DRIVER 宏，这是为了让 stm32f1xx.h 包含 stm32f1xx_hal_conf.h 这个头文件。</p>
-<p>在 HAL 的头文件目录下有一个默认的配置文件 stm32f1xx_hal_conf_template.h 在编译 HAL代码前，要将这个文件拷贝为 stm32f1xx_hal_conf.h ， 修改部分宏定义，用来修改 HAL 的全局配置。</p>
-<p>2.<code>stm32fxxx_it.c</code></p>
-<p>stm32fxxx_it.c这几个文件为什么放在用户文件夹下？</p>
-<p>3.</p>
-<p>只要工程目录下包含以上的必要部分就可以进行程序开发，但是合理的工程结构有助于项目更好的开发。工程结构可以参考：</p>
+<h4 id="_2">重要文件解释：</h4>
+<p>1.<code>startup_stm32fxxxx.s</code></p>
+<p><a href="../%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/">见启动过程</a></p>
+<p>2.<code>system_stm32f1xx.h</code></p>
+<p>这个文件中编写了两个函数和一个全局变量：</p>
+<ul>
+<li><code>SystemInit()</code>：设置系统时钟（系统时钟源，PLL乘法器，AHB/APBx预分频器和Flash设置），这个函数在<code>startup_stm32f1xx_xx</code>中被调用来初始化系统的时钟。</li>
+<li><code>SystemCoreClock</code>：包含核心时钟（HCLK），它可以被用户应用程序用来设置SysTick计时器或配置其他参数。</li>
+<li><code>SystemCoreClockUpdate()</code>：更新变量SystemCoreClock，必须在程序执行期间更改核心时钟时调用。</li>
+</ul>
+<p>3.<code>stm32f1xx.h</code></p>
+<p>官方的注释中说<code>main.c</code>中只需要包含这个头文件即可，这个头文件中包含了<code>stm32f1xx_hal.h</code>和<code>stm32f103xe.h</code>（对应芯片的头文件），以及一些对寄存器位操作的宏定义。</p>
+<p>4.<code>stm32f1xx_hal</code></p>
+<p>构建Hal库项目需要预先定义USE_HAL_DRIVER 宏，这是为了让 <code>stm32f1xx.h</code> 包含 <code>stm32f1xx_hal.h</code> 这个头文件。这个文件中包含了所有的Hal库函数的声明（大部分都在<code>stm32fxxx_hal_conf.h</code>文件中只有有关滴答计时器和调试的函数在本文件中声明），引用了<code>stm32fxxx_hal_conf.h</code>文件，定义了一些对定时器操作和调试用的宏。</p>
+<p>5.<code>stm32fxxx_hal_conf.h</code></p>
+<p>在 HAL 的头文件目录下有一个默认的配置文件 stm32f1xx_hal_conf_template.h 在编译 HAL代码前，要将这个文件拷贝为 stm32f1xx_hal_conf.h ，在这个文件当中你可以通过修改宏定义来选择哪些 HAL 模块被包含在项目中，比如 GPIO、USART、I2C 等，从而减小最终固件的大小。</p>
+<p>6.<code>stm32f103xe.h</code></p>
+<p>这里以f103系列举例了，实际上每个芯片型号都有一个对应的头文件，这个文件中定义了该芯片所有外设的寄存器在MCU寻址空间内的地址映射。</p>
+<blockquote>
+<p>This file contains:</p>
+<p>*      - Data structures and the address mapping for all peripherals</p>
+<p>*      - Peripheral's registers declarations and bits definition</p>
+<p>*      - Macros to access peripheral's registers hardware</p>
+</blockquote>
+<p>7.<code>stm32fxxx_it.c</code></p>
+<p>这个文件中包含了一些异常处理中断服务函数，当运行发成异常时就会触发这些中断进而执行对应的中断服务函数，可以自行更改这些函数。</p>
+<ul>
+<li><strong>NMI（非屏蔽中断）</strong>：通过 <code>NMI_Handler</code> 函数处理。</li>
+<li><strong>硬故障</strong>：当发生硬故障时，<code>HardFault_Handler</code> 会进入无限循环，通常用于调试。</li>
+<li><strong>内存管理异常</strong>：<code>MemManage_Handler</code> 也会进入无限循环。</li>
+<li><strong>总线故障</strong>：<code>BusFault_Handler</code> 处理总线故障并进入无限循环。</li>
+<li><strong>使用故障</strong>：<code>UsageFault_Handler</code> 处理使用故障并进入无限循环。</li>
+<li><strong>SVCall（Supervisor Call）</strong>、<strong>调试监视器</strong>和<strong>PendSV异常</strong>等，当前函数体为空，表示未实现具体的处理逻辑</li>
+</ul>
+<p>文件中还编写了系统滴答定时器中断的函数<code>SysTick_Handler</code>，每当发生 SysTick 中断时，它会调用 <code>HAL_IncTick()</code> 函数，这通常用于维护系统时钟或时间戳。</p>
+<p>8.<code>cmsis_compiler.h</code>和<code>cmsis_xxxx.h</code></p>
+<p>CMSIS做了对不同编译器的兼容，<code>cmsis_compiler.h</code>文件会根据编译器的种类包含对应的编译器头文件</p>
+<p>例如：</p>
+<ul>
+<li><code>cmsis_armcc.h</code></li>
+<li><code>cmsis_armclang.h</code></li>
+<li><code>cmsis_gcc.h</code></li>
+<li><code>cmsis_irrarm.h</code></li>
+</ul>
+<p>ps.不同编译器使用的汇编语法不同，因此使用不同的编译器需要使用对应的头文件启动文件</p>
+<p>只要工程目录下包含以上的必要部分就可以进行程序的编写，但是合理的工程结构有助于项目更好的开发。</p>
+<p>工程结构可以参考使用：</p>
 <ol>
 <li>Stm32CubMX生成的工程模板</li>
 <li>正点原子的工程</li>
 <li>DDL的工程模板：<a href="https://github.com/Deadline039/STM32-Template">Deadline039/STM32-Template</a></li>
 </ol>
-<h3 id="_2">标准库工程</h3>
+<h3 id="_3">标准库工程</h3>
 
 
 

@@ -20,7 +20,14 @@ MATLAB打开界面如图：
 
 - 当前文件夹：显示当前工作目录下都有哪些文件，确保运行的文件在当前工作文件夹下
 
-  
+
+MATLAB2023a以后支持新UI，能够配置暗色主题具体实现法方如下：
+
+正版直接在获得更多app中搜索`new desktop for matlab`下载安装即可，破解版参考下面两篇博客。
+
+[破解版MATLAB设置深色模式 - 哔哩哔哩](https://www.bilibili.com/opus/854920387099623443?jump_opus=1)
+
+[matlab2023版深色模式开启方法 - 哔哩哔哩](https://www.bilibili.com/opus/886472754460622850?spm_id_from=333.1387.0.0)
 
 ### 基础语法
 
