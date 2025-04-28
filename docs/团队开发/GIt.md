@@ -6,7 +6,11 @@
 
 官方指南：[Git](https://git-scm.com/book/zh/v2)
 
-### Git常用用法
+### Git工作形式
+
+
+
+### Git常用命令
 
 - #### Git 创建仓库
 
@@ -115,4 +119,55 @@ git config --global https.proxy https://127.0.0.1:7890
 
 ### VS Code中的Git操作
 
-`VS Code`提供了图形化的`Git`模块来方便管理程序开发版本。：[VS Code使用Git可视化管理源代码教程](https://www.cnblogs.com/lgx5/p/18577380)
+`VS Code`提供了图形化的`Git`模块来方便管理程序开发版本。
+
+详见：[VS Code使用Git可视化管理源代码教程](https://www.cnblogs.com/lgx5/p/18577380)
+
+
+
+### Git信息格式
+
+#### Angular规范
+
+[AngularJS](https://github.com/angular/angular/commits/dylhunn-patch-1) 在github上 的提交记录被业内许多人认可逐渐被大家引用，是目前使用最广的写法，比较合理和系统化，并且有配套的工具。
+
+Angular规范每次提交的Commit message 都包括三个部分：header，body 和 footer。
+
+```html
+<type>(<scope>): <subject> 							#header
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+其中，header 是必需的，body 和 footer 可以省略。
+不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。
+
+安装`Commitizen`后，符合`Angular`风格的`commit`可以通过脚本自动生成Change log
+
+详细请见：[git commit 规范指南 - 不挑食的程序员](https://segmentfault.com/a/1190000009048911)
+
+#### 效仿格式
+
+```
+type: description
+```
+
+**type 类型**：是 commit 的类别，只允许如下几种标识：
+
+- fix: 修复bug
+- add: 新功能
+- update: 更新
+- style : 代码格式改变
+- test: 增加测试代码
+- revert: 撤销上一次的commit
+- build: 构建工具或构建过程等的变动，如：gulp 换成了 webpack，webpack 升级等
+
+**description**： 是对本次提交的简短描述。
+
+不超过50个字符。
+
+### Git提交原则
+
+[Git最佳实践：原子性提交（atomic commits）](https://hearrain.com/git-zui-jia-shi-jian-:-yuan-zi-xing-ti-jiao-atomic-commits)

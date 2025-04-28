@@ -351,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../基础知识/2.Windows操作简介.md" class="md-nav__link">
+      <a href="../../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2.Windows%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,11 +498,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/Markdown/" class="md-nav__link">
+      <a href="../../../%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91/%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Markdown
+    编写规范
   </span>
   
 
@@ -856,7 +856,7 @@
         <li class="md-nav__item">
   <a href="#gdb" class="md-nav__link">
     <span class="md-ellipsis">
-      GDB ？启动 ！
+      GDB的工作原理
     </span>
   </a>
   
@@ -864,6 +864,15 @@
       
         <li class="md-nav__item">
   <a href="#gdb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      GDB ？启动 ！
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gdb_2" class="md-nav__link">
     <span class="md-ellipsis">
       GDB的常用命令：
     </span>
@@ -963,8 +972,43 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../%E6%A0%91%E8%8E%93%E6%B4%BE/" class="md-nav__link">
+      <a href="../../Other/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,6 +1017,35 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Other/%E7%94%B5%E6%8E%A7%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电控基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1419,6 +1492,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1557,7 +1651,7 @@
         <li class="md-nav__item">
   <a href="#gdb" class="md-nav__link">
     <span class="md-ellipsis">
-      GDB ？启动 ！
+      GDB的工作原理
     </span>
   </a>
   
@@ -1565,6 +1659,15 @@
       
         <li class="md-nav__item">
   <a href="#gdb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      GDB ？启动 ！
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gdb_2" class="md-nav__link">
     <span class="md-ellipsis">
       GDB的常用命令：
     </span>
@@ -1627,7 +1730,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ gcc -g gdb—example. c
 </code></pre></div>
 <p>在由多个源文件组成的大型程序中，必须在编译每个模块时都使用<code>-g</code> 选项。</p>
-<h4 id="gdb">GDB ？启动 ！</h4>
+<h4 id="gdb">GDB的工作原理</h4>
+<p>GDB有两种工作模式：本地调试和远程调试</p>
+<p><img alt="GDB远程调试" src="../Picture/GDB%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95.png" /></p>
+<h4 id="gdb_1">GDB ？启动 ！</h4>
 <p>在 shell 命令提示符中输人 gdb 命令就可以启动 GDB 。 GDB 支持许多命令行选项与参数：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$gdb [options] [executable_file [core_file | process_id]] 
 </code></pre></div>
@@ -1704,7 +1810,7 @@
 <p>下面的命令将直接启动调试器，不显示启动信息：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ gdb -silent #该命令没有指定要调试的文件，可使用file命令指定可执行文件
 </code></pre></div>
-<h4 id="gdb_1">GDB的常用命令：</h4>
+<h4 id="gdb_2">GDB的常用命令：</h4>
 <ul>
 <li>
 <p>l : list 列出程序源码，一般展示十行，将要执行的那一行在中间。</p>
@@ -1739,7 +1845,13 @@
 </ul>
 <h4 id="stlink">STlink:</h4>
 <h4 id="jlink">Jlink:</h4>
+<p><img alt="Jlink工作模式" src="../Picture/Jlink%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F.png" /></p>
+<p><a href="https://kb.segger.com/J-Link_Commander">J-Link Commander - SEGGER 知識庫</a></p>
+<p><a href="https://www.segger.com/products/debug-probes/j-link/tools/j-link-remote-server/">J-Link 远程服务器</a></p>
 <h4 id="openocd">OpenOCD：</h4>
+<p><a href="https://gnutoolchains.com/arm-eabi/openocd/">下载适用于 Windows 的 OpenOCD</a></p>
+<p><a href="https://www.cnblogs.com/wanower/articles/17653065.html">OpenOCD笔记</a></p>
+<p><a href="https://nanjo712.github.io/2024/07/28/OpenOCD简明指南/">OpenOCD简明指南 </a></p>
 
 
 
