@@ -1,3 +1,8 @@
+---
+title: PC硬件简介
+comments: true  #默认不开启评论
+---
+
 # PickingChip's Knowledge base
 
 > _Each chip constitutes a phase of growth._
