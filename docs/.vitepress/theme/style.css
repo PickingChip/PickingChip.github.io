@@ -371,7 +371,7 @@ html.dark .home-panel:hover {
   }
 
   .VPHero .image {
-    margin: -52px auto -20px;
+    margin: -52px auto 8px;
   }
 
   .VPHero .image-container {
