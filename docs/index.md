@@ -5,6 +5,10 @@ layout: home
 hero:
   text: "PickingChip's Knowledge base"
   tagline: Each chip constitutes a phase of growth.
+  image:
+    light: /yellow_face.png
+    dark: /red_face.png
+    alt: PickingChip avatar
   actions:
     - theme: brand
       text: ES
@@ -23,13 +27,6 @@ hero:
       link: https://github.com/PickingChip
 
 ---
-
-<div class="home-avatar-shell" aria-hidden="true">
-  <div class="home-avatar">
-    <img class="home-avatar-light" src="/yellow_face.png" alt="yellow_face" />
-    <img class="home-avatar-dark" src="/red_face.png" alt="red_face" />
-  </div>
-</div>
 
 <section class="home-section home-intro">
   <p class="home-eyebrow">主页简介</p>

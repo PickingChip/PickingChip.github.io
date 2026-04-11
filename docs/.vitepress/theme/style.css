@@ -366,16 +366,27 @@ html.dark .home-panel:hover {
 }
 
 @media (max-width: 767px) {
-  .home-theme-ripple,
-  .home-avatar {
-    top: 5.75rem;
-    right: 1rem;
+  .VPHero .image-bg {
+    display: none;
   }
 
-  .home-avatar-shell {
-    --home-avatar-size: clamp(120px, 28vw, 160px);
-    --home-avatar-center-x: calc(100% - 1rem - (var(--home-avatar-size) / 2));
-    --home-avatar-center-y: calc(5.75rem + (var(--home-avatar-size) / 2));
+  .VPHero .image {
+    margin: -52px auto -20px;
+  }
+
+  .VPHero .image-container {
+    width: clamp(120px, 28vw, 160px);
+    height: clamp(120px, 28vw, 160px);
+  }
+
+  .VPHero .image-src {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
   }
 
   .home-module-list,
@@ -384,6 +395,7 @@ html.dark .home-panel:hover {
   }
 
   .home-intro {
+    margin-top: 0;
     padding: 0.65rem 0 0.95rem;
   }
 }
