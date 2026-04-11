@@ -202,29 +202,36 @@ html.dark .home-theme-ripple::after {
   top: -20rem;
   right: 8rem;
   z-index: 1;
-  display: flex;
+  width: var(--home-avatar-size);
+  height: var(--home-avatar-size);
+  overflow: hidden;
+  border-radius: 999px;
   pointer-events: none;
 }
 
 .home-avatar img {
+  position: absolute;
+  inset: 0;
   width: var(--home-avatar-size);
   height: var(--home-avatar-size);
   object-fit: cover;
+  object-position: center;
+  display: block;
   border-radius: 999px;
   box-shadow: none;
-  border: 1px solid color-mix(in srgb, var(--vp-c-divider) 70%, transparent);
+  border: 0;
 }
 
 .home-avatar-dark {
-  display: none;
+  display: none !important;
 }
 
 html.dark .home-avatar-light {
-  display: none;
+  display: none !important;
 }
 
 html.dark .home-avatar-dark {
-  display: block;
+  display: block !important;
 }
 
 .home-section {
