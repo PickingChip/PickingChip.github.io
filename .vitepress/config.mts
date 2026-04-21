@@ -43,8 +43,9 @@ export default defineConfig({
           text: 'ES',
           items: [
             { text: 'Stm32', link: '/ES/Stm32/Stm32开发/Stm32简介' },
-            { text: '工具链', link: '/ES/工具链/编译器' },
-            { text: '51单片机', link: '/ES/8051/51单片机' },
+            { text: 'Lib', link: '/ES/Lib/TouchGFX/TouchGFX' },
+            { text: 'ToolChains', link: '/ES/工具链/编译器' },
+            { text: '8051', link: '/ES/8051/51单片机' },
           ]
         }
       ],
@@ -73,6 +74,15 @@ export default defineConfig({
                 { text: 'USART', link: '/ES/Stm32/Stm32外设/USART' },
               ]
             },
+          ]
+        }
+      ],
+      '/ES/Lib/': [
+        {
+          text: 'Lib',
+          items: [
+            { text: 'TouchGFX', link: '/ES/Lib/TouchGFX/TouchGFX' },
+            { text: 'μros', link: '/ES/Lib/micro_ros/μros' },
           ]
         }
       ],
@@ -136,12 +146,21 @@ export default defineConfig({
         {
           text: 'Other',
           items: [
+            { text: 'Git', link: '/Other/Git/Git' },
             { text: 'WSL', link: '/Other/WSL' },
             { text: '树莓派', link: '/Other/树莓派' },
-            { text: 'μros', link: '/Other/μros' },
           ]
         }
-      ]
+      ],
+      '/Other/Git/': [
+        {
+          text: 'Git',
+          items: [
+            { text: 'Git', link: '/Other/Git/Git' },
+            { text: 'GitHub', link: '/Other/Git/GitHub' },
+          ]
+        }
+  ],
     },
     
 
